@@ -1,0 +1,327 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "smash aid",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "CharacterMoveIntent",
+                    "slots": [
+                        {
+                            "name": "move_type",
+                            "type": "move_type"
+                        },
+                        {
+                            "name": "character",
+                            "type": "character",
+                            "samples": [
+                                "{character}",
+                                "I want to know about {character}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "Say {move_type} for {character}",
+                        "{move_type} for {character}",
+                        "{character} {move_type}",
+                        "What is the {move_type} for {character}",
+                        "What is {character}  {move_type}",
+                        "Tell me about {character} {move_type}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.MoreIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateSettingsIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NextIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageUpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PageDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PreviousIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollRightIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollDownIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollLeftIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ScrollUpIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "move_type",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "air dodge"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "back roll"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "forward roll",
+                                "synonyms": [
+                                    "roll"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "spot dodge"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "up throw",
+                                "synonyms": [
+                                    "u throw"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "down throw",
+                                "synonyms": [
+                                    "d throw"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "back throw",
+                                "synonyms": [
+                                    "b throw"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "forward throw",
+                                "synonyms": [
+                                    " f throw"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pivot grab"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dash grab"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "standing grab",
+                                "synonyms": [
+                                    "grab"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "up smash",
+                                "synonyms": [
+                                    "usmash"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "down smash",
+                                "synonyms": [
+                                    "d smash"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "forward smash",
+                                "synonyms": [
+                                    "f smash"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "down tilt",
+                                "synonyms": [
+                                    "d tilt"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "up tilt",
+                                "synonyms": [
+                                    "u tilt"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "forward tilt",
+                                "synonyms": [
+                                    "f tilt"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dash attack"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "jab 3"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "jab  1",
+                                "synonyms": [
+                                    "jab"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "jab 2"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "character",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "peach"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bowser"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "rosalina",
+                                "synonyms": [
+                                    "Rosa"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "luigi"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "mario"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "CharacterMoveIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "move_type",
+                            "type": "move_type",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.10019951557.883920751769"
+                            }
+                        },
+                        {
+                            "name": "character",
+                            "type": "character",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.10019951557.1303304771453"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.10019951557.1303304771453",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Which character's {move_type} do you want to know about?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.10019951557.883920751769",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "What move of {character} do you want to know about?"
+                    }
+                ]
+            }
+        ]
+    }
+}
