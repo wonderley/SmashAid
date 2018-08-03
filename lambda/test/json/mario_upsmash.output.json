@@ -1,0 +1,26 @@
+{
+	"body": {
+		"version": "1.0",
+		"response": {
+			"outputSpeech": {
+				"type": "PlainText",
+				"text": "mario's up smash is active frames 9 through 12 (Head Intangible: 9. mario can act on frame 40"
+			},
+			"card": {
+				"type": "Simple",
+				"title": "SessionSpeechlet - CharacterMoveIntent",
+				"content": "SessionSpeechlet - mario's up smash is active frames 9 through 12 (Head Intangible: 9. mario can act on frame 40"
+			},
+			"reprompt": {
+				"outputSpeech": {
+					"type": "PlainText",
+					"text": "What is the character and move?"
+				}
+			},
+			"shouldEndSession": false
+		},
+		"sessionAttributes": {
+			"character": "mario"
+		}
+	}
+}

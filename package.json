@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "chai": "^4.1.2",
+    "cheerio": "^1.0.0-rc.2",
+    "pagetojson": "0.0.5",
+    "proxyquire": "^2.0.1"
+  },
+  "description": "Alexa skill for Smash frame data",
+  "files": [
+    "index.js"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "Lucas Wonderley",
+      "email": "lucas.wonderley@gmail.com"
+    }
+  ],
+  "version": "0.0.1"
+}

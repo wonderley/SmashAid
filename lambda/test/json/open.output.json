@@ -1,0 +1,24 @@
+{
+	"body": {
+		"version": "1.0",
+		"response": {
+			"outputSpeech": {
+				"type": "PlainText",
+				"text": "Welcome to Smash Aid. Ask about a move for any character."
+			},
+			"card": {
+				"type": "Simple",
+				"title": "SessionSpeechlet - Welcome",
+				"content": "SessionSpeechlet - Welcome to Smash Aid. Ask about a move for any character."
+			},
+			"reprompt": {
+				"outputSpeech": {
+					"type": "PlainText",
+					"text": "Please ask about a move for any character. For example, say, tell me about Mario's up smash."
+				}
+			},
+			"shouldEndSession": false
+		},
+		"sessionAttributes": {}
+	}
+}
