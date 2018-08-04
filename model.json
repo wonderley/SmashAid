@@ -236,6 +236,51 @@
                             "name": {
                                 "value": "jab 2"
                             }
+                        },
+                        {
+                            "name": {
+                                "value": "up air",
+                                "synonyms": [
+                                    "up aerial",
+                                    "u air"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "down air",
+                                "synonyms": [
+                                    "down aerial",
+                                    "dair"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "forward air",
+                                "synonyms": [
+                                    "fair",
+                                    "f air"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "back air",
+                                "synonyms": [
+                                    "bair",
+                                    "b air"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "neutral air",
+                                "synonyms": [
+                                    "nair",
+                                    "n air"
+                                ]
+                            }
                         }
                     ]
                 },
@@ -244,30 +289,56 @@
                     "values": [
                         {
                             "name": {
-                                "value": "peach"
+                                "value": "peach",
+                                "synonyms": [
+                                    "peach's",
+                                    "princess peach",
+                                    "princess peach's"
+                                ]
                             }
                         },
                         {
                             "name": {
-                                "value": "bowser"
+                                "value": "bowser",
+                                "synonyms": [
+                                    "bowser's",
+                                    "king koopa",
+                                    "king koopa's"
+                                ]
                             }
                         },
                         {
                             "name": {
                                 "value": "rosalina",
                                 "synonyms": [
-                                    "Rosa"
+                                    "rosa",
+                                    "rosa's",
+                                    "rosalina's",
+                                    "rosalina and luma",
+                                    "rosalina and luma's",
+                                    "rosaluma",
+                                    "rosaluma's",
+                                    "rosa and luma",
+                                    "rosa and luma's"
                                 ]
                             }
                         },
                         {
                             "name": {
-                                "value": "luigi"
+                                "value": "luigi",
+                                "synonyms": [
+                                    "luigi's",
+                                    "wee gee",
+                                    "wee gee's"
+                                ]
                             }
                         },
                         {
                             "name": {
-                                "value": "mario"
+                                "value": "mario",
+                                "synonyms": [
+                                    "mario's"
+                                ]
                             }
                         }
                     ]

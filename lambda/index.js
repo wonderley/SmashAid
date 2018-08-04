@@ -14,6 +14,10 @@ const s3 = new AWS.S3();
 
 // --------------- Helpers that build all of the responses -----------------------
 
+String.prototype.replaceAll = function(target, replacement) {
+  return this.split(target).join(replacement);
+};
+
 function buildSpeechletResponse(title, output, repromptText, shouldEndSession) {
   return {
     outputSpeech: {
@@ -99,25 +103,67 @@ function speechOutputForMoveData(character, move, data) {
   return `${character}'s ${move} is active ${activeFramesStr}. ${fafStr}`;
 }
 
-function onCharacterMoveIntent(intent, session, callback) {
-  console.log(this);
-  console.log(intent);
-  console.log(session);
-  console.log(callback);
-  console.log(intent.slots.move_type);
-  const cardTitle = intent.name;
-  const move = intent.slots.move_type.resolutions.resolutionsPerAuthority[0].values[0].value.name;
-  const character = intent.slots.character.value.toLowerCase();
-  let sessionAttributes = {};
-  const shouldEndSession = false;
-  let speechOutput = '';
-  let repromptText = 'What is the character and move?';
+function onCharacterIntent(intent, session, callback) {
+}
 
-  speechOutput = `Character is ${character} and move is ${move}`;
-  sessionAttributes.character = character;
+function getSlot(intent, slotName) {
+  try {
+  return intent.slots[slotName].resolutions.resolutionsPerAuthority[0].values[0].value.name;
+  } catch (e) {
+    return undefined;
+  }
+}
+
+function onCharacterMoveIntent(intent, session, callback) {
+  let sessionAttributes = session.attributes || {};
+  let cardTitle = 'Error';
+  let move = sessionAttributes.move;
+  let character = sessionAttributes.character;
+  let speechOutput = 'Error';
+  let repromptText = 'There is an error';
+  let shouldEndSession = false;
+  try {
+    console.log(intent);
+    console.log(session);
+    console.log(intent.slots.character);
+    console.log(intent.slots.move_type);
+    cardTitle = intent.name;
+    move = getSlot(intent, 'move_type') || move;
+    character = getSlot(intent, 'character') || character;
+    if (character) {
+      sessionAttributes.character = character;
+    } 
+    if (move) {
+      sessionAttributes.move = move;
+    }
+    if (character && !move) {
+      cardTitle = 'Move';
+      speechOutput = `What move of ${character} do you want to know about?`;
+      repromptText = `I didn't get that. ${speechOutput}`;
+      callback(sessionAttributes,
+      buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+      return;
+    }
+    if (move && !character) {
+      cardTitle = 'Move';
+      speechOutput = `Which character's ${move} do you want to know about?`;
+      repromptText = `I didn't get that. ${speechOutput}`;
+      callback(sessionAttributes,
+      buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+      return;
+    }
+    shouldEndSession = false;
+    speechOutput = '';
+    repromptText = 'What is the character and move?';
+    speechOutput = `Character is ${character} and move is ${move}`;
+  } catch (e) {
+    console.log(e);
+    callback(sessionAttributes,
+      buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+  }
   
   // read from s3
-  readFile('aws-lambda-smashproject', `${character}.json`, (filename, result) => {
+  readFile('aws-lambda-smashproject', `${character.replaceAll(' ', '_')}.json`, (filename, result) => {
     try {
       console.log(`move ${move}`);
       result = JSON.parse(result);
@@ -160,6 +206,7 @@ function onLaunch(launchRequest, session, callback) {
  * Called when the user specifies an intent for this skill.
  */
 function onIntent(intentRequest, session, callback) {
+  debugger;
   console.log(`intentRequest ${intentRequest}`);
   console.log(`onIntent requestId=${intentRequest.requestId}, sessionId=${session.sessionId}`);
 
@@ -175,8 +222,21 @@ function onIntent(intentRequest, session, callback) {
   } else if (intentName === 'AMAZON.StopIntent' || intentName === 'AMAZON.CancelIntent') {
     handleSessionEndRequest(callback);
   } else {
-    throw new Error('Invalid intent');
+    triggerError(callback);
   }
+}
+
+function triggerError(callback) {
+  console.log('error');
+  let cardTitle = 'Error';
+  let move = 'Error';
+  let character = 'Error';
+  let sessionAttributes = {};
+  let speechOutput = 'Error';
+  let repromptText = 'There is an error';
+  let shouldEndSession = true;
+  callback(sessionAttributes,
+    buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
 }
 
 /**

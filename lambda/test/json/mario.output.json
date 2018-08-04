@@ -1,0 +1,26 @@
+{
+	"body": {
+		"version": "1.0",
+		"response": {
+			"outputSpeech": {
+				"type": "PlainText",
+				"text": "What move of mario do you want to know about?"
+			},
+			"card": {
+				"type": "Simple",
+				"title": "SessionSpeechlet - Move",
+				"content": "SessionSpeechlet - What move of mario do you want to know about?"
+			},
+			"reprompt": {
+				"outputSpeech": {
+					"type": "PlainText",
+					"text": "I didn't get that. What move of mario do you want to know about?"
+				}
+			},
+			"shouldEndSession": false
+		},
+		"sessionAttributes": {
+			"character": "mario"
+		}
+	}
+}
