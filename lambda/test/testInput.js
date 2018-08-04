@@ -36,6 +36,7 @@ function test(testName) {
         expect(response).to.deep.equal(output.body);
       } catch (e) {
         console.error(`${testName} failed`);
+        throw e;
       }
     });
 }

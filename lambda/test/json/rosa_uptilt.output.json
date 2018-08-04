@@ -4,17 +4,17 @@
 		"response": {
 			"outputSpeech": {
 				"type": "PlainText",
-				"text": "I couldn't find the up tilt for rosalina and luma."
+				"text": "rosalina and luma's up tilt has 4 parts. up tilt  rosalina is active frames 9 through 17 (Head Intangible: 4. First actionable frame is 41. up tilt  early luma is active frame 3 (Ground Only). First actionable frame is 31. up tilt  luma is active frames 4 through 5.  up tilt  late luma is active frames 6 through 10. "
 			},
 			"card": {
 				"type": "Simple",
 				"title": "SessionSpeechlet - CharacterMoveIntent",
-				"content": "SessionSpeechlet - I couldn't find the up tilt for rosalina and luma."
+				"content": "SessionSpeechlet - rosalina and luma's up tilt has 4 parts. up tilt  rosalina is active frames 9 through 17 (Head Intangible: 4. First actionable frame is 41. up tilt  early luma is active frame 3 (Ground Only). First actionable frame is 31. up tilt  luma is active frames 4 through 5.  up tilt  late luma is active frames 6 through 10. "
 			},
 			"reprompt": {
 				"outputSpeech": {
 					"type": "PlainText",
-					"text": "What is the character and move?"
+					"text": ""
 				}
 			},
 			"shouldEndSession": false

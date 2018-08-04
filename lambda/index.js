@@ -86,7 +86,26 @@ function handleSessionEndRequest(callback) {
   callback({}, buildSpeechletResponse(cardTitle, speechOutput, null, shouldEndSession));
 }
 
-function speechOutputForMoveData(character, move, data) {
+function speechOutputForMoveGroup(character, group, data) {
+  debugger;
+  if (Array.isArray(data)) {
+    if (data.length === 1) {
+      return speechOutputForMoveData(character, group, data[0], true);
+    }
+    else {
+      let output = `${character}'s ${group} has ${data.length} parts.`
+      data.forEach(moveData => {
+        const move = `${group} ${moveData.modifier}`;
+        output += ' ' + speechOutputForMoveData(character, move, moveData, false);
+      });
+      return output;
+    }
+  } else {
+    return speechOutputForMoveData(character, group, data, true);
+  }
+}
+
+function speechOutputForMoveData(character, move, data, verbose) {
   let activeFramesStr;
   if (data.hitbox_active.includes(',')) {
     throw new Error('Cannot determine active frames due to comma.')
@@ -97,13 +116,13 @@ function speechOutputForMoveData(character, move, data) {
     activeFramesStr = `frame ${data.hitbox_active}`;
   }
   let fafStr = '';
-  if (data.faf !== '-') {
-    fafStr = `${character} can act on frame ${data.faf}`;
+  if (data.faf) {
+    fafStr = verbose ? `${character} can act on frame ${data.faf}.`
+                     : `First actionable frame is ${data.faf}.`
   }
-  return `${character}'s ${move} is active ${activeFramesStr}. ${fafStr}`;
-}
-
-function onCharacterIntent(intent, session, callback) {
+  let activeStr = `${move} is active ${activeFramesStr}.`;
+  if (verbose) activeStr = `${character}'s ${activeStr}`;
+  return `${activeStr} ${fafStr}`;
 }
 
 function getSlot(intent, slotName) {
@@ -119,8 +138,8 @@ function onCharacterMoveIntent(intent, session, callback) {
   let cardTitle = 'Error';
   let move = sessionAttributes.move;
   let character = sessionAttributes.character;
-  let speechOutput = 'Error';
-  let repromptText = 'There is an error';
+  let speechOutput = 'What is the character and move?';
+  let repromptText = 'What is the character and move?';
   let shouldEndSession = false;
   try {
     console.log(intent);
@@ -154,8 +173,7 @@ function onCharacterMoveIntent(intent, session, callback) {
     }
     shouldEndSession = false;
     speechOutput = '';
-    repromptText = 'What is the character and move?';
-    speechOutput = `Character is ${character} and move is ${move}`;
+    repromptText = '';
   } catch (e) {
     console.log(e);
     callback(sessionAttributes,
@@ -165,9 +183,9 @@ function onCharacterMoveIntent(intent, session, callback) {
   // read from s3
   readFile('aws-lambda-smashproject', `${character.replaceAll(' ', '_')}.json`, (filename, result) => {
     try {
-      console.log(`move ${move}`);
       result = JSON.parse(result);
-      speechOutput = speechOutputForMoveData(character, move, result.moveset[move]);
+      speechOutput = speechOutputForMoveGroup(character, move, result.moveset[move]);
+      repromptText = '';
       callback(sessionAttributes,
        buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
     } catch (e) {

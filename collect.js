@@ -76,22 +76,40 @@ async function fetchTables(character) {
   return tables;
 }
 
-function toStandardMoveType(moveType) {
+function toMoveNameObject(moveType) {
   function standardize(moveType) {
     const moveTypeLower = moveType.toLowerCase()
       .replaceAll('.', '');
     return (standardMoveTypeMap[moveTypeLower] || moveTypeLower);
   }
-  const hasModifier = moveType.includes('(');
-  if (hasModifier) {
+  // ex. ftilt (up angled)
+  const hasParenModifier = moveType.includes('(');
+  // ex. jab 1
+  const hasNumberModifier = !!parseInt(moveType[moveType.length - 1]);
+  if (hasParenModifier) {
     const indexOfModifier = moveType.indexOf(' (');
     const basicMoveType = moveType.substring(0, indexOfModifier);
     const modifier = moveType.substring(indexOfModifier)
       .toLowerCase().replace('(', '')
       .replace(')', '').replace(',', '');
-    return `${standardize(basicMoveType)}${modifier}`;
+    return {
+      group: `${standardize(basicMoveType)}`,
+      modifier,
+    };
+  } else if (hasNumberModifier) {
+    const words = moveType.split(' ');
+    return {
+      group: standardize(
+              words.slice(0, words.length - 1)
+                   .join(' ')
+             ),
+      modifier: words[words.length - 1],
+    };
   } else {
-    return standardize(moveType);
+    return {
+      group: standardize(moveType),
+      modifier: ''
+    };
   }
 }
 
@@ -125,18 +143,21 @@ function addGroundMoves(moveset, table) {
     // Ignore rows with multiple headers.
     // They don't have data.
     if (rowHeaders.length > 1) return;
-    const moveType = 
-      toStandardMoveType($(rowHeaders[0]).text());
+    // Move objects have a group and modifier
+    const moveNameObject = 
+      toMoveNameObject($(rowHeaders[0]).text());
+    const group = moveNameObject.group;
     const rowData = extractRowData(tr);
-    if (moveType.includes('throw')) {
-      moveset[moveType] = createThrow(rowData);
-    } else if (moveType.includes('grab')) {
-      moveset[moveType] = createGrab(rowData);
-    } else if (moveType.includes('dodge')
-            || moveType.includes('roll')) {
-      moveset[moveType] = createMisc(rowData);
+    if (group.includes('throw')) {
+      moveset[group] = createThrow(rowData);
+    } else if (group.includes('grab')) {
+      moveset[group] = createGrab(rowData);
+    } else if (group.includes('dodge')
+            || group.includes('roll')) {
+      moveset[group] = createMisc(rowData);
     } else {
-      moveset[moveType] = createAttack(rowData);
+      const attack = createAttack(rowData);
+      addMoveToMoveset(attack, moveNameObject, moveset);
     }
   });
 }
@@ -147,10 +168,11 @@ function addAerials(moveset, table) {
     const rowHeaders = $(tr).find('th');
     // Ignore rows with multiple headers. They don't have data.
     if (rowHeaders.length > 1) return;
-    const moveType =
-      toStandardMoveType($(rowHeaders[0]).text());
+    const moveNameObject =
+      toMoveNameObject($(rowHeaders[0]).text());
     const rowData = extractRowData(tr);
-    moveset[moveType] = createAerial(rowData);
+    const aerial = createAerial(rowData);
+    addMoveToMoveset(aerial, moveNameObject, moveset);
   });
 }
 
@@ -163,13 +185,24 @@ function addSpecials(moveset, table) {
     // Ignore rows with multiple headers.
     // They don't have data.
     if (rowHeaders.length > 1) return;
-    const moveType = 
-      toStandardMoveType($(rowHeaders[0]).text());
+    const moveNameObject = 
+      toMoveNameObject($(rowHeaders[0]).text());
     // Ignore trolling on Zelda page
-    if (moveType === 'shovel knight deconfirmed') return;
+    if (moveNameObject.group
+        === 'shovel knight deconfirmed') return;
     const rowData = extractRowData(tr);
-    moveset[moveType] = createSpecial(rowData);
+    const special = createSpecial(rowData);
+    addMoveToMoveset(special, moveNameObject, moveset);
   });
+}
+
+function addMoveToMoveset(move, moveNameObject, moveset) {
+  move.modifier = moveNameObject.modifier;
+  const group = moveNameObject.group;
+  if (!moveset[group]) moveset[group] = [];
+  // Moves without modifiers go in the front of the list
+  if (move.modifier) moveset[group].push(move);
+  else               moveset[group].unshift(move);
 }
 
 function createThrow(rowData) {

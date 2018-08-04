@@ -4,24 +4,24 @@
 		"response": {
 			"outputSpeech": {
 				"type": "PlainText",
-				"text": "luigi's up air is active frames 5 through 7. luigi can act on frame 30"
+				"text": "luigi's up air has 2 parts. up air  is active frames 5 through 7. First actionable frame is 30. up air  late is active frames 8 through 11. "
 			},
 			"card": {
 				"type": "Simple",
 				"title": "SessionSpeechlet - CharacterMoveIntent",
-				"content": "SessionSpeechlet - luigi's up air is active frames 5 through 7. luigi can act on frame 30"
+				"content": "SessionSpeechlet - luigi's up air has 2 parts. up air  is active frames 5 through 7. First actionable frame is 30. up air  late is active frames 8 through 11. "
 			},
 			"reprompt": {
 				"outputSpeech": {
 					"type": "PlainText",
-					"text": "What is the character and move?"
+					"text": ""
 				}
 			},
 			"shouldEndSession": false
 		},
 		"sessionAttributes": {
 			"character": "luigi",
-      "move": "up air"
+			"move": "up air"
 		}
 	}
 }
