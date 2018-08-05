@@ -7,8 +7,7 @@
 			"applicationId": "amzn1.ask.skill.2fb7d380-4b6c-4bf4-969b-2894cb77037c"
 		},
 		"attributes": {
-			"move": "forward roll",
-			"character": "mario"
+			"move": "forward roll"
 		},
 		"user": {
 			"userId": "amzn1.ask.account.AHE2YIB5CB2FNVYWYYRQEFDBDE423OP3RUEKJLPGDHIGRGD4ZU7VOKQFDNYUMF3OWBQBFLDAMJ3RIGBBD4QE7I2EUEC6NNDFN244VMTGQKF5VWDDROWENJXCWBBMOUUP5FTUOVSB3WEOVNKT3VZRRAHSJKRISEE5QUYSWDJJLEIBP6RDF2L3IWLTT6Y5EK4V66XCM7GRIX3NINQ"
@@ -35,13 +34,13 @@
 				}
 			},
 			"apiEndpoint": "https://api.amazonalexa.com",
-			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjJmYjdkMzgwLTRiNmMtNGJmNC05NjliLTI4OTRjYjc3MDM3YyIsImV4cCI6MTUzMzUwODM0NSwiaWF0IjoxNTMzNTA0NzQ1LCJuYmYiOjE1MzM1MDQ3NDUsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhOWExMTlk1WFNTVFZSVlhEWlA2N01QMlRUM09HSjJGTzVEVk5TUzVQV1BLNUNTVkRMQTdDVUY2SVJFNkpLRkZVRUQ0VE9XTDc0TVBDM0ZBS0tPQzRPWU9MSERINFJERFhPMkRMMzc3RklJR09LNFZYUUhBWTVWU0VYUkNHQVZURDNNU0hLRU8yVE4zTFBNSE9WUEhFSlNMSVVHTlZBN0IyUlpORjVKUUpUTE5SVFRPSlFCUSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIRTJZSUI1Q0IyRk5WWVdZWVJRRUZEQkRFNDIzT1AzUlVFS0pMUEdESElHUkdENFpVN1ZPS1FGRE5ZVU1GM09XQlFCRkxEQU1KM1JJR0JCRDRRRTdJMkVVRUM2Tk5ERk4yNDRWTVRHUUtGNVZXRERST1dFTkpYQ1dCQk1PVVVQNUZUVU9WU0IzV0VPVk5LVDNWWlJSQUhTSktSSVNFRTVRVVlTV0RKSkxFSUJQNlJERjJMM0lXTFRUNlk1RUs0VjY2WENNN0dSSVgzTklOUSJ9fQ.QtQ4hDE5CL_-ypg0ZfZC2ln0clnDTaDT4wbwcxABII6GYVE5rrO_1llpOxtCNP4x7mt4Ie0uJ8aRiZsb1XQ3i7gppNjHXR8vV70N1Wp54DbF59qE8DA-Ivpl_4W7tBZ7f_hWs3vr_gtpro3UqgmRW_WdlC_MsPwNdYbsey6xZGbWwkXWp3jcGlRDZf_wMQtpN57xPfBev9RumFPHOFPM5v3cdNBlobKzvEdsfAgUGKGhRAVd_cZTNjWX17w5c4iux82DFOkcSakhzLVWg9Ic06nQk9ICBz_PEnd8BqaVpaCtxTFJWVgq90c7ryJhe5KVzjtlZTrZp4HchVLc0phsAA"
+			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjJmYjdkMzgwLTRiNmMtNGJmNC05NjliLTI4OTRjYjc3MDM3YyIsImV4cCI6MTUzMzUwNzU5OSwiaWF0IjoxNTMzNTAzOTk5LCJuYmYiOjE1MzM1MDM5OTksInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhOWExMTlk1WFNTVFZSVlhEWlA2N01QMlRUM09HSjJGTzVEVk5TUzVQV1BLNUNTVkRMQTdDVUY2SVJFNkpLRkZVRUQ0VE9XTDc0TVBDM0ZBS0tPQzRPWU9MSERINFJERFhPMkRMMzc3RklJR09LNFZYUUhBWTVWU0VYUkNHQVZURDNNU0hLRU8yVE4zTFBNSE9WUEhFSlNMSVVHTlZBN0IyUlpORjVKUUpUTE5SVFRPSlFCUSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIRTJZSUI1Q0IyRk5WWVdZWVJRRUZEQkRFNDIzT1AzUlVFS0pMUEdESElHUkdENFpVN1ZPS1FGRE5ZVU1GM09XQlFCRkxEQU1KM1JJR0JCRDRRRTdJMkVVRUM2Tk5ERk4yNDRWTVRHUUtGNVZXRERST1dFTkpYQ1dCQk1PVVVQNUZUVU9WU0IzV0VPVk5LVDNWWlJSQUhTSktSSVNFRTVRVVlTV0RKSkxFSUJQNlJERjJMM0lXTFRUNlk1RUs0VjY2WENNN0dSSVgzTklOUSJ9fQ.W4RA09N0YYYlAvoyGbE0uNd5r_ZwoqgD_0FJVAM-dO5SvxJA4VoSRW8Tydled_KYO_-iFQXAAhEOyvWMyCvysoS_k520yVmoKllYbFXiwD0BrKPLzQKUloczmTZsI_JL9eZVJ3BnE9zlYj-ejfDbr0p_891ceWh3bCNOXudDNSOC0Iisxy-rnnJiawVVjFq-uCDEKPAhQ8n2RxgzpglnMRi18IajbOW69mzzYCSkhIpCk4MBlV5MN3meUm-ABcLSW3OTVlxIpRvuL3sujd_56bwyqJDkE5YJCXaEtIpF8sFkAagqCqvWx6l5834HW7-1AHvkGh8UuthnsMlEekmkWg"
 		}
 	},
 	"request": {
 		"type": "IntentRequest",
-		"requestId": "amzn1.echo-api.request.5bb54c8c-ee44-4525-9781-fdbb4c39e47c",
-		"timestamp": "2018-08-05T21:32:25Z",
+		"requestId": "amzn1.echo-api.request.eba88b4a-0a30-4a06-8f76-2df40b668503",
+		"timestamp": "2018-08-05T21:19:59Z",
 		"locale": "en-US",
 		"intent": {
 			"name": "CharacterMoveIntent",
@@ -49,7 +48,7 @@
 			"slots": {
 				"character": {
 					"name": "character",
-					"value": "Pac Man",
+					"value": "Mario",
 					"resolutions": {
 						"resolutionsPerAuthority": [
 							{
@@ -60,8 +59,14 @@
 								"values": [
 									{
 										"value": {
-											"name": "pac man",
-											"id": "f118feb43e5699bddf46eafa5c129e21"
+											"name": "mario",
+											"id": "de2f15d014d40b93578d255e6221fd60"
+										}
+									},
+									{
+										"value": {
+											"name": "doctor mario",
+											"id": "bec8fc4d1cb05e2f8f356fab7537e83a"
 										}
 									}
 								]
@@ -72,25 +77,6 @@
 				},
 				"move_type": {
 					"name": "move_type",
-					"value": "Nair",
-					"resolutions": {
-						"resolutionsPerAuthority": [
-							{
-								"authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.2fb7d380-4b6c-4bf4-969b-2894cb77037c.move_type",
-								"status": {
-									"code": "ER_SUCCESS_MATCH"
-								},
-								"values": [
-									{
-										"value": {
-											"name": "neutral air",
-											"id": "8ccdee71844f5f43d87e1d593cfa60b3"
-										}
-									}
-								]
-							}
-						]
-					},
 					"confirmationStatus": "NONE"
 				}
 			}

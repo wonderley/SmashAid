@@ -87,17 +87,23 @@ function handleSessionEndRequest(callback) {
 }
 
 function speechOutputForMoveGroup(character, group, data) {
-  debugger;
   let output;
   const movesInGroup = Array.isArray(data) ? data : [data];
   if (movesInGroup.length === 1) {
-    output = speechOutputForMoveData(character, group, movesInGroup[0], true);
+    const moveData = movesInGroup[0];
+    if (moveData.hitbox_active) {
+      output = speechOutputForAttackData(character, group, moveData, true);
+    } else if (moveData.intangibility) {
+      output = speechOutputForDodgeData(character, group, moveData);
+    } else {
+      throw new Error('Unrecognized move data');
+    }
   }
   else {
     output = `${character}'s ${group} has ${movesInGroup.length} parts.`
     movesInGroup.forEach(moveData => {
       const move = `${group} ${moveData.modifier}`;
-      output += ' ' + speechOutputForMoveData(character, move, moveData, false);
+      output += ' ' + speechOutputForAttackData(character, move, moveData, false);
     });
   }
   // Put FAF at the end
@@ -110,9 +116,7 @@ function speechOutputForMoveGroup(character, group, data) {
   return `${output} ${fafStr}`;
 }
 
-// Returns [speech output, faf output]
-function speechOutputForMoveData(character, move, data, verbose) {
-  debugger;
+function speechOutputForAttackData(character, move, data, verbose) {
   let activeStr;
   if (data.hitbox_active.includes(',')) {
     const commas = data.hitbox_active.split(',');
@@ -133,6 +137,10 @@ function speechOutputForMoveData(character, move, data, verbose) {
   return activeStr;
 }
 
+function speechOutputForDodgeData(character, move, data) {
+  return `${character}'s ${move} is intangible frames ${data.intangibility}.`;
+}
+
 function getSlot(intent, slotName) {
   try {
   return intent.slots[slotName].resolutions.resolutionsPerAuthority[0].values[0].value.name;
@@ -147,10 +155,10 @@ function onCharacterMoveIntent(intent, session, callback) {
   let move = sessionAttributes.move;
   let character = sessionAttributes.character;
   let speechOutput = 'What is the character and move?';
-  let repromptText = 'What is the character and move?';
+  let repromptText = 'I didn\'t get that. What is the character and move?';
   let shouldEndSession = false;
   try {
-    console.log(intent);
+    console.log(JSON.stringify(intent));
     console.log(session);
     console.log(intent.slots.character);
     console.log(intent.slots.move_type);
@@ -163,15 +171,19 @@ function onCharacterMoveIntent(intent, session, callback) {
     if (move) {
       sessionAttributes.move = move;
     }
-    if (character && !move) {
+    if (!character && !move) {
+      cardTitle = 'Choose a character and move';
+      callback(sessionAttributes,
+      buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+      return;
+    } else if (character && !move) {
       cardTitle = 'Move';
       speechOutput = `What move of ${character} do you want to know about?`;
       repromptText = `I didn't get that. ${speechOutput}`;
       callback(sessionAttributes,
       buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
       return;
-    }
-    if (move && !character) {
+    } else if (move && !character) {
       cardTitle = 'Move';
       speechOutput = `Which character's ${move} do you want to know about?`;
       repromptText = `I didn't get that. ${speechOutput}`;
