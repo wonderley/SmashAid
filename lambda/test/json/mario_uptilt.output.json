@@ -4,12 +4,12 @@
 		"response": {
 			"outputSpeech": {
 				"type": "PlainText",
-				"text": "mario's up tilt is active frames 5 through 11. mario can act on frame 30."
+				"text": "mario's up tilt is active frames 5 to 11. mario can act on frame 30."
 			},
 			"card": {
 				"type": "Simple",
 				"title": "SessionSpeechlet - CharacterMoveIntent",
-				"content": "SessionSpeechlet - mario's up tilt is active frames 5 through 11. mario can act on frame 30."
+				"content": "SessionSpeechlet - mario's up tilt is active frames 5 to 11. mario can act on frame 30."
 			},
 			"reprompt": {
 				"outputSpeech": {
@@ -21,7 +21,7 @@
 		},
 		"sessionAttributes": {
 			"character": "mario",
-      "move": "up tilt"
+			"move": "up tilt"
 		}
 	}
 }

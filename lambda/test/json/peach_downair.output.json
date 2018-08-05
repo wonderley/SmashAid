@@ -1,0 +1,27 @@
+{
+	"body": {
+		"version": "1.0",
+		"response": {
+			"outputSpeech": {
+				"type": "PlainText",
+				"text": "peach's down air has 2 parts. down air  hits 1 to 3 are active frames 12 to 13, 18 to 19 and  24 to 25. down air  hit 4 is active frames 30 to 31. peach can act on frame 39."
+			},
+			"card": {
+				"type": "Simple",
+				"title": "SessionSpeechlet - CharacterMoveIntent",
+				"content": "SessionSpeechlet - peach's down air has 2 parts. down air  hits 1 to 3 are active frames 12 to 13, 18 to 19 and  24 to 25. down air  hit 4 is active frames 30 to 31. peach can act on frame 39."
+			},
+			"reprompt": {
+				"outputSpeech": {
+					"type": "PlainText",
+					"text": ""
+				}
+			},
+			"shouldEndSession": false
+		},
+		"sessionAttributes": {
+			"character": "peach",
+			"move": "down air"
+		}
+	}
+}

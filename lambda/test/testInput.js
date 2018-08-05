@@ -7,7 +7,6 @@ const proxyquire = require('proxyquire').noCallThru();
 function S3() {
   return {
     getObject: (params, callback) => {
-      debugger;
       let data;
       let err;
       try {

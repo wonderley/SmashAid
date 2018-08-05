@@ -7,7 +7,7 @@
 			"applicationId": "amzn1.ask.skill.2fb7d380-4b6c-4bf4-969b-2894cb77037c"
 		},
 		"attributes": {
-			"character": "peach",
+			"character": "king dedede",
 			"move": "down air"
 		},
 		"user": {
@@ -35,13 +35,13 @@
 				}
 			},
 			"apiEndpoint": "https://api.amazonalexa.com",
-			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjJmYjdkMzgwLTRiNmMtNGJmNC05NjliLTI4OTRjYjc3MDM3YyIsImV4cCI6MTUzMzQzMTU5MSwiaWF0IjoxNTMzNDI3OTkxLCJuYmYiOjE1MzM0Mjc5OTEsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhOWExMTlk1WFNTVFZSVlhEWlA2N01QMlRUM09HSjJGTzVEVk5TUzVQV1BLNUNTVkRMQTdDVUY2SVJFNkpLRkZVRUQ0VE9XTDc0TVBDM0ZBS0tPQzRPWU9MSERINFJERFhPMkRMMzc3RklJR09LNFZYUUhBWTVWU0VYUkNHQVZURDNNU0hLRU8yVE4zTFBNSE9WUEhFSlNMSVVHTlZBN0IyUlpORjVKUUpUTE5SVFRPSlFCUSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIRTJZSUI1Q0IyRk5WWVdZWVJRRUZEQkRFNDIzT1AzUlVFS0pMUEdESElHUkdENFpVN1ZPS1FGRE5ZVU1GM09XQlFCRkxEQU1KM1JJR0JCRDRRRTdJMkVVRUM2Tk5ERk4yNDRWTVRHUUtGNVZXRERST1dFTkpYQ1dCQk1PVVVQNUZUVU9WU0IzV0VPVk5LVDNWWlJSQUhTSktSSVNFRTVRVVlTV0RKSkxFSUJQNlJERjJMM0lXTFRUNlk1RUs0VjY2WENNN0dSSVgzTklOUSJ9fQ.CAjYl248ZcfKXvrXGUnxFJkxnWZNjdaqTjhRgsO6P0CGYDDwA3Fx0JCyfr5xGNm-9M8v-laeYFyVBk3pBXxC2tXnKQ5hoTPAxuqRhJqNg4tqpuwd0Y6aauM4CHdz9zuJSGFOZ78bwZCZ9q_mXqbFfu6QR_5U-p-DwHkKkNr_SPRv4LgCKmeba8U5sCMiQqrI-JMNPhjsTJJLNJL4yNDdFmGdL1zZFo-obm9utHV83nPhViKAgYfswpc99XzNDJqKArWKa__h6VBUd1KWMebjNF6da6z-Av_BHKoL09SbQsMaHW8urgkCIr2r4zEzW-D-o0zi2JxxDWPqMAjJX3Z6Mg"
+			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjJmYjdkMzgwLTRiNmMtNGJmNC05NjliLTI4OTRjYjc3MDM3YyIsImV4cCI6MTUzMzQzMTU0NSwiaWF0IjoxNTMzNDI3OTQ1LCJuYmYiOjE1MzM0Mjc5NDUsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhOWExMTlk1WFNTVFZSVlhEWlA2N01QMlRUM09HSjJGTzVEVk5TUzVQV1BLNUNTVkRMQTdDVUY2SVJFNkpLRkZVRUQ0VE9XTDc0TVBDM0ZBS0tPQzRPWU9MSERINFJERFhPMkRMMzc3RklJR09LNFZYUUhBWTVWU0VYUkNHQVZURDNNU0hLRU8yVE4zTFBNSE9WUEhFSlNMSVVHTlZBN0IyUlpORjVKUUpUTE5SVFRPSlFCUSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIRTJZSUI1Q0IyRk5WWVdZWVJRRUZEQkRFNDIzT1AzUlVFS0pMUEdESElHUkdENFpVN1ZPS1FGRE5ZVU1GM09XQlFCRkxEQU1KM1JJR0JCRDRRRTdJMkVVRUM2Tk5ERk4yNDRWTVRHUUtGNVZXRERST1dFTkpYQ1dCQk1PVVVQNUZUVU9WU0IzV0VPVk5LVDNWWlJSQUhTSktSSVNFRTVRVVlTV0RKSkxFSUJQNlJERjJMM0lXTFRUNlk1RUs0VjY2WENNN0dSSVgzTklOUSJ9fQ.WM9MJOH2O3XC5kY9vEZtarN5qhAYScK2jGsLJC53rxdTNmuhXj7c6eVKf0LvrLm6FkJIwKNzBfFWI30o-Mm5G3dFxko9xaYNO6bOuDSmDvA3PnTssbBwIN3Usj1sJ6mtimQetR1srPnXcbFlDr7qlhzCCFhi8hn3bBhnwKtep2a2bbRaTyFuDE6xzqLxrZ7662WUy9kmzbsB7Bs4NJoJsYyUh77CHxub_R-hGGBivxOJd20LNS-2sKUVhW8dP0F7rsx43vwlg_qE3pv-W9hbTl2-CSy3_RNXCWXYapOz36Ild6dxi-stQorFeTxEvFvYROvHVQ7NlRx7sm6ed299Ww"
 		}
 	},
 	"request": {
 		"type": "IntentRequest",
-		"requestId": "amzn1.echo-api.request.59671225-52eb-48d9-b080-b7fbe008cdda",
-		"timestamp": "2018-08-05T00:13:11Z",
+		"requestId": "amzn1.echo-api.request.b0001c2b-e984-47f7-9194-a160a1934dc5",
+		"timestamp": "2018-08-05T00:12:25Z",
 		"locale": "en-US",
 		"intent": {
 			"name": "CharacterMoveIntent",
@@ -49,7 +49,7 @@
 			"slots": {
 				"character": {
 					"name": "character",
-					"value": "Rosa",
+					"value": "peach",
 					"resolutions": {
 						"resolutionsPerAuthority": [
 							{
@@ -60,8 +60,8 @@
 								"values": [
 									{
 										"value": {
-											"name": "rosalina and luma",
-											"id": "5254b0b91cf18353f3184fbe86d5f99b"
+											"name": "peach",
+											"id": "889560d93572d538078ce1578567b91a"
 										}
 									}
 								]
@@ -72,25 +72,6 @@
 				},
 				"move_type": {
 					"name": "move_type",
-					"value": "up tilt",
-					"resolutions": {
-						"resolutionsPerAuthority": [
-							{
-								"authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.2fb7d380-4b6c-4bf4-969b-2894cb77037c.move_type",
-								"status": {
-									"code": "ER_SUCCESS_MATCH"
-								},
-								"values": [
-									{
-										"value": {
-											"name": "up tilt",
-											"id": "10c6b1f990067ac7ada89fb63cb73db9"
-										}
-									}
-								]
-							}
-						]
-					},
 					"confirmationStatus": "NONE"
 				}
 			}

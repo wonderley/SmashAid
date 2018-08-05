@@ -57,7 +57,7 @@ async function collect(character) {
     if (!fs.existsSync('./gen')) {
       fs.mkdirSync('./gen');
     }
-    const fileName = character.toLowerCase().replaceAll('.', '').replaceAll(' ', '_');
+    const fileName = character.toLowerCase().replaceAll('.', '').replaceAll(' ', '_').replaceAll('-', '_');
     fs.writeFileSync(`./gen/${fileName}.json`, characterObjStr);
   } catch (e) {
     console.error(`Failed to parse ${character}`);
@@ -200,9 +200,7 @@ function addMoveToMoveset(move, moveNameObject, moveset) {
   move.modifier = moveNameObject.modifier;
   const group = moveNameObject.group;
   if (!moveset[group]) moveset[group] = [];
-  // Moves without modifiers go in the front of the list
-  if (move.modifier) moveset[group].push(move);
-  else               moveset[group].unshift(move);
+  moveset[group].push(move);
 }
 
 function createThrow(rowData) {

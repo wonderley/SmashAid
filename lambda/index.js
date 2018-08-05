@@ -88,41 +88,49 @@ function handleSessionEndRequest(callback) {
 
 function speechOutputForMoveGroup(character, group, data) {
   debugger;
-  if (Array.isArray(data)) {
-    if (data.length === 1) {
-      return speechOutputForMoveData(character, group, data[0], true);
-    }
-    else {
-      let output = `${character}'s ${group} has ${data.length} parts.`
-      data.forEach(moveData => {
-        const move = `${group} ${moveData.modifier}`;
-        output += ' ' + speechOutputForMoveData(character, move, moveData, false);
-      });
-      return output;
-    }
-  } else {
-    return speechOutputForMoveData(character, group, data, true);
+  let output;
+  const movesInGroup = Array.isArray(data) ? data : [data];
+  if (movesInGroup.length === 1) {
+    output = speechOutputForMoveData(character, group, movesInGroup[0], true);
   }
+  else {
+    output = `${character}'s ${group} has ${movesInGroup.length} parts.`
+    movesInGroup.forEach(moveData => {
+      const move = `${group} ${moveData.modifier}`;
+      output += ' ' + speechOutputForMoveData(character, move, moveData, false);
+    });
+  }
+  // Put FAF at the end
+  let fafStr = '';
+  const movesWithFaf = movesInGroup.filter(data => data.faf);
+  if (movesWithFaf.length) {
+    const faf = movesWithFaf[0].faf;
+    fafStr = `${character} can act on frame ${faf}.`;
+  }
+  return `${output} ${fafStr}`;
 }
 
+// Returns [speech output, faf output]
 function speechOutputForMoveData(character, move, data, verbose) {
-  let activeFramesStr;
+  debugger;
+  let activeStr;
   if (data.hitbox_active.includes(',')) {
-    throw new Error('Cannot determine active frames due to comma.')
-  } else if (data.hitbox_active.includes('-')) {
-    const activeFrames = data.hitbox_active.split('-');
-    activeFramesStr = `frames ${activeFrames[0]} through ${activeFrames[1]}`;
+    const commas = data.hitbox_active.split(',');
+    const allButLastItem = commas.splice(0, commas.length - 1).join(',');
+    const lastItem = commas[commas.length - 1];
+    let activeFramesStr = `frames ${allButLastItem} and ${lastItem}`;
+    activeStr = `${move} are active ${activeFramesStr}.`;
   } else {
-    activeFramesStr = `frame ${data.hitbox_active}`;
+    let framesStr = 'frame';
+    if (data.hitbox_active.includes('-')) {
+      framesStr = 'frames';
+    }
+    let activeFramesStr = `${framesStr} ${data.hitbox_active}`;
+    activeStr = `${move} is active ${activeFramesStr}.`;
   }
-  let fafStr = '';
-  if (data.faf) {
-    fafStr = verbose ? `${character} can act on frame ${data.faf}.`
-                     : `First actionable frame is ${data.faf}.`
-  }
-  let activeStr = `${move} is active ${activeFramesStr}.`;
+  activeStr = activeStr.replaceAll('-', ' to ');
   if (verbose) activeStr = `${character}'s ${activeStr}`;
-  return `${activeStr} ${fafStr}`;
+  return activeStr;
 }
 
 function getSlot(intent, slotName) {
@@ -224,7 +232,6 @@ function onLaunch(launchRequest, session, callback) {
  * Called when the user specifies an intent for this skill.
  */
 function onIntent(intentRequest, session, callback) {
-  debugger;
   console.log(`intentRequest ${intentRequest}`);
   console.log(`onIntent requestId=${intentRequest.requestId}, sessionId=${session.sessionId}`);
 
