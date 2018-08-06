@@ -1,0 +1,27 @@
+{
+	"body": {
+		"version": "1.0",
+		"response": {
+			"outputSpeech": {
+				"type": "PlainText",
+				"text": "mario's up special, super jump punch, has 4 parts.  hit 1 is active frames 3 to 6 (Intangible: 3 to 6).  hits 2 to 4 are active frames 7, 8 and  9.  hits 5 to 6 are active frames 10 to 11 and  12 to 13.  hit 7 is active frames 14 to 15. "
+			},
+			"card": {
+				"type": "Simple",
+				"title": "SessionSpeechlet - CharacterMoveIntent",
+				"content": "SessionSpeechlet - mario's up special, super jump punch, has 4 parts.  hit 1 is active frames 3 to 6 (Intangible: 3 to 6).  hits 2 to 4 are active frames 7, 8 and  9.  hits 5 to 6 are active frames 10 to 11 and  12 to 13.  hit 7 is active frames 14 to 15. "
+			},
+			"reprompt": {
+				"outputSpeech": {
+					"type": "PlainText",
+					"text": ""
+				}
+			},
+			"shouldEndSession": false
+		},
+		"sessionAttributes": {
+			"character": "mario",
+			"move": "up special"
+		}
+	}
+}

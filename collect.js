@@ -82,35 +82,29 @@ function toMoveNameObject(moveType) {
       .replaceAll('.', '');
     return (standardMoveTypeMap[moveTypeLower] || moveTypeLower);
   }
-  // ex. ftilt (up angled)
-  const hasParenModifier = moveType.includes('(');
-  // ex. jab 1
-  const hasNumberModifier = !!parseInt(moveType[moveType.length - 1]);
+  let group = moveType;
+  let modifier = '';
+  // e.g. ftilt (up angled)
+  const hasParenModifier = group.includes('(');
   if (hasParenModifier) {
-    const indexOfModifier = moveType.indexOf(' (');
-    const basicMoveType = moveType.substring(0, indexOfModifier);
-    const modifier = moveType.substring(indexOfModifier)
+    const indexOfModifier = group.indexOf(' (');
+    const basicMoveType = group.substring(0, indexOfModifier);
+    modifier = moveType.substring(indexOfModifier)
       .toLowerCase().replace('(', '')
       .replace(')', '').replace(',', '');
-    return {
-      group: `${standardize(basicMoveType)}`,
-      modifier,
-    };
-  } else if (hasNumberModifier) {
-    const words = moveType.split(' ');
-    return {
-      group: standardize(
-              words.slice(0, words.length - 1)
-                   .join(' ')
-             ),
-      modifier: words[words.length - 1],
-    };
-  } else {
-    return {
-      group: standardize(moveType),
-      modifier: ''
-    };
+    group = basicMoveType;
   }
+  // e.g. jab 1
+  const hasNumberModifier = !!parseInt(group[group.length - 1]);
+  if (hasNumberModifier) {
+    const words = group.split(' ');
+    group = words.slice(0, words.length - 1).join(' ');
+    modifier = `${words[words.length - 1]} ${modifier}`;
+  }
+  return {
+    group: standardize(group),
+    modifier,
+  };
 }
 
 function characterObjectFromTables(tables, character) {
@@ -127,7 +121,7 @@ function characterObjectFromTables(tables, character) {
   addAttributes(moveset, attributesTable);
   addGroundMoves(moveset, groundTable);
   addAerials(moveset, aerialsTable);
-  addSpecials(moveset, specialsTable);
+  addSpecials(moveset, character, specialsTable);
   return {
     moveset,
   };
@@ -176,10 +170,31 @@ function addAerials(moveset, table) {
   });
 }
 
-function addSpecials(moveset, table) {
+function addSpecials(moveset, character, table) {
+  moveset.specials = [
+    {
+      name: 'neutral special',
+      otherName: '',
+      value: []
+    },
+    {
+      name: 'side special',
+      otherName: '',
+      value: [],
+    },
+    {
+      name: 'up special',
+      otherName: '',
+      value: [],
+    },
+    {
+      name: 'down special',
+      otherName: '',
+      value: [],
+    },
+  ];
   const specialRows = $(table).find('tr');
-  // Keep track of specials to convert to standard names
-  const knownSpecials = [];
+  let currentSpecialIdx = -1;
   specialRows.each(function(i, tr) {
     const rowHeaders = $(tr).find('th');
     // Ignore rows with multiple headers.
@@ -187,14 +202,88 @@ function addSpecials(moveset, table) {
     if (rowHeaders.length > 1) return;
     const moveNameObject = 
       toMoveNameObject($(rowHeaders[0]).text());
-    // Ignore trolling on Zelda page
-    if (moveNameObject.group
-        === 'shovel knight deconfirmed') return;
+    if ([
+        // Ignore trolling on Zelda page
+        'shovel knight deconfirmed',
+        // Ignore Robin's book and Levin Sword
+        'book',
+        'levin sword',
+        // Ignore limit break charge
+        'limit break',
+        ].includes(moveNameObject.group)) return;
+    if (character === 'Ryu') fixRyuMoves(moveNameObject);
+    if (character === 'Cloud') fixCloudMoves(moveNameObject);
     const rowData = extractRowData(tr);
+    const group = groupNameForSpecial(moveNameObject, character);
+    if (currentSpecialIdx === -1
+    ||  group !== moveset.specials[currentSpecialIdx]
+                                  .otherName) {
+      debugger;
+      currentSpecialIdx++;
+      if (currentSpecialIdx > 3)
+        throw new Error
+          ('Creating too many special groups');
+      moveset.specials[currentSpecialIdx]
+                      .otherName = group;
+    }
     const special = createSpecial(rowData);
-    addMoveToMoveset(special, moveNameObject, moveset);
+    // For known special groups (see below),
+    // use the group plus modifier as the modifier
+    special.modifier = group ? moveNameObject.modifier
+    : `${moveNameObject.group} ${moveNameObject.modifier}`;
+    moveset.specials[currentSpecialIdx].value.push(special);
   });
 }
+
+function groupNameForSpecial(moveNameObject, character) {
+  const group = moveNameObject.group;
+  if (knownSpecialGroups[character]
+   && knownSpecialGroups[character].includes(group)) {
+    // Edge cases like this will have no group name.
+    return '';
+  }
+  return moveNameObject.group;
+}
+
+function fixRyuMoves(moveNameObject) {
+  // Light/Medium/Heavy should be considered modifiers
+  // Same for Shakunetsu
+  ['light ', 'medium ', 'heavy ', 'light shakunetsu ',
+  'medium shakunetsu ', 'heavy shakunetsu ', 'shakunetsu '].forEach(extraModifier => {
+    if (moveNameObject.group.includes(extraModifier)) {
+      moveNameObject.group = 
+        moveNameObject.group.substring(extraModifier.length);
+      moveNameObject.modifier =
+        `${extraModifier}${moveNameObject.modifier}`;
+    }
+  });
+}
+
+function fixCloudMoves(moveNameObject) {
+  if (moveNameObject.group.includes('limit')) {
+      moveNameObject.group = 
+        moveNameObject.group.substring('limit '.length);
+      moveNameObject.modifier =
+        `limit ${moveNameObject.modifier}`;
+   }
+}
+
+// Names of specials that should be considered the
+// same group, even though their names don't fit
+// the usual pattern
+const knownSpecialGroups = {
+  'Samus': ['homing missile', 'super missile'],
+  'Robin': ['thunder', 'elthunder', 'arcthunder',
+            'thoron', 'super thoron'],
+  'Little Mac': ['ko punch', 'straight lunge'],
+  'Shulk': ['monado arts activation',
+            'monado arts duration',
+            'monado arts cooldown',
+           ],
+  'Bayonetta': ['no kick heel slide',
+                'heel slide',
+                'after burner kick'],
+};
 
 function addMoveToMoveset(move, moveNameObject, moveset) {
   move.modifier = moveNameObject.modifier;

@@ -101,8 +101,11 @@ function speechOutputForMoveGroup(character, group, data) {
   }
   else {
     output = `${character}'s ${group} has ${movesInGroup.length} parts.`
-    movesInGroup.forEach(moveData => {
-      const move = `${group} ${moveData.modifier}`;
+    movesInGroup.forEach((moveData, idx) => {
+      const move = 
+        moveData.modifier ? moveData.modifier
+                          : (idx === 0 ? 'the first one'
+                                       : 'the next one');
       output += ' ' + speechOutputForAttackData(character, move, moveData, false);
     });
   }
@@ -123,16 +126,22 @@ function speechOutputForAttackData(character, move, data, verbose) {
     const allButLastItem = commas.splice(0, commas.length - 1).join(',');
     const lastItem = commas[commas.length - 1];
     let activeFramesStr = `frames ${allButLastItem} and ${lastItem}`;
-    activeStr = `${move} are active ${activeFramesStr}.`;
+    activeStr = `${move} is active ${activeFramesStr}.`;
   } else {
     let framesStr = 'frame';
     if (data.hitbox_active.includes('-')) {
       framesStr = 'frames';
+      data.hitbox_active = data.hitbox_active.replaceAll('-', ' to ');
     }
     let activeFramesStr = `${framesStr} ${data.hitbox_active}`;
     activeStr = `${move} is active ${activeFramesStr}.`;
   }
   activeStr = activeStr.replaceAll('-', ' to ');
+  if (move.includes('hit') && move.includes('-')) {
+    // Handle plural move modifier, e.g. hits 1-3 are...
+    activeStr = activeStr.replaceAll(' is ', ' are ')
+                         .replaceAll(' hit ', ' hits ');
+  }
   if (verbose) activeStr = `${character}'s ${activeStr}`;
   return activeStr;
 }
@@ -204,7 +213,19 @@ function onCharacterMoveIntent(intent, session, callback) {
   readFile('aws-lambda-smashproject', `${character.replaceAll(' ', '_')}.json`, (filename, result) => {
     try {
       result = JSON.parse(result);
-      speechOutput = speechOutputForMoveGroup(character, move, result.moveset[move]);
+      let moveObj;
+      if (move.includes('special')) {
+        debugger;
+        const specialMoveObj = 
+          result.moveset.specials.filter(
+            special => special.name === move
+          )[0];
+        move = `${move}, ${specialMoveObj.otherName},`
+        moveObj = specialMoveObj.value;
+      } else {
+        moveObj = result.moveset[move];
+      }
+      speechOutput = speechOutputForMoveGroup(character, move, moveObj);
       repromptText = '';
       callback(sessionAttributes,
        buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));

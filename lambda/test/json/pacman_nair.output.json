@@ -4,12 +4,12 @@
 		"response": {
 			"outputSpeech": {
 				"type": "PlainText",
-				"text": "pac man's neutral air has 3 parts. neutral air  early is active frames 3 to 5. neutral air  is active frames 6 to 9. neutral air  late is active frames 10 to 19. pac man can act on frame 52."
+				"text": "pac man's neutral air has 3 parts.  early is active frames 3 to 5. the next one is active frames 6 to 9.  late is active frames 10 to 19. pac man can act on frame 52."
 			},
 			"card": {
 				"type": "Simple",
 				"title": "SessionSpeechlet - CharacterMoveIntent",
-				"content": "SessionSpeechlet - pac man's neutral air has 3 parts. neutral air  early is active frames 3 to 5. neutral air  is active frames 6 to 9. neutral air  late is active frames 10 to 19. pac man can act on frame 52."
+				"content": "SessionSpeechlet - pac man's neutral air has 3 parts.  early is active frames 3 to 5. the next one is active frames 6 to 9.  late is active frames 10 to 19. pac man can act on frame 52."
 			},
 			"reprompt": {
 				"outputSpeech": {
@@ -20,8 +20,8 @@
 			"shouldEndSession": false
 		},
 		"sessionAttributes": {
-			"move": "neutral air",
-			"character": "pac man"
+			"character": "pac man",
+			"move": "neutral air"
 		}
 	}
 }

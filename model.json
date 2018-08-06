@@ -36,6 +36,15 @@
                         }
                     ],
                     "samples": [
+                        "I want to hear about {character} {move_type}",
+                        "Tell me the frame data for {character} {move_type}",
+                        "What's the frame data for {character} {move_type}",
+                        "What can you tell me about {character} {move_type}",
+                        "How about {character}",
+                        "What about {character}",
+                        "I want to know about {character} {move_type}",
+                        "How about {character} {move_type}",
+                        "What about {character} {move_type}",
                         "I want to know about {character}",
                         "{move_type}",
                         "{character}",
@@ -97,6 +106,31 @@
                 {
                     "name": "move_type",
                     "values": [
+                        {
+                            "name": {
+                                "value": "down special",
+                                "synonyms": [
+                                    "down b"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "up special",
+                                "synonyms": [
+                                    "up b"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "side special",
+                                "synonyms": [
+                                    "forward b",
+                                    "side b"
+                                ]
+                            }
+                        },
                         {
                             "name": {
                                 "value": "air dodge"

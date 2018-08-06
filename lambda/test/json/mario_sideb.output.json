@@ -1,0 +1,27 @@
+{
+	"body": {
+		"version": "1.0",
+		"response": {
+			"outputSpeech": {
+				"type": "PlainText",
+				"text": "mario's side special, cape, is active frames 12 to 14 (Reflects 6 to 20 and  1.5× 50% Break Threshold). mario can act on frame 36."
+			},
+			"card": {
+				"type": "Simple",
+				"title": "SessionSpeechlet - CharacterMoveIntent",
+				"content": "SessionSpeechlet - mario's side special, cape, is active frames 12 to 14 (Reflects 6 to 20 and  1.5× 50% Break Threshold). mario can act on frame 36."
+			},
+			"reprompt": {
+				"outputSpeech": {
+					"type": "PlainText",
+					"text": ""
+				}
+			},
+			"shouldEndSession": false
+		},
+		"sessionAttributes": {
+			"character": "mario",
+			"move": "side special"
+		}
+	}
+}

@@ -1,0 +1,102 @@
+{
+	"version": "1.0",
+	"session": {
+		"new": false,
+		"sessionId": "amzn1.echo-api.session.7f0beca5-d8a7-4bca-9fbf-c16ccbf9b303",
+		"application": {
+			"applicationId": "amzn1.ask.skill.2fb7d380-4b6c-4bf4-969b-2894cb77037c"
+		},
+		"user": {
+			"userId": "amzn1.ask.account.AHE2YIB5CB2FNVYWYYRQEFDBDE423OP3RUEKJLPGDHIGRGD4ZU7VOKQFDNYUMF3OWBQBFLDAMJ3RIGBBD4QE7I2EUEC6NNDFN244VMTGQKF5VWDDROWENJXCWBBMOUUP5FTUOVSB3WEOVNKT3VZRRAHSJKRISEE5QUYSWDJJLEIBP6RDF2L3IWLTT6Y5EK4V66XCM7GRIX3NINQ"
+		}
+	},
+	"context": {
+		"Display": {
+			"token": ""
+		},
+		"System": {
+			"application": {
+				"applicationId": "amzn1.ask.skill.2fb7d380-4b6c-4bf4-969b-2894cb77037c"
+			},
+			"user": {
+				"userId": "amzn1.ask.account.AHE2YIB5CB2FNVYWYYRQEFDBDE423OP3RUEKJLPGDHIGRGD4ZU7VOKQFDNYUMF3OWBQBFLDAMJ3RIGBBD4QE7I2EUEC6NNDFN244VMTGQKF5VWDDROWENJXCWBBMOUUP5FTUOVSB3WEOVNKT3VZRRAHSJKRISEE5QUYSWDJJLEIBP6RDF2L3IWLTT6Y5EK4V66XCM7GRIX3NINQ"
+			},
+			"device": {
+				"deviceId": "amzn1.ask.device.AHNXLLNY5XSSTVRVXDZP67MP2TT3OGJ2FO5DVNSS5PWPK5CSVDLA7CUF6IRE6JKFFUED4TOWL74MPC3FAKKOC4OYOLHDH4RDDXO2DL377FIIGOK4VXQHAY5VSEXRCGAVTD3MSHKEO2TN3LPMHOVPHEJSLIUGNVA7B2RZNF5JQJTLNRTTOJQBQ",
+				"supportedInterfaces": {
+					"Display": {
+						"templateVersion": "1.0",
+						"markupVersion": "1.0"
+					}
+				}
+			},
+			"apiEndpoint": "https://api.amazonalexa.com",
+			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjJmYjdkMzgwLTRiNmMtNGJmNC05NjliLTI4OTRjYjc3MDM3YyIsImV4cCI6MTUzMzUxNzYzMCwiaWF0IjoxNTMzNTE0MDMwLCJuYmYiOjE1MzM1MTQwMzAsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhOWExMTlk1WFNTVFZSVlhEWlA2N01QMlRUM09HSjJGTzVEVk5TUzVQV1BLNUNTVkRMQTdDVUY2SVJFNkpLRkZVRUQ0VE9XTDc0TVBDM0ZBS0tPQzRPWU9MSERINFJERFhPMkRMMzc3RklJR09LNFZYUUhBWTVWU0VYUkNHQVZURDNNU0hLRU8yVE4zTFBNSE9WUEhFSlNMSVVHTlZBN0IyUlpORjVKUUpUTE5SVFRPSlFCUSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIRTJZSUI1Q0IyRk5WWVdZWVJRRUZEQkRFNDIzT1AzUlVFS0pMUEdESElHUkdENFpVN1ZPS1FGRE5ZVU1GM09XQlFCRkxEQU1KM1JJR0JCRDRRRTdJMkVVRUM2Tk5ERk4yNDRWTVRHUUtGNVZXRERST1dFTkpYQ1dCQk1PVVVQNUZUVU9WU0IzV0VPVk5LVDNWWlJSQUhTSktSSVNFRTVRVVlTV0RKSkxFSUJQNlJERjJMM0lXTFRUNlk1RUs0VjY2WENNN0dSSVgzTklOUSJ9fQ.CEj3JJy62W88CtERKFyj8dDKsrgRzCfBxyPtuVtBR4tXzxGGcKqt-LkOzeEri9JM0eEmFx8Oa5NUw9z1tqyhpsA1EPaRJ6HCRObg9fjyuo6FK1HI9CCnio2NsOtGylj5hWK7TBhsJsZPAtwhjy-K50Rc3ityZIpFQziiYDI3v5bWVS29Dtvbb05PoKh0AMjZaCyDRnlvq9Ke_pe39D3Cmnz1uvfl4VdfZAv1Q-ZOkcDZvQR0fPKI_mzJbbJwNtgHJwjn1OGhYI7N-xM-K25AnWgTwlau8ngFP7edWF7QDV9eTQrmGLKCSt2rqZaxIoKxP1WJkaH9igbrs01n-p95Kw"
+		}
+	},
+	"request": {
+		"type": "IntentRequest",
+		"requestId": "amzn1.echo-api.request.2ff413fb-4c3f-4c39-b4f6-aa40b51ed40f",
+		"timestamp": "2018-08-06T00:07:10Z",
+		"locale": "en-US",
+		"intent": {
+			"name": "CharacterMoveIntent",
+			"confirmationStatus": "NONE",
+			"slots": {
+				"character": {
+					"name": "character",
+					"value": "Mario",
+					"resolutions": {
+						"resolutionsPerAuthority": [
+							{
+								"authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.2fb7d380-4b6c-4bf4-969b-2894cb77037c.character",
+								"status": {
+									"code": "ER_SUCCESS_MATCH"
+								},
+								"values": [
+									{
+										"value": {
+											"name": "mario",
+											"id": "de2f15d014d40b93578d255e6221fd60"
+										}
+									},
+									{
+										"value": {
+											"name": "doctor mario",
+											"id": "bec8fc4d1cb05e2f8f356fab7537e83a"
+										}
+									}
+								]
+							}
+						]
+					},
+					"confirmationStatus": "NONE"
+				},
+				"move_type": {
+					"name": "move_type",
+					"value": "side b",
+					"resolutions": {
+						"resolutionsPerAuthority": [
+							{
+								"authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.2fb7d380-4b6c-4bf4-969b-2894cb77037c.move_type",
+								"status": {
+									"code": "ER_SUCCESS_MATCH"
+								},
+								"values": [
+									{
+										"value": {
+											"name": "side special",
+											"id": "bddece9100f570171b4743e86fe05168"
+										}
+									}
+								]
+							}
+						]
+					},
+					"confirmationStatus": "NONE"
+				}
+			}
+		},
+		"dialogState": "STARTED"
+	}
+}
