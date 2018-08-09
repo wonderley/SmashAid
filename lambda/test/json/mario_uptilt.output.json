@@ -4,17 +4,17 @@
 		"response": {
 			"outputSpeech": {
 				"type": "PlainText",
-				"text": "mario's up tilt is active frames 5 to 11. mario can act on frame 30."
+				"text": "Mario's up tilt is active frames 5 to 11. Mario can act on frame 30. You can ask about another one of Mario's moves, or name another character and move."
 			},
 			"card": {
 				"type": "Simple",
-				"title": "SessionSpeechlet - CharacterMoveIntent",
-				"content": "SessionSpeechlet - mario's up tilt is active frames 5 to 11. mario can act on frame 30."
+				"title": "Mario's Up Tilt",
+				"content": ""
 			},
 			"reprompt": {
 				"outputSpeech": {
 					"type": "PlainText",
-					"text": ""
+					"text": "Ask about another one of Mario's moves, or name another character and move."
 				}
 			},
 			"shouldEndSession": false

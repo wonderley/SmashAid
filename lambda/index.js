@@ -18,7 +18,7 @@ String.prototype.replaceAll = function(target, replacement) {
   return this.split(target).join(replacement);
 };
 
-function buildSpeechletResponse(title, output, repromptText, shouldEndSession) {
+function buildSpeechletResponse(title, output, repromptText, shouldEndSession, cardContent) {
   return {
     outputSpeech: {
       type: 'PlainText',
@@ -26,8 +26,8 @@ function buildSpeechletResponse(title, output, repromptText, shouldEndSession) {
     },
     card: {
       type: 'Simple',
-      title: `SessionSpeechlet - ${title}`,
-      content: `SessionSpeechlet - ${output}`,
+      title: `${title}`,
+      content: '',
     },
     reprompt: {
       outputSpeech: {
@@ -64,7 +64,7 @@ function readFile(bucketName, filename, onFileContent, onError) {
 function getWelcomeResponse(callback) {
   // If we wanted to initialize the session to have some attributes we could add those here.
   const sessionAttributes = {};
-  const cardTitle = 'Welcome';
+  const cardTitle = 'Smash Aid';
   const speechOutput = 'Welcome to Smash Aid. ' +
     'Ask about a move for any character.';
   // If the user either does not reply to the welcome message or says something that is not
@@ -74,21 +74,30 @@ function getWelcomeResponse(callback) {
   const shouldEndSession = false;
 
   callback(sessionAttributes,
-    buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+    buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession, speechOutput));
 }
 
 function handleSessionEndRequest(callback) {
-  const cardTitle = 'Session Ended';
-  const speechOutput = 'Thank you for trying the Alexa Skills Kit sample. Have a nice day!';
+  const cardTitle = 'Exiting Smash Aid';
+  const speechOutput = 'Thanks for using Smash Aid!';
   // Setting this to true ends the session and exits the skill.
   const shouldEndSession = true;
 
-  callback({}, buildSpeechletResponse(cardTitle, speechOutput, null, shouldEndSession));
+  callback({}, buildSpeechletResponse(cardTitle, speechOutput, null, shouldEndSession, speechOutput));
 }
 
 function speechOutputForMoveGroup(character, group, data) {
   let output;
-  const movesInGroup = Array.isArray(data) ? data : [data];
+  let movesInGroup = Array.isArray(data) ? data : [data];
+  // Get rid of parts of the move group with no value
+  // for hitbox_active. For example, Falcon's Falcon
+  // Dive (Latch). This presumably only applies to
+  // multi-hit moves, but definitely not to dodges.
+  if (movesInGroup.length > 1) {
+    movesInGroup =
+      movesInGroup.filter(
+        moveData => !!moveData.hitbox_active);
+  }
   if (movesInGroup.length === 1) {
     const moveData = movesInGroup[0];
     if (moveData.hitbox_active) {
@@ -121,6 +130,14 @@ function speechOutputForMoveGroup(character, group, data) {
 
 function speechOutputForAttackData(character, move, data, verbose) {
   let activeStr;
+  const firstWordInHitboxActive = data.hitbox_active.split(' ')[0];
+  if (!parseInt(firstWordInHitboxActive)) {
+    // Handle Mario FLUDD: "Max Charge: Frame 98"
+    // Don't want to say "is active frame max charge..."
+    // Settle for "is active max charge..."
+    return `${move} is active ${data.hitbox_active}.`;
+  }
+  if (data.hitbox_active.split(' ')[0])
   if (data.hitbox_active.includes(',')) {
     const commas = data.hitbox_active.split(',');
     const allButLastItem = commas.splice(0, commas.length - 1).join(',');
@@ -158,20 +175,27 @@ function getSlot(intent, slotName) {
   }
 }
 
+function capitalize(input) {
+  return input.split(' ').map(word => {
+    if (!word) return word;
+    if (word.length === 1) return word.toUpperCase();
+    else return word[0].toUpperCase() + word.substring(1);
+  }).join(' ');
+}
+
 function onCharacterMoveIntent(intent, session, callback) {
   let sessionAttributes = session.attributes || {};
-  let cardTitle = 'Error';
+  let cardTitle = 'Failed to find move';
   let move = sessionAttributes.move;
   let character = sessionAttributes.character;
-  let speechOutput = 'What is the character and move?';
-  let repromptText = 'I didn\'t get that. What is the character and move?';
+  let speechOutput = 'What character and move are you interested in?';
+  let repromptText = 'Please name a character and move. For example, say, tell me about Mario\'s up smash.';
   let shouldEndSession = false;
   try {
     console.log(JSON.stringify(intent));
     console.log(session);
     console.log(intent.slots.character);
     console.log(intent.slots.move_type);
-    cardTitle = intent.name;
     move = getSlot(intent, 'move_type') || move;
     character = getSlot(intent, 'character') || character;
     if (character) {
@@ -186,14 +210,14 @@ function onCharacterMoveIntent(intent, session, callback) {
       buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
       return;
     } else if (character && !move) {
-      cardTitle = 'Move';
-      speechOutput = `What move of ${character} do you want to know about?`;
+      cardTitle = `${capitalize(character)}`;
+      speechOutput = `Which of ${capitalize(character)}'s moves?`;
       repromptText = `I didn't get that. ${speechOutput}`;
       callback(sessionAttributes,
       buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
       return;
     } else if (move && !character) {
-      cardTitle = 'Move';
+      cardTitle = `${capitalize(move)}`;
       speechOutput = `Which character's ${move} do you want to know about?`;
       repromptText = `I didn't get that. ${speechOutput}`;
       callback(sessionAttributes,
@@ -211,34 +235,40 @@ function onCharacterMoveIntent(intent, session, callback) {
   
   // read from s3
   readFile('aws-lambda-smashproject', `${character.replaceAll(' ', '_')}.json`, (filename, result) => {
+    const Character = capitalize(character);
     try {
       result = JSON.parse(result);
       let moveObj;
       if (move.includes('special')) {
-        debugger;
         const specialMoveObj = 
           result.moveset.specials.filter(
             special => special.name === move
           )[0];
-        move = `${move}, ${specialMoveObj.otherName},`
+        move = `${move}, ${capitalize(specialMoveObj.otherName)}`;
+        move += ',';
         moveObj = specialMoveObj.value;
       } else {
         moveObj = result.moveset[move];
       }
-      speechOutput = speechOutputForMoveGroup(character, move, moveObj);
-      repromptText = '';
+      cardTitle = capitalize(`${character}'s ${move}`);
+      speechOutput = speechOutputForMoveGroup(
+        Character, move, moveObj);
+      speechOutput += ` You can ask about another one of ${Character}'s moves, or name another character and move.`;
+      repromptText = `Ask about another one of ${Character}'s moves, or name another character and move.`;
       callback(sessionAttributes,
        buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
     } catch (e) {
-      speechOutput = `I couldn't find the ${move} for ${character}.`;
+      speechOutput = `My B. I couldn't find the ${move} for ${Character}. Please name another character and move.`;
+      cardTitle = 'Please try again';
       callback(sessionAttributes,
-       buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+       buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession, speechOutput));
     }
   }, (err) => {
     console.log(err);
-    repromptText = speechOutput = `I can't find any information about ${character}`;
+    repromptText = speechOutput = `My B. I can't find any information about ${character}.`;
+    cardTitle = 'Please try again';
     callback(sessionAttributes,
-     buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
+     buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession, speechOutput));
   });
 }
 
@@ -280,21 +310,12 @@ function onIntent(intentRequest, session, callback) {
   } else if (intentName === 'AMAZON.StopIntent' || intentName === 'AMAZON.CancelIntent') {
     handleSessionEndRequest(callback);
   } else {
-    triggerError(callback);
+    let speechOutput = 'My B. I didn\'t understand what you said. Please name a character and move.';
+    let repromptText = 'Please name a character and move. For example, say, tell me about Mario\'s up smash.';
+    let shouldEndSession = false;
+    callback(session.attributes || {},
+      buildSpeechletResponse('Please try again', speechOutput, repromptText, shouldEndSession, speechOutput));
   }
-}
-
-function triggerError(callback) {
-  console.log('error');
-  let cardTitle = 'Error';
-  let move = 'Error';
-  let character = 'Error';
-  let sessionAttributes = {};
-  let speechOutput = 'Error';
-  let repromptText = 'There is an error';
-  let shouldEndSession = true;
-  callback(sessionAttributes,
-    buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
 }
 
 /**

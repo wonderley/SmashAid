@@ -4,24 +4,24 @@
 		"response": {
 			"outputSpeech": {
 				"type": "PlainText",
-				"text": "mario's forward roll is intangible frames 4-16. mario can act on frame 30."
+				"text": "Mario's forward roll is intangible frames 4-16. Mario can act on frame 30. You can ask about another one of Mario's moves, or name another character and move."
 			},
 			"card": {
 				"type": "Simple",
-				"title": "SessionSpeechlet - CharacterMoveIntent",
-				"content": "SessionSpeechlet - mario's forward roll is intangible frames 4-16. mario can act on frame 30."
+				"title": "Mario's Forward Roll",
+				"content": ""
 			},
 			"reprompt": {
 				"outputSpeech": {
 					"type": "PlainText",
-					"text": ""
+					"text": "Ask about another one of Mario's moves, or name another character and move."
 				}
 			},
 			"shouldEndSession": false
 		},
 		"sessionAttributes": {
-			"move": "forward roll",
-			"character": "mario"
+			"character": "mario",
+			"move": "forward roll"
 		}
 	}
 }

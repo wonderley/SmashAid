@@ -8,8 +8,8 @@
 			},
 			"card": {
 				"type": "Simple",
-				"title": "SessionSpeechlet - Welcome",
-				"content": "SessionSpeechlet - Welcome to Smash Aid. Ask about a move for any character."
+				"title": "Smash Aid",
+				"content": ""
 			},
 			"reprompt": {
 				"outputSpeech": {

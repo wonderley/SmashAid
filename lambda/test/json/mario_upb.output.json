@@ -4,17 +4,17 @@
 		"response": {
 			"outputSpeech": {
 				"type": "PlainText",
-				"text": "mario's up special, super jump punch, has 4 parts.  hit 1 is active frames 3 to 6 (Intangible: 3 to 6).  hits 2 to 4 are active frames 7, 8 and  9.  hits 5 to 6 are active frames 10 to 11 and  12 to 13.  hit 7 is active frames 14 to 15. "
+				"text": "Mario's up special, Super Jump Punch, has 4 parts.  hit 1 is active frames 3 to 6 (Intangible: 3 to 6).  hits 2 to 4 are active frames 7, 8 and  9.  hits 5 to 6 are active frames 10 to 11 and  12 to 13.  hit 7 is active frames 14 to 15.  You can ask about another one of Mario's moves, or name another character and move."
 			},
 			"card": {
 				"type": "Simple",
-				"title": "SessionSpeechlet - CharacterMoveIntent",
-				"content": "SessionSpeechlet - mario's up special, super jump punch, has 4 parts.  hit 1 is active frames 3 to 6 (Intangible: 3 to 6).  hits 2 to 4 are active frames 7, 8 and  9.  hits 5 to 6 are active frames 10 to 11 and  12 to 13.  hit 7 is active frames 14 to 15. "
+				"title": "Mario's Up Special, Super Jump Punch,",
+				"content": ""
 			},
 			"reprompt": {
 				"outputSpeech": {
 					"type": "PlainText",
-					"text": ""
+					"text": "Ask about another one of Mario's moves, or name another character and move."
 				}
 			},
 			"shouldEndSession": false

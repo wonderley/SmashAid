@@ -4,17 +4,17 @@
 		"response": {
 			"outputSpeech": {
 				"type": "PlainText",
-				"text": "mario's up air is active frames 4 to 8. mario can act on frame 32."
+				"text": "Mario's up air is active frames 4 to 8. Mario can act on frame 32. You can ask about another one of Mario's moves, or name another character and move."
 			},
 			"card": {
 				"type": "Simple",
-				"title": "SessionSpeechlet - CharacterMoveIntent",
-				"content": "SessionSpeechlet - mario's up air is active frames 4 to 8. mario can act on frame 32."
+				"title": "Mario's Up Air",
+				"content": ""
 			},
 			"reprompt": {
 				"outputSpeech": {
 					"type": "PlainText",
-					"text": ""
+					"text": "Ask about another one of Mario's moves, or name another character and move."
 				}
 			},
 			"shouldEndSession": false

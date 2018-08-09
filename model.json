@@ -1,885 +1,893 @@
 {
-    "interactionModel": {
-        "languageModel": {
-            "invocationName": "smash aid",
-            "intents": [
-                {
-                    "name": "AMAZON.FallbackIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.CancelIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.HelpIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.StopIntent",
-                    "samples": []
-                },
-                {
-                    "name": "CharacterMoveIntent",
-                    "slots": [
-                        {
-                            "name": "move_type",
-                            "type": "move_type"
-                        },
-                        {
-                            "name": "character",
-                            "type": "character",
-                            "samples": [
-                                "{character}",
-                                "I want to know about {character}"
-                            ]
-                        }
-                    ],
-                    "samples": [
-                        "I want to hear about {character} {move_type}",
-                        "Tell me the frame data for {character} {move_type}",
-                        "What's the frame data for {character} {move_type}",
-                        "What can you tell me about {character} {move_type}",
-                        "How about {character}",
-                        "What about {character}",
-                        "I want to know about {character} {move_type}",
-                        "How about {character} {move_type}",
-                        "What about {character} {move_type}",
-                        "I want to know about {character}",
-                        "{move_type}",
-                        "{character}",
-                        "Tell me about {character}",
-                        "Say {move_type} for {character}",
-                        "{move_type} for {character}",
-                        "{character} {move_type}",
-                        "What is the {move_type} for {character}",
-                        "What is {character}  {move_type}",
-                        "Tell me about {character} {move_type}"
-                    ]
-                },
-                {
-                    "name": "AMAZON.MoreIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.NavigateHomeIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.NavigateSettingsIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.NextIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.PageUpIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.PageDownIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.PreviousIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.ScrollRightIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.ScrollDownIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.ScrollLeftIntent",
-                    "samples": []
-                },
-                {
-                    "name": "AMAZON.ScrollUpIntent",
-                    "samples": []
-                }
-            ],
-            "types": [
-                {
-                    "name": "move_type",
-                    "values": [
-                        {
-                            "name": {
-                                "value": "down special",
-                                "synonyms": [
-                                    "down b"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "up special",
-                                "synonyms": [
-                                    "up b"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "side special",
-                                "synonyms": [
-                                    "forward b",
-                                    "side b"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "air dodge"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "back roll"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "forward roll",
-                                "synonyms": [
-                                    "roll"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "spot dodge"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "up throw",
-                                "synonyms": [
-                                    "u throw"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "down throw",
-                                "synonyms": [
-                                    "d throw"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "back throw",
-                                "synonyms": [
-                                    "b throw"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "forward throw",
-                                "synonyms": [
-                                    " f throw"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "pivot grab"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "dash grab"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "standing grab",
-                                "synonyms": [
-                                    "grab"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "up smash",
-                                "synonyms": [
-                                    "usmash"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "down smash",
-                                "synonyms": [
-                                    "d smash"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "forward smash",
-                                "synonyms": [
-                                    "f smash"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "down tilt",
-                                "synonyms": [
-                                    "d tilt"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "up tilt",
-                                "synonyms": [
-                                    "u tilt"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "forward tilt",
-                                "synonyms": [
-                                    "f tilt"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "dash attack"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "jab 3"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "jab  1",
-                                "synonyms": [
-                                    "jab"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "jab 2"
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "up air",
-                                "synonyms": [
-                                    "up aerial",
-                                    "u air"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "down air",
-                                "synonyms": [
-                                    "down aerial",
-                                    "dair"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "forward air",
-                                "synonyms": [
-                                    "fair",
-                                    "f air"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "back air",
-                                "synonyms": [
-                                    "bair",
-                                    "b air"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "neutral air",
-                                "synonyms": [
-                                    "nair",
-                                    "n air"
-                                ]
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "character",
-                    "values": [
-                        {
-                            "name": {
-                                "value": "bayonetta",
-                                "synonyms": [
-                                    "bayo's",
-                                    "bayo",
-                                    "bayonetta's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "corrin",
-                                "synonyms": [
-                                    "corrin's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "cloud",
-                                "synonyms": [
-                                    "cloud strife's",
-                                    "cloud strife",
-                                    "cloud's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "ryu",
-                                "synonyms": [
-                                    "ryu's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "roy",
-                                "synonyms": [
-                                    "roy's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "lucas",
-                                "synonyms": [
-                                    "lucas's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "mewtwo",
-                                "synonyms": [
-                                    "mewtwo's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "jigglypuff",
-                                "synonyms": [
-                                    "jigglypuff's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "duck hunt",
-                                "synonyms": [
-                                    "duck hunt's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "bowser junior",
-                                "synonyms": [
-                                    "bowser junior's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "game and watch",
-                                "synonyms": [
-                                    "mister game and watch",
-                                    "mister game and watch",
-                                    "game and watch's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "ganondorf",
-                                "synonyms": [
-                                    "ganon's",
-                                    "ganondorf's",
-                                    "ganon"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "rob",
-                                "synonyms": [
-                                    "rob's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "doctor mario",
-                                "synonyms": [
-                                    "doc's",
-                                    "doc",
-                                    "doctor mario's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "dark pit",
-                                "synonyms": [
-                                    "dark pit's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "lucina",
-                                "synonyms": [
-                                    "lucina's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "wario",
-                                "synonyms": [
-                                    "wario's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "falco",
-                                "synonyms": [
-                                    "falco's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "ness",
-                                "synonyms": [
-                                    "ness's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "sonic",
-                                "synonyms": [
-                                    "sonic's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "mega man",
-                                "synonyms": [
-                                    "mega man's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "pac man",
-                                "synonyms": [
-                                    "pac man's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "shulk",
-                                "synonyms": [
-                                    "shulk's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "wii fit trainer",
-                                "synonyms": [
-                                    "wii fit's",
-                                    "wii fit",
-                                    "wii fit trainer's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "olimar",
-                                "synonyms": [
-                                    "pikmin and olimar's",
-                                    "pikmin and olimar",
-                                    "alph's",
-                                    "alph",
-                                    "olimar's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "villager",
-                                "synonyms": [
-                                    "villager's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "captain falcon",
-                                "synonyms": [
-                                    "falcon's",
-                                    "falcon",
-                                    "captain falcon's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "greninja",
-                                "synonyms": [
-                                    "greninja's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "lucario",
-                                "synonyms": [
-                                    "lucario's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "charizard",
-                                "synonyms": [
-                                    "charizard's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "pikachu",
-                                "synonyms": [
-                                    "pika's",
-                                    "pika",
-                                    "pikachu's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "fox",
-                                "synonyms": [
-                                    "fox mccloud's",
-                                    "fox mccloud",
-                                    "fox's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "little mac",
-                                "synonyms": [
-                                    "mac's",
-                                    "mac",
-                                    "little mac's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "meta knight",
-                                "synonyms": [
-                                    "m k's",
-                                    "m k",
-                                    "meta knight's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "king dedede",
-                                "synonyms": [
-                                    "dee dee dee's",
-                                    "dee dee dee",
-                                    "king dee dee dee's",
-                                    "king dee dee dee",
-                                    "dedede's",
-                                    "dedede",
-                                    "king dedede's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "kirby",
-                                "synonyms": [
-                                    "kirby's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "robin",
-                                "synonyms": [
-                                    "robin's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "ike",
-                                "synonyms": [
-                                    "ike's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "marth",
-                                "synonyms": [
-                                    "marth's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "palutena",
-                                "synonyms": [
-                                    "palutena's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "pit",
-                                "synonyms": [
-                                    "pit's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "zero suit samus",
-                                "synonyms": [
-                                    "z s s's",
-                                    "z s s",
-                                    "zero suit samus's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "samus",
-                                "synonyms": [
-                                    "samus's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "toon link",
-                                "synonyms": [
-                                    "tink's",
-                                    "tink",
-                                    "toon link's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "sheik",
-                                "synonyms": [
-                                    "sheik's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "zelda",
-                                "synonyms": [
-                                    "zelda's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "link",
-                                "synonyms": [
-                                    "link's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "diddy kong",
-                                "synonyms": [
-                                    "diddy's",
-                                    "diddy",
-                                    "diddy kong's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "donkey kong",
-                                "synonyms": [
-                                    "d k",
-                                    "d k's",
-                                    "donkey kong's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "yoshi",
-                                "synonyms": [
-                                    "yoshi's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "peach",
-                                "synonyms": [
-                                    "peach's",
-                                    "princess peach",
-                                    "princess peach's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "bowser",
-                                "synonyms": [
-                                    "bowser's",
-                                    "king koopa",
-                                    "king koopa's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "rosalina and luma",
-                                "synonyms": [
-                                    "rosalina",
-                                    "rosa",
-                                    "rosa's",
-                                    "rosalina's",
-                                    "rosalina and luma's",
-                                    "rosaluma",
-                                    "rosaluma's",
-                                    "rosa and luma",
-                                    "rosa and luma's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "luigi",
-                                "synonyms": [
-                                    "luigi's",
-                                    "wee gee",
-                                    "wee gee's"
-                                ]
-                            }
-                        },
-                        {
-                            "name": {
-                                "value": "mario",
-                                "synonyms": [
-                                    "mario's"
-                                ]
-                            }
-                        }
-                    ]
-                }
-            ]
-        },
-        "dialog": {
-            "intents": [
-                {
-                    "name": "CharacterMoveIntent",
-                    "confirmationRequired": false,
-                    "prompts": {},
-                    "slots": [
-                        {
-                            "name": "move_type",
-                            "type": "move_type",
-                            "confirmationRequired": false,
-                            "elicitationRequired": true,
-                            "prompts": {
-                                "elicitation": "Elicit.Slot.10019951557.883920751769"
-                            }
-                        },
-                        {
-                            "name": "character",
-                            "type": "character",
-                            "confirmationRequired": false,
-                            "elicitationRequired": true,
-                            "prompts": {
-                                "elicitation": "Elicit.Slot.10019951557.1303304771453"
-                            }
-                        }
-                    ]
-                }
-            ]
-        },
-        "prompts": [
-            {
-                "id": "Elicit.Slot.10019951557.1303304771453",
-                "variations": [
-                    {
-                        "type": "PlainText",
-                        "value": "Which character's {move_type} do you want to know about?"
-                    }
-                ]
-            },
-            {
-                "id": "Elicit.Slot.10019951557.883920751769",
-                "variations": [
-                    {
-                        "type": "PlainText",
-                        "value": "What move of {character} do you want to know about?"
-                    }
-                ]
-            },
-            {
-                "id": "Elicit.Slot.968683813518.537987446067",
-                "variations": [
-                    {
-                        "type": "PlainText",
-                        "value": "what character?"
-                    }
-                ]
-            }
-        ]
-    }
+  "interactionModel": {
+      "languageModel": {
+          "invocationName": "smash aid",
+          "intents": [
+              {
+                  "name": "AMAZON.FallbackIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.CancelIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.HelpIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.StopIntent",
+                  "samples": []
+              },
+              {
+                  "name": "CharacterMoveIntent",
+                  "slots": [
+                      {
+                          "name": "move_type",
+                          "type": "move_type"
+                      },
+                      {
+                          "name": "character",
+                          "type": "character",
+                          "samples": [
+                              "{character}",
+                              "I want to know about {character}"
+                          ]
+                      }
+                  ],
+                  "samples": [
+                      "about {character} {move_type}",
+                      "about {character}",
+                      "Tell me about {move_type}",
+                      "What about {move_type}",
+                      "I want to hear about {character} {move_type}",
+                      "Tell me the frame data for {character} {move_type}",
+                      "What's the frame data for {character} {move_type}",
+                      "What can you tell me about {character} {move_type}",
+                      "How about {character}",
+                      "What about {character}",
+                      "I want to know about {character} {move_type}",
+                      "How about {character} {move_type}",
+                      "What about {character} {move_type}",
+                      "I want to know about {character}",
+                      "{move_type}",
+                      "{character}",
+                      "Tell me about {character}",
+                      "Say {move_type} for {character}",
+                      "{move_type} for {character}",
+                      "{character} {move_type}",
+                      "What is the {move_type} for {character}",
+                      "What is {character}  {move_type}",
+                      "Tell me about {character} {move_type}"
+                  ]
+              },
+              {
+                  "name": "AMAZON.MoreIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.NavigateHomeIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.NavigateSettingsIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.NextIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.PageUpIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.PageDownIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.PreviousIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.ScrollRightIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.ScrollDownIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.ScrollLeftIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.ScrollUpIntent",
+                  "samples": []
+              }
+          ],
+          "types": [
+              {
+                  "name": "move_type",
+                  "values": [
+                      {
+                          "name": {
+                              "value": "jab"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "neutral special",
+                              "synonyms": [
+                                  "normal bee",
+                                  "neutral bee",
+                                  "normal b",
+                                  "neutral b"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "down special",
+                              "synonyms": [
+                                  "down bee",
+                                  "down b"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "up special",
+                              "synonyms": [
+                                  "up bee",
+                                  "up b"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "side special",
+                              "synonyms": [
+                                  "side bee",
+                                  "forward bee",
+                                  "forward b",
+                                  "side b"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "air dodge"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "back roll"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "forward roll",
+                              "synonyms": [
+                                  "roll"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "spot dodge"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "up throw",
+                              "synonyms": [
+                                  "u throw"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "down throw",
+                              "synonyms": [
+                                  "d throw"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "back throw",
+                              "synonyms": [
+                                  "b throw"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "forward throw",
+                              "synonyms": [
+                                  " f throw"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "pivot grab"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "dash grab"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "standing grab",
+                              "synonyms": [
+                                  "grab"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "up smash",
+                              "synonyms": [
+                                  "usmash"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "down smash",
+                              "synonyms": [
+                                  "d smash"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "forward smash",
+                              "synonyms": [
+                                  "side smash",
+                                  "f smash"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "down tilt",
+                              "synonyms": [
+                                  "d tilt"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "up tilt",
+                              "synonyms": [
+                                  "u tilt"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "forward tilt",
+                              "synonyms": [
+                                  "side tilt",
+                                  "f tilt"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "dash attack"
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "up air",
+                              "synonyms": [
+                                  "up aerial",
+                                  "u air"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "down air",
+                              "synonyms": [
+                                  "down aerial",
+                                  "dair"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "forward air",
+                              "synonyms": [
+                                  "fair",
+                                  "f air"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "back air",
+                              "synonyms": [
+                                  "bair",
+                                  "b air"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "neutral air",
+                              "synonyms": [
+                                  "nair",
+                                  "n air"
+                              ]
+                          }
+                      }
+                  ]
+              },
+              {
+                  "name": "character",
+                  "values": [
+                      {
+                          "name": {
+                              "value": "bayonetta",
+                              "synonyms": [
+                                  "bayo's",
+                                  "bayo",
+                                  "bayonetta's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "corrin",
+                              "synonyms": [
+                                  "corrin's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "cloud",
+                              "synonyms": [
+                                  "cloud strife's",
+                                  "cloud strife",
+                                  "cloud's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "ryu",
+                              "synonyms": [
+                                  "ryu's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "roy",
+                              "synonyms": [
+                                  "roy's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "lucas",
+                              "synonyms": [
+                                  "lucas's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "mewtwo",
+                              "synonyms": [
+                                  "mewtwo's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "jigglypuff",
+                              "synonyms": [
+                                  "jigglypuff's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "duck hunt",
+                              "synonyms": [
+                                  "duck hunt's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "bowser junior",
+                              "synonyms": [
+                                  "bowser junior's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "game and watch",
+                              "synonyms": [
+                                  "mister game and watch",
+                                  "mister game and watch",
+                                  "game and watch's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "ganondorf",
+                              "synonyms": [
+                                  "ganon's",
+                                  "ganondorf's",
+                                  "ganon"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "rob",
+                              "synonyms": [
+                                  "rob's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "doctor mario",
+                              "synonyms": [
+                                  "doc's",
+                                  "doc",
+                                  "doctor mario's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "dark pit",
+                              "synonyms": [
+                                  "dark pit's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "lucina",
+                              "synonyms": [
+                                  "lucina's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "wario",
+                              "synonyms": [
+                                  "wario's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "falco",
+                              "synonyms": [
+                                  "falco's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "ness",
+                              "synonyms": [
+                                  "ness's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "sonic",
+                              "synonyms": [
+                                  "sonic's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "mega man",
+                              "synonyms": [
+                                  "mega man's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "pac man",
+                              "synonyms": [
+                                  "pac man's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "shulk",
+                              "synonyms": [
+                                  "shulk's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "wii fit trainer",
+                              "synonyms": [
+                                  "wii fit's",
+                                  "wii fit",
+                                  "wii fit trainer's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "olimar",
+                              "synonyms": [
+                                  "pikmin and olimar's",
+                                  "pikmin and olimar",
+                                  "alph's",
+                                  "alph",
+                                  "olimar's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "villager",
+                              "synonyms": [
+                                  "villager's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "captain falcon",
+                              "synonyms": [
+                                  "falcon's",
+                                  "falcon",
+                                  "captain falcon's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "greninja",
+                              "synonyms": [
+                                  "greninja's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "lucario",
+                              "synonyms": [
+                                  "lucario's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "charizard",
+                              "synonyms": [
+                                  "charizard's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "pikachu",
+                              "synonyms": [
+                                  "pika's",
+                                  "pika",
+                                  "pikachu's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "fox",
+                              "synonyms": [
+                                  "fox mccloud's",
+                                  "fox mccloud",
+                                  "fox's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "little mac",
+                              "synonyms": [
+                                  "mac's",
+                                  "mac",
+                                  "little mac's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "meta knight",
+                              "synonyms": [
+                                  "m k's",
+                                  "m k",
+                                  "meta knight's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "king dedede",
+                              "synonyms": [
+                                  "dee dee dee's",
+                                  "dee dee dee",
+                                  "king dee dee dee's",
+                                  "king dee dee dee",
+                                  "dedede's",
+                                  "dedede",
+                                  "king dedede's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "kirby",
+                              "synonyms": [
+                                  "kirby's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "robin",
+                              "synonyms": [
+                                  "robin's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "ike",
+                              "synonyms": [
+                                  "ike's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "marth",
+                              "synonyms": [
+                                  "marth's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "palutena",
+                              "synonyms": [
+                                  "palutena's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "pit",
+                              "synonyms": [
+                                  "pit's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "zero suit samus",
+                              "synonyms": [
+                                  "z s s's",
+                                  "z s s",
+                                  "zero suit samus's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "samus",
+                              "synonyms": [
+                                  "samus's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "toon link",
+                              "synonyms": [
+                                  "tink's",
+                                  "tink",
+                                  "toon link's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "sheik",
+                              "synonyms": [
+                                  "sheik's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "zelda",
+                              "synonyms": [
+                                  "zelda's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "link",
+                              "synonyms": [
+                                  "link's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "diddy kong",
+                              "synonyms": [
+                                  "diddy's",
+                                  "diddy",
+                                  "diddy kong's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "donkey kong",
+                              "synonyms": [
+                                  "d k",
+                                  "d k's",
+                                  "donkey kong's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "yoshi",
+                              "synonyms": [
+                                  "yoshi's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "peach",
+                              "synonyms": [
+                                  "peach's",
+                                  "princess peach",
+                                  "princess peach's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "bowser",
+                              "synonyms": [
+                                  "bowser's",
+                                  "king koopa",
+                                  "king koopa's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "rosalina and luma",
+                              "synonyms": [
+                                  "rosalina",
+                                  "rosa",
+                                  "rosa's",
+                                  "rosalina's",
+                                  "rosalina and luma's",
+                                  "rosaluma",
+                                  "rosaluma's",
+                                  "rosa and luma",
+                                  "rosa and luma's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "luigi",
+                              "synonyms": [
+                                  "luigi's",
+                                  "wee gee",
+                                  "wee gee's"
+                              ]
+                          }
+                      },
+                      {
+                          "name": {
+                              "value": "mario",
+                              "synonyms": [
+                                  "mario's"
+                              ]
+                          }
+                      }
+                  ]
+              }
+          ]
+      },
+      "dialog": {
+          "intents": [
+              {
+                  "name": "CharacterMoveIntent",
+                  "confirmationRequired": false,
+                  "prompts": {},
+                  "slots": [
+                      {
+                          "name": "move_type",
+                          "type": "move_type",
+                          "confirmationRequired": false,
+                          "elicitationRequired": true,
+                          "prompts": {
+                              "elicitation": "Elicit.Slot.10019951557.883920751769"
+                          }
+                      },
+                      {
+                          "name": "character",
+                          "type": "character",
+                          "confirmationRequired": false,
+                          "elicitationRequired": true,
+                          "prompts": {
+                              "elicitation": "Elicit.Slot.10019951557.1303304771453"
+                          }
+                      }
+                  ]
+              }
+          ]
+      },
+      "prompts": [
+          {
+              "id": "Elicit.Slot.10019951557.1303304771453",
+              "variations": [
+                  {
+                      "type": "PlainText",
+                      "value": "Which character's {move_type} do you want to know about?"
+                  }
+              ]
+          },
+          {
+              "id": "Elicit.Slot.10019951557.883920751769",
+              "variations": [
+                  {
+                      "type": "PlainText",
+                      "value": "What move of {character} do you want to know about?"
+                  }
+              ]
+          },
+          {
+              "id": "Elicit.Slot.968683813518.537987446067",
+              "variations": [
+                  {
+                      "type": "PlainText",
+                      "value": "what character?"
+                  }
+              ]
+          }
+      ]
+  }
 }

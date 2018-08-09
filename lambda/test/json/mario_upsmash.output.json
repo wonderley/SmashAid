@@ -4,17 +4,17 @@
 		"response": {
 			"outputSpeech": {
 				"type": "PlainText",
-				"text": "mario's up smash is active frames 9 to 12 (Head Intangible: 9 to 12). mario can act on frame 40."
+				"text": "Mario's up smash is active frames 9 to 12 (Head Intangible: 9 to 12). Mario can act on frame 40. You can ask about another one of Mario's moves, or name another character and move."
 			},
 			"card": {
 				"type": "Simple",
-				"title": "SessionSpeechlet - CharacterMoveIntent",
-				"content": "SessionSpeechlet - mario's up smash is active frames 9 to 12 (Head Intangible: 9 to 12). mario can act on frame 40."
+				"title": "Mario's Up Smash",
+				"content": ""
 			},
 			"reprompt": {
 				"outputSpeech": {
 					"type": "PlainText",
-					"text": ""
+					"text": "Ask about another one of Mario's moves, or name another character and move."
 				}
 			},
 			"shouldEndSession": false
