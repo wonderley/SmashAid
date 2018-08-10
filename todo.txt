@@ -1,0 +1,7 @@
+Add ability to add custom data to generated JSON via static JSON decorator files.
+For example - provide the real name of Zelda's down B.
+Character general info / bio
+Attributes
+Rankings
+Comparisons
+Damage/knockback/angles

@@ -1,0 +1,27 @@
+{
+	"body": {
+		"version": "1.0",
+		"response": {
+			"outputSpeech": {
+				"type": "PlainText",
+				"text": "Bowser Junior's up special, Abandon Ship!, has 3 parts.  initial is active frames 21 to 22.  explosion is active frames 60 to 61.  hammer is active frames 8 and  13. Bowser Junior can act on frame 40. You can ask about another one of Bowser Junior's moves, or name another character and move."
+			},
+			"card": {
+				"type": "Simple",
+				"title": "Bowser Junior's Up Special, Abandon Ship!,",
+				"content": ""
+			},
+			"reprompt": {
+				"outputSpeech": {
+					"type": "PlainText",
+					"text": "Ask about another one of Bowser Junior's moves, or name another character and move."
+				}
+			},
+			"shouldEndSession": false
+		},
+		"sessionAttributes": {
+			"character": "bowser junior",
+			"move": "up special"
+		}
+	}
+}

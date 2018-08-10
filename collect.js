@@ -356,7 +356,8 @@ function extractRowData(tr) {
   let rowData = [];
   $(tr).find('td').each(function(_, td) {
     let text = $(td).text();
-    if (!text || text === '-') text = '';
+    if (!text || text === '-' || text === '?')
+      text = '';
     if (text && text[text.length - 1] === '-')
       text = text.substring(0, text.length - 1);
     rowData.push(text);

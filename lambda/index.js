@@ -87,7 +87,6 @@ function handleSessionEndRequest(callback) {
 }
 
 function speechOutputForMoveGroup(character, group, data) {
-  let output;
   let movesInGroup = Array.isArray(data) ? data : [data];
   // Get rid of parts of the move group with no value
   // for hitbox_active. For example, Falcon's Falcon
@@ -98,12 +97,18 @@ function speechOutputForMoveGroup(character, group, data) {
       movesInGroup.filter(
         moveData => !!moveData.hitbox_active);
   }
+  if (!movesInGroup.length) {
+    throw new Error('No valid moves in the group');
+  }
+  let output;
   if (movesInGroup.length === 1) {
     const moveData = movesInGroup[0];
     if (moveData.hitbox_active) {
       output = speechOutputForAttackData(character, group, moveData, true);
     } else if (moveData.intangibility) {
       output = speechOutputForDodgeData(character, group, moveData);
+    } else if (moveData.weight_dependent) {
+      output = speechOutputForThrowData(character, group, moveData);
     } else {
       throw new Error('Unrecognized move data');
     }
@@ -165,6 +170,11 @@ function speechOutputForAttackData(character, move, data, verbose) {
 
 function speechOutputForDodgeData(character, move, data) {
   return `${character}'s ${move} is intangible frames ${data.intangibility}.`;
+}
+
+function speechOutputForThrowData(character, move, data) {
+  const not = data.weight_dependent ? '' : ' not ';
+  return `${character}'s ${move} is ${not} weight dependent.`;
 }
 
 function getSlot(intent, slotName) {
@@ -234,7 +244,10 @@ function onCharacterMoveIntent(intent, session, callback) {
   }
   
   // read from s3
-  readFile('aws-lambda-smashproject', `${character.replaceAll(' ', '_')}.json`, (filename, result) => {
+  const characterFileName = character
+    .replaceAll(' ', '_').replaceAll('junior', 'jr')
+    .replaceAll('doctor', 'dr');
+  readFile('aws-lambda-smashproject', `${characterFileName}.json`, (_, result) => {
     const Character = capitalize(character);
     try {
       result = JSON.parse(result);
@@ -258,7 +271,7 @@ function onCharacterMoveIntent(intent, session, callback) {
       callback(sessionAttributes,
        buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession));
     } catch (e) {
-      speechOutput = `My B. I couldn't find the ${move} for ${Character}. Please name another character and move.`;
+      speechOutput = `Sorry, I don't have any information about the ${move} for ${Character}. Please name another character and move.`;
       cardTitle = 'Please try again';
       callback(sessionAttributes,
        buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession, speechOutput));

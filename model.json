@@ -9,7 +9,12 @@
               },
               {
                   "name": "AMAZON.CancelIntent",
-                  "samples": []
+                  "samples": [
+                      "no thanks",
+                      "that's okay",
+                      "nevermind",
+                      "cancel"
+                  ]
               },
               {
                   "name": "AMAZON.HelpIntent",
@@ -17,7 +22,19 @@
               },
               {
                   "name": "AMAZON.StopIntent",
-                  "samples": []
+                  "samples": [
+                      "got it",
+                      "that's all for now",
+                      "that's all",
+                      "exit",
+                      "thank you",
+                      "thanks",
+                      "close smash aid",
+                      "that's all I need",
+                      "that's it",
+                      "stop",
+                      "I'm done"
+                  ]
               },
               {
                   "name": "CharacterMoveIntent",
@@ -373,6 +390,8 @@
                           "name": {
                               "value": "roy",
                               "synonyms": [
+                                  "our boy's",
+                                  "our boy",
                                   "roy's"
                               ]
                           }
@@ -397,6 +416,8 @@
                           "name": {
                               "value": "jigglypuff",
                               "synonyms": [
+                                  "puff's",
+                                  "puff",
                                   "jigglypuff's"
                               ]
                           }
@@ -405,6 +426,8 @@
                           "name": {
                               "value": "duck hunt",
                               "synonyms": [
+                                  "duck hunt dog's",
+                                  "duck hunt dog",
                                   "duck hunt's"
                               ]
                           }
@@ -431,6 +454,8 @@
                           "name": {
                               "value": "ganondorf",
                               "synonyms": [
+                                  "dorf's",
+                                  "dorf",
                                   "ganon's",
                                   "ganondorf's",
                                   "ganon"
@@ -587,6 +612,8 @@
                           "name": {
                               "value": "charizard",
                               "synonyms": [
+                                  "zard's",
+                                  "zard",
                                   "charizard's"
                               ]
                           }

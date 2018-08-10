@@ -1,0 +1,27 @@
+{
+	"body": {
+		"version": "1.0",
+		"response": {
+			"outputSpeech": {
+				"type": "PlainText",
+				"text": "Mario's up throw is  weight dependent.  You can ask about another one of Mario's moves, or name another character and move."
+			},
+			"card": {
+				"type": "Simple",
+				"title": "Mario's Up Throw",
+				"content": ""
+			},
+			"reprompt": {
+				"outputSpeech": {
+					"type": "PlainText",
+					"text": "Ask about another one of Mario's moves, or name another character and move."
+				}
+			},
+			"shouldEndSession": false
+		},
+		"sessionAttributes": {
+			"character": "mario",
+			"move": "up throw"
+		}
+	}
+}

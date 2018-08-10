@@ -1,0 +1,27 @@
+{
+	"body": {
+		"version": "1.0",
+		"response": {
+			"outputSpeech": {
+				"type": "PlainText",
+				"text": "Sorry, I don't have any information about the side special, Din's Fire, for Zelda. Please name another character and move."
+			},
+			"card": {
+				"type": "Simple",
+				"title": "Please try again",
+				"content": ""
+			},
+			"reprompt": {
+				"outputSpeech": {
+					"type": "PlainText",
+					"text": ""
+				}
+			},
+			"shouldEndSession": false
+		},
+		"sessionAttributes": {
+			"character": "zelda",
+			"move": "side special"
+		}
+	}
+}
