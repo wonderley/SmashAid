@@ -5,3 +5,5 @@ Attributes
 Rankings
 Comparisons
 Damage/knockback/angles
+Confirms, esp kill confirms, esp out of grab
+Ledge options

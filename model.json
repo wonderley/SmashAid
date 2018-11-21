@@ -23,6 +23,9 @@
               {
                   "name": "AMAZON.StopIntent",
                   "samples": [
+                      "okay cool",
+                      "I am done",
+                      "all done",
                       "got it",
                       "that's all for now",
                       "that's all",
