@@ -1,0 +1,638 @@
+{
+  "moveset": {
+    "jab": [
+      {
+        "hitbox_active": "8-10",
+        "faf": "23",
+        "base_dmg": "2",
+        "angle": "70/82",
+        "bkb_wbkb": "W: 40/30",
+        "kbg": "100",
+        "modifier": "1  rosalina"
+      },
+      {
+        "hitbox_active": "4-5",
+        "faf": "23",
+        "base_dmg": "2",
+        "angle": "70",
+        "bkb_wbkb": "W: 50",
+        "kbg": "100",
+        "modifier": "1  luma"
+      },
+      {
+        "hitbox_active": "6-8",
+        "faf": "25",
+        "base_dmg": "1",
+        "angle": "74/82",
+        "bkb_wbkb": "W: 40/30",
+        "kbg": "100",
+        "modifier": "2  rosalina"
+      },
+      {
+        "hitbox_active": "6-7",
+        "faf": "25",
+        "base_dmg": "2",
+        "angle": "90",
+        "bkb_wbkb": "W: 50",
+        "kbg": "100",
+        "modifier": "2  luma"
+      },
+      {
+        "hitbox_active": "9-11",
+        "faf": "36",
+        "base_dmg": "3",
+        "angle": "74",
+        "bkb_wbkb": "48",
+        "kbg": "80",
+        "modifier": "3  rosalina"
+      },
+      {
+        "hitbox_active": "9-13",
+        "faf": "36",
+        "base_dmg": "4",
+        "angle": "80",
+        "bkb_wbkb": "60",
+        "kbg": "150",
+        "modifier": "3  luma"
+      }
+    ],
+    "rapid jab": [
+      {
+        "hitbox_active": "",
+        "faf": "",
+        "base_dmg": "",
+        "angle": "",
+        "bkb_wbkb": "",
+        "kbg": "",
+        "modifier": " rosalina"
+      },
+      {
+        "hitbox_active": "",
+        "faf": "",
+        "base_dmg": "1.2",
+        "angle": "50",
+        "bkb_wbkb": "15",
+        "kbg": "100",
+        "modifier": " luma"
+      }
+    ],
+    "rapid jab finisher": [
+      {
+        "hitbox_active": "9-11",
+        "faf": "40",
+        "base_dmg": "3",
+        "angle": "361",
+        "bkb_wbkb": "60",
+        "kbg": "150",
+        "modifier": " rosalina"
+      },
+      {
+        "hitbox_active": "8-12",
+        "faf": "40",
+        "base_dmg": "3",
+        "angle": "80",
+        "bkb_wbkb": "60",
+        "kbg": "130",
+        "modifier": " luma"
+      }
+    ],
+    "dash attack": [
+      {
+        "hitbox_active": "6-9",
+        "faf": "48",
+        "base_dmg": "3",
+        "angle": "45",
+        "bkb_wbkb": "40",
+        "kbg": "50",
+        "modifier": " hit 1 rosalina"
+      },
+      {
+        "hitbox_active": "17-19",
+        "faf": "",
+        "base_dmg": "4",
+        "angle": "65",
+        "bkb_wbkb": "70",
+        "kbg": "130",
+        "modifier": " hit 2 rosalina"
+      },
+      {
+        "hitbox_active": "6-8",
+        "faf": "48",
+        "base_dmg": "3",
+        "angle": "45",
+        "bkb_wbkb": "45",
+        "kbg": "50",
+        "modifier": " luma"
+      }
+    ],
+    "forward tilt": [
+      {
+        "hitbox_active": "7-9",
+        "faf": "38",
+        "base_dmg": "6/6/5",
+        "angle": "361",
+        "bkb_wbkb": "35",
+        "kbg": "90",
+        "modifier": " rosalina"
+      },
+      {
+        "hitbox_active": "8-11",
+        "faf": "39",
+        "base_dmg": "4.3",
+        "angle": "361",
+        "bkb_wbkb": "40",
+        "kbg": "125",
+        "modifier": " luma"
+      }
+    ],
+    "up tilt": [
+      {
+        "hitbox_active": "9-17 (Head Intangible: 4-11)",
+        "faf": "41",
+        "base_dmg": "8",
+        "angle": "88",
+        "bkb_wbkb": "80",
+        "kbg": "70",
+        "modifier": " rosalina"
+      },
+      {
+        "hitbox_active": "3 (Ground Only)",
+        "faf": "31",
+        "base_dmg": "8",
+        "angle": "88",
+        "bkb_wbkb": "120",
+        "kbg": "60",
+        "modifier": " early luma"
+      },
+      {
+        "hitbox_active": "4-5",
+        "faf": "",
+        "base_dmg": "4",
+        "angle": "98/93",
+        "bkb_wbkb": "85/80",
+        "kbg": "60",
+        "modifier": " luma"
+      },
+      {
+        "hitbox_active": "6-10",
+        "faf": "",
+        "base_dmg": "3",
+        "angle": "90",
+        "bkb_wbkb": "80",
+        "kbg": "60",
+        "modifier": " late luma"
+      }
+    ],
+    "down tilt": [
+      {
+        "hitbox_active": "5-8",
+        "faf": "33",
+        "base_dmg": "4.5",
+        "angle": "30",
+        "bkb_wbkb": "35",
+        "kbg": "98",
+        "modifier": " rosalina"
+      },
+      {
+        "hitbox_active": "8-13",
+        "faf": "32",
+        "base_dmg": "3.5",
+        "angle": "30",
+        "bkb_wbkb": "35",
+        "kbg": "120",
+        "modifier": " luma"
+      }
+    ],
+    "forward smash": [
+      {
+        "hitbox_active": "16-18",
+        "faf": "52",
+        "base_dmg": "12",
+        "angle": "361",
+        "bkb_wbkb": "30",
+        "kbg": "111",
+        "modifier": " rosalina"
+      },
+      {
+        "hitbox_active": "17-18",
+        "faf": "52",
+        "base_dmg": "7/5",
+        "angle": "361/70",
+        "bkb_wbkb": "43",
+        "kbg": "165",
+        "modifier": " luma"
+      }
+    ],
+    "up smash": [
+      {
+        "hitbox_active": "8-16 (Head Intangible: 7-16)",
+        "faf": "48",
+        "base_dmg": "12",
+        "angle": "86",
+        "bkb_wbkb": "45",
+        "kbg": "90",
+        "modifier": " rosalina"
+      },
+      {
+        "hitbox_active": "10-12",
+        "faf": "48",
+        "base_dmg": "6",
+        "angle": "85",
+        "bkb_wbkb": "60",
+        "kbg": "142",
+        "modifier": " luma"
+      },
+      {
+        "hitbox_active": "13-17",
+        "faf": "",
+        "base_dmg": "5",
+        "angle": "85",
+        "bkb_wbkb": "60",
+        "kbg": "142",
+        "modifier": " late luma"
+      }
+    ],
+    "down smash": [
+      {
+        "hitbox_active": "6-7",
+        "faf": "42",
+        "base_dmg": "7",
+        "angle": "32",
+        "bkb_wbkb": "40",
+        "kbg": "102",
+        "modifier": " hit 1 rosalina"
+      },
+      {
+        "hitbox_active": "17-18",
+        "faf": "",
+        "base_dmg": "9",
+        "angle": "32",
+        "bkb_wbkb": "36",
+        "kbg": "105",
+        "modifier": " hit 2 rosalina"
+      },
+      {
+        "hitbox_active": "7-8",
+        "faf": "36",
+        "base_dmg": "4",
+        "angle": "33",
+        "bkb_wbkb": "40",
+        "kbg": "155",
+        "modifier": " hit 1 luma"
+      },
+      {
+        "hitbox_active": "19-20",
+        "faf": "",
+        "base_dmg": "5",
+        "angle": "33",
+        "bkb_wbkb": "40",
+        "kbg": "155",
+        "modifier": " hit 2 luma"
+      }
+    ],
+    "standing grab": {
+      "hitbox_active": "6-7",
+      "faf": "36"
+    },
+    "dash grab": {
+      "hitbox_active": "8-9",
+      "faf": "43"
+    },
+    "pivot grab": {
+      "hitbox_active": "9-10",
+      "faf": "42"
+    },
+    "forward throw": {
+      "weight_dependent": false,
+      "base_dmg": "9",
+      "angle": "45",
+      "bkb_wbkb": "45",
+      "kbg": "76"
+    },
+    "back throw": {
+      "weight_dependent": false,
+      "base_dmg": "11",
+      "angle": "50",
+      "bkb_wbkb": "70",
+      "kbg": "60"
+    },
+    "up throw": {
+      "weight_dependent": false,
+      "base_dmg": "7",
+      "angle": "88",
+      "bkb_wbkb": "50",
+      "kbg": "90"
+    },
+    "down throw": {
+      "weight_dependent": false,
+      "base_dmg": "9",
+      "angle": "70",
+      "bkb_wbkb": "90",
+      "kbg": "35"
+    },
+    "spot dodge": {
+      "intangibility": "3-17",
+      "faf": "27"
+    },
+    "forward roll": {
+      "intangibility": "4-17",
+      "faf": "31"
+    },
+    "back roll": {
+      "intangibility": "4-17",
+      "faf": "31"
+    },
+    "air dodge": {
+      "intangibility": "3-27",
+      "faf": "33"
+    },
+    "neutral air": [
+      {
+        "hitbox_active": "9-34",
+        "faf": "66",
+        "base_dmg": "5",
+        "angle": "361",
+        "bkb_wbkb": "30",
+        "kbg": "108",
+        "landing_lag": "11",
+        "autocancel": "1-2, 60>",
+        "modifier": " rosalina"
+      },
+      {
+        "hitbox_active": "35-46",
+        "faf": "",
+        "base_dmg": "7.5",
+        "angle": "361",
+        "bkb_wbkb": "25",
+        "kbg": "108",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " late rosalina"
+      },
+      {
+        "hitbox_active": "3-6",
+        "faf": "57?",
+        "base_dmg": "4",
+        "angle": "361",
+        "bkb_wbkb": "40",
+        "kbg": "170",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " hit 1 luma"
+      },
+      {
+        "hitbox_active": "26-29",
+        "faf": "",
+        "base_dmg": "3",
+        "angle": "361",
+        "bkb_wbkb": "40",
+        "kbg": "170",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " hit 2 luma"
+      }
+    ],
+    "forward air": [
+      {
+        "hitbox_active": "11-25 (Rehit rate: 5)",
+        "faf": "76",
+        "base_dmg": "1",
+        "angle": "366/30",
+        "bkb_wbkb": "55",
+        "kbg": "100",
+        "landing_lag": "20",
+        "autocancel": "1-5, 67>",
+        "modifier": " rosalina"
+      },
+      {
+        "hitbox_active": "27-28",
+        "faf": "",
+        "base_dmg": "4",
+        "angle": "361",
+        "bkb_wbkb": "50",
+        "kbg": "138",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " final hit rosalina"
+      },
+      {
+        "hitbox_active": "11-14",
+        "faf": "58",
+        "base_dmg": "5",
+        "angle": "80",
+        "bkb_wbkb": "30",
+        "kbg": "150",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " luma"
+      }
+    ],
+    "back air": [
+      {
+        "hitbox_active": "9-11",
+        "faf": "55",
+        "base_dmg": "11",
+        "angle": "30",
+        "bkb_wbkb": "38",
+        "kbg": "65",
+        "landing_lag": "16",
+        "autocancel": "1-4, 46>",
+        "modifier": " rosalina"
+      },
+      {
+        "hitbox_active": "10-15",
+        "faf": "55",
+        "base_dmg": "4",
+        "angle": "28",
+        "bkb_wbkb": "30",
+        "kbg": "150",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " luma"
+      }
+    ],
+    "up air": [
+      {
+        "hitbox_active": "8-10",
+        "faf": "42",
+        "base_dmg": "10",
+        "angle": "88",
+        "bkb_wbkb": "40",
+        "kbg": "98",
+        "landing_lag": "18",
+        "autocancel": "42>",
+        "modifier": " early rosalina"
+      },
+      {
+        "hitbox_active": "11-21",
+        "faf": "",
+        "base_dmg": "5",
+        "angle": "88",
+        "bkb_wbkb": "40",
+        "kbg": "98",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " rosalina"
+      },
+      {
+        "hitbox_active": "22-29",
+        "faf": "",
+        "base_dmg": "2",
+        "angle": "88",
+        "bkb_wbkb": "20",
+        "kbg": "30",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " late rosalina"
+      },
+      {
+        "hitbox_active": "3-10",
+        "faf": "42",
+        "base_dmg": "4",
+        "angle": "108/92",
+        "bkb_wbkb": "110",
+        "kbg": "60",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " luma"
+      }
+    ],
+    "down air": [
+      {
+        "hitbox_active": "17",
+        "faf": "50",
+        "base_dmg": "8",
+        "angle": "361",
+        "bkb_wbkb": "40",
+        "kbg": "80",
+        "landing_lag": "20",
+        "autocancel": "1-2, 49>",
+        "modifier": " early rosalina"
+      },
+      {
+        "hitbox_active": "18-22",
+        "faf": "",
+        "base_dmg": "7",
+        "angle": "270",
+        "bkb_wbkb": "20",
+        "kbg": "67",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " meteor rosalina"
+      },
+      {
+        "hitbox_active": "23-25",
+        "faf": "",
+        "base_dmg": "6",
+        "angle": "45",
+        "bkb_wbkb": "35",
+        "kbg": "100",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " rosalina"
+      },
+      {
+        "hitbox_active": "26-32",
+        "faf": "",
+        "base_dmg": "2",
+        "angle": "361",
+        "bkb_wbkb": "20",
+        "kbg": "30",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " late rosalina"
+      },
+      {
+        "hitbox_active": "8-12",
+        "faf": "42",
+        "base_dmg": "5",
+        "angle": "45",
+        "bkb_wbkb": "90",
+        "kbg": "110",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " luma"
+      }
+    ],
+    "specials": [
+      {
+        "name": "neutral special",
+        "otherName": "luma shot",
+        "value": [
+          {
+            "hitbox_active": "10-25",
+            "faf": "44",
+            "base_dmg": "1",
+            "angle": "52",
+            "bkb_wbkb": "50",
+            "kbg": "104",
+            "modifier": " no charge"
+          },
+          {
+            "hitbox_active": "4-32 (80 Frames to Fully Charge)",
+            "faf": "38",
+            "base_dmg": "16",
+            "angle": "52",
+            "bkb_wbkb": "50",
+            "kbg": "104",
+            "modifier": " full charge release"
+          },
+          {
+            "hitbox_active": "8-15",
+            "faf": "38",
+            "base_dmg": "0",
+            "angle": "361",
+            "bkb_wbkb": "W: 30",
+            "kbg": "100",
+            "modifier": " wand wave"
+          }
+        ]
+      },
+      {
+        "name": "side special",
+        "otherName": "star bits",
+        "value": [
+          {
+            "hitbox_active": "13-16, 17-20, 21-24",
+            "faf": "52 (Luma: 40)",
+            "base_dmg": "2.8",
+            "angle": "55",
+            "bkb_wbkb": "30",
+            "kbg": "50",
+            "modifier": ""
+          }
+        ]
+      },
+      {
+        "name": "up special",
+        "otherName": "launch star",
+        "value": [
+          {
+            "hitbox_active": "",
+            "faf": "",
+            "base_dmg": "",
+            "angle": "",
+            "bkb_wbkb": "",
+            "kbg": "",
+            "modifier": ""
+          }
+        ]
+      },
+      {
+        "name": "down special",
+        "otherName": "gravitational pull",
+        "value": [
+          {
+            "hitbox_active": "Pulls on: 2-60",
+            "faf": "45 (Luma: 44)",
+            "base_dmg": "",
+            "angle": "",
+            "bkb_wbkb": "",
+            "kbg": "",
+            "modifier": ""
+          }
+        ]
+      }
+    ]
+  }
+}

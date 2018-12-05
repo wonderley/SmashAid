@@ -2,13 +2,9 @@
 	"version": "1.0",
 	"session": {
 		"new": false,
-		"sessionId": "amzn1.echo-api.session.38a88fe5-59ad-4951-9fbe-5b38f167d9dc",
+		"sessionId": "amzn1.echo-api.session.089e97ee-3730-49c6-9d93-a39ee235c037",
 		"application": {
 			"applicationId": "amzn1.ask.skill.2fb7d380-4b6c-4bf4-969b-2894cb77037c"
-		},
-		"attributes": {
-			"move": "up air",
-			"character": "luigi"
 		},
 		"user": {
 			"userId": "amzn1.ask.account.AHE2YIB5CB2FNVYWYYRQEFDBDE423OP3RUEKJLPGDHIGRGD4ZU7VOKQFDNYUMF3OWBQBFLDAMJ3RIGBBD4QE7I2EUEC6NNDFN244VMTGQKF5VWDDROWENJXCWBBMOUUP5FTUOVSB3WEOVNKT3VZRRAHSJKRISEE5QUYSWDJJLEIBP6RDF2L3IWLTT6Y5EK4V66XCM7GRIX3NINQ"
@@ -35,13 +31,32 @@
 				}
 			},
 			"apiEndpoint": "https://api.amazonalexa.com",
-			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjJmYjdkMzgwLTRiNmMtNGJmNC05NjliLTI4OTRjYjc3MDM3YyIsImV4cCI6MTUzMzc3NDM2MywiaWF0IjoxNTMzNzcwNzYzLCJuYmYiOjE1MzM3NzA3NjMsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhOWExMTlk1WFNTVFZSVlhEWlA2N01QMlRUM09HSjJGTzVEVk5TUzVQV1BLNUNTVkRMQTdDVUY2SVJFNkpLRkZVRUQ0VE9XTDc0TVBDM0ZBS0tPQzRPWU9MSERINFJERFhPMkRMMzc3RklJR09LNFZYUUhBWTVWU0VYUkNHQVZURDNNU0hLRU8yVE4zTFBNSE9WUEhFSlNMSVVHTlZBN0IyUlpORjVKUUpUTE5SVFRPSlFCUSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIRTJZSUI1Q0IyRk5WWVdZWVJRRUZEQkRFNDIzT1AzUlVFS0pMUEdESElHUkdENFpVN1ZPS1FGRE5ZVU1GM09XQlFCRkxEQU1KM1JJR0JCRDRRRTdJMkVVRUM2Tk5ERk4yNDRWTVRHUUtGNVZXRERST1dFTkpYQ1dCQk1PVVVQNUZUVU9WU0IzV0VPVk5LVDNWWlJSQUhTSktSSVNFRTVRVVlTV0RKSkxFSUJQNlJERjJMM0lXTFRUNlk1RUs0VjY2WENNN0dSSVgzTklOUSJ9fQ.VYOX8IUzxY5LPie0sku9_GeFigjNCW89N6o6SxnUURRiBqcSuGfKa59ZBJoQFZXzeijtmrOFrDedxrPWy-fH_836x-u_MAy8hO3U1H9roJKPEG2QmynfNqgfXdPldOHmAu-9ecsTZAV3OGpsUdfgIhHm3MxzrQR1JYesZO8JLo_CNeEfy-5wlGloOgJfA7sJKRYO5nIgqDBGPt8ecaG945o54xIu1UTTt2-fOIdgO_0WIlGhakBnzoTnATjrFo-M5uSOZykdEGC63dPE-9jvOxG2tjb7Ym7F11BoJ5OUYwjJxvRAJ105R7Wa3gdCziEJ8m_Fz1g8-TU1gqZwga-iNw"
+			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjJmYjdkMzgwLTRiNmMtNGJmNC05NjliLTI4OTRjYjc3MDM3YyIsImV4cCI6MTU0NDA3MTk5MywiaWF0IjoxNTQ0MDY4MzkzLCJuYmYiOjE1NDQwNjgzOTMsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhOWExMTlk1WFNTVFZSVlhEWlA2N01QMlRUM09HSjJGTzVEVk5TUzVQV1BLNUNTVkRMQTdDVUY2SVJFNkpLRkZVRUQ0VE9XTDc0TVBDM0ZBS0tPQzRPWU9MSERINFJERFhPMkRMMzc3RklJR09LNFZYUUhBWTVWU0VYUkNHQVZURDNNU0hLRU8yVE4zTFBNSE9WUEhFSlNMSVVHTlZBN0IyUlpORjVKUUpUTE5SVFRPSlFCUSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIRTJZSUI1Q0IyRk5WWVdZWVJRRUZEQkRFNDIzT1AzUlVFS0pMUEdESElHUkdENFpVN1ZPS1FGRE5ZVU1GM09XQlFCRkxEQU1KM1JJR0JCRDRRRTdJMkVVRUM2Tk5ERk4yNDRWTVRHUUtGNVZXRERST1dFTkpYQ1dCQk1PVVVQNUZUVU9WU0IzV0VPVk5LVDNWWlJSQUhTSktSSVNFRTVRVVlTV0RKSkxFSUJQNlJERjJMM0lXTFRUNlk1RUs0VjY2WENNN0dSSVgzTklOUSJ9fQ.S07HSXFRkOK7OzWlDiyjiK23wFzp12X_hnQXlZOBBYyBPS_leHzggBxoKHrhhOSCBHR9URIw-nejttBIj_6yx_e0B1XAiEiY3R_fr7Tle7cgpOHrb3ZkkI77OiT0OuVB3N9_4xPkE1DeBPFfuT_CMi2n3yhVAZoahkAhj9ztTa5UJIKuXS_PKYQkiD7EqhXzXPVsWNxOugvxKdQEeNrOtZLId-6XnPGBVBZL0WvSmTpUW1sZpLhDac9yBPAVL3o6wMa64eB9Rcl8SNEuMpXMD9D1-C1Kxurv9Rq2ah73EPQhFlbrcmaVfBLKWkFt8M-0RYiGS7kd_R95oL36k3LUpQ"
+		},
+		"Viewport": {
+			"experiences": [
+				{
+					"arcMinuteWidth": 246,
+					"arcMinuteHeight": 144,
+					"canRotate": false,
+					"canResize": false
+				}
+			],
+			"shape": "RECTANGLE",
+			"pixelWidth": 1024,
+			"pixelHeight": 600,
+			"dpi": 160,
+			"currentPixelWidth": 1024,
+			"currentPixelHeight": 600,
+			"touch": [
+				"SINGLE"
+			]
 		}
 	},
 	"request": {
 		"type": "IntentRequest",
-		"requestId": "amzn1.echo-api.request.cea4627a-ca05-45a2-b70c-98b0da48e74c",
-		"timestamp": "2018-08-08T23:26:03Z",
+		"requestId": "amzn1.echo-api.request.80a10d4f-0a5b-4e1c-b738-9fff5aab1fb1",
+		"timestamp": "2018-12-06T03:53:13Z",
 		"locale": "en-US",
 		"intent": {
 			"name": "CharacterMoveIntent",
@@ -49,7 +64,7 @@
 			"slots": {
 				"character": {
 					"name": "character",
-					"value": "luigis",
+					"value": "Luigi's",
 					"resolutions": {
 						"resolutionsPerAuthority": [
 							{
@@ -68,7 +83,8 @@
 							}
 						]
 					},
-					"confirmationStatus": "NONE"
+					"confirmationStatus": "NONE",
+					"source": "USER"
 				},
 				"move_type": {
 					"name": "move_type",
@@ -91,7 +107,8 @@
 							}
 						]
 					},
-					"confirmationStatus": "NONE"
+					"confirmationStatus": "NONE",
+					"source": "USER"
 				}
 			}
 		},

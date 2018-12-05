@@ -3,8 +3,8 @@
 		"version": "1.0",
 		"response": {
 			"outputSpeech": {
-				"type": "PlainText",
-				"text": "Sorry, I don't have any information about the side special, Din's Fire, for Zelda. Please name another character and move."
+				"type": "SSML",
+				"ssml": "<speak>Sorry, I don't have any information about the side special, Din's Fire, for Zelda. Please name another character and move.</speak>"
 			},
 			"card": {
 				"type": "Simple",
@@ -13,8 +13,8 @@
 			},
 			"reprompt": {
 				"outputSpeech": {
-					"type": "PlainText",
-					"text": ""
+					"type": "SSML",
+					"ssml": "<speak>Sorry, I don't have any information about the side special, Din's Fire, for Zelda. Please name another character and move.</speak>"
 				}
 			},
 			"shouldEndSession": false
@@ -22,6 +22,7 @@
 		"sessionAttributes": {
 			"character": "zelda",
 			"move": "side special"
-		}
+		},
+		"userAgent": "ask-node/2.3.0 Node/v8.10.0"
 	}
 }

@@ -3,8 +3,8 @@
 		"version": "1.0",
 		"response": {
 			"outputSpeech": {
-				"type": "PlainText",
-				"text": "Which of Mario's moves?"
+				"type": "SSML",
+				"ssml": "<speak>Which of Mario's moves?</speak>"
 			},
 			"card": {
 				"type": "Simple",
@@ -13,14 +13,15 @@
 			},
 			"reprompt": {
 				"outputSpeech": {
-					"type": "PlainText",
-					"text": "I didn't get that. Which of Mario's moves?"
+					"type": "SSML",
+					"ssml": "<speak>I didn't get that. Which of Mario's moves?</speak>"
 				}
 			},
 			"shouldEndSession": false
 		},
 		"sessionAttributes": {
 			"character": "mario"
-		}
+		},
+		"userAgent": "ask-node/2.3.0 Node/v8.10.0"
 	}
 }

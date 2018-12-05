@@ -2,13 +2,9 @@
 	"version": "1.0",
 	"session": {
 		"new": false,
-		"sessionId": "amzn1.echo-api.session.80dc2f33-a994-459e-8834-4786c4ba973b",
+		"sessionId": "amzn1.echo-api.session.789377de-d305-4397-a13a-a2f2af86d660",
 		"application": {
 			"applicationId": "amzn1.ask.skill.2fb7d380-4b6c-4bf4-969b-2894cb77037c"
-		},
-		"attributes": {
-			"character": "bowser junior",
-			"move": "up special"
 		},
 		"user": {
 			"userId": "amzn1.ask.account.AHE2YIB5CB2FNVYWYYRQEFDBDE423OP3RUEKJLPGDHIGRGD4ZU7VOKQFDNYUMF3OWBQBFLDAMJ3RIGBBD4QE7I2EUEC6NNDFN244VMTGQKF5VWDDROWENJXCWBBMOUUP5FTUOVSB3WEOVNKT3VZRRAHSJKRISEE5QUYSWDJJLEIBP6RDF2L3IWLTT6Y5EK4V66XCM7GRIX3NINQ"
@@ -35,13 +31,32 @@
 				}
 			},
 			"apiEndpoint": "https://api.amazonalexa.com",
-			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjJmYjdkMzgwLTRiNmMtNGJmNC05NjliLTI4OTRjYjc3MDM3YyIsImV4cCI6MTUzMzg0MTIyNCwiaWF0IjoxNTMzODM3NjI0LCJuYmYiOjE1MzM4Mzc2MjQsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhOWExMTlk1WFNTVFZSVlhEWlA2N01QMlRUM09HSjJGTzVEVk5TUzVQV1BLNUNTVkRMQTdDVUY2SVJFNkpLRkZVRUQ0VE9XTDc0TVBDM0ZBS0tPQzRPWU9MSERINFJERFhPMkRMMzc3RklJR09LNFZYUUhBWTVWU0VYUkNHQVZURDNNU0hLRU8yVE4zTFBNSE9WUEhFSlNMSVVHTlZBN0IyUlpORjVKUUpUTE5SVFRPSlFCUSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIRTJZSUI1Q0IyRk5WWVdZWVJRRUZEQkRFNDIzT1AzUlVFS0pMUEdESElHUkdENFpVN1ZPS1FGRE5ZVU1GM09XQlFCRkxEQU1KM1JJR0JCRDRRRTdJMkVVRUM2Tk5ERk4yNDRWTVRHUUtGNVZXRERST1dFTkpYQ1dCQk1PVVVQNUZUVU9WU0IzV0VPVk5LVDNWWlJSQUhTSktSSVNFRTVRVVlTV0RKSkxFSUJQNlJERjJMM0lXTFRUNlk1RUs0VjY2WENNN0dSSVgzTklOUSJ9fQ.dJNzeiPzezDYn3W4PARYZ9XJzqPnuowim8IobA-f4jpnqmHqBNxudetKPFj00paYUIZxLfvIHlRcf1G83WiSatQKQ8BSZMjGIjx9yT77Mm1Ysf1JSad7GBu7-64MJ4U1V5heWtUspxcn31EcPIUOzgnSMZjiAvpdP2tqC42j8cZZO-qBE-SzUOD2My97ee4c_oaTDA-tq1ftSbmQBKe6U-wCawDmeRp5HdUFO_b-O8vLl906vqzUOiaekVo4-NdS_gRgLtbkVFGtx_X32wAQme1Y-KRjt9spRiInonGqIw5rSJzmZM6p2KpMjZucRXgERJhH3hArI8JZ0wluNaHWbQ"
+			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjJmYjdkMzgwLTRiNmMtNGJmNC05NjliLTI4OTRjYjc3MDM3YyIsImV4cCI6MTU0NDA1MzQ4NCwiaWF0IjoxNTQ0MDQ5ODg0LCJuYmYiOjE1NDQwNDk4ODQsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhOWExMTlk1WFNTVFZSVlhEWlA2N01QMlRUM09HSjJGTzVEVk5TUzVQV1BLNUNTVkRMQTdDVUY2SVJFNkpLRkZVRUQ0VE9XTDc0TVBDM0ZBS0tPQzRPWU9MSERINFJERFhPMkRMMzc3RklJR09LNFZYUUhBWTVWU0VYUkNHQVZURDNNU0hLRU8yVE4zTFBNSE9WUEhFSlNMSVVHTlZBN0IyUlpORjVKUUpUTE5SVFRPSlFCUSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIRTJZSUI1Q0IyRk5WWVdZWVJRRUZEQkRFNDIzT1AzUlVFS0pMUEdESElHUkdENFpVN1ZPS1FGRE5ZVU1GM09XQlFCRkxEQU1KM1JJR0JCRDRRRTdJMkVVRUM2Tk5ERk4yNDRWTVRHUUtGNVZXRERST1dFTkpYQ1dCQk1PVVVQNUZUVU9WU0IzV0VPVk5LVDNWWlJSQUhTSktSSVNFRTVRVVlTV0RKSkxFSUJQNlJERjJMM0lXTFRUNlk1RUs0VjY2WENNN0dSSVgzTklOUSJ9fQ.jefMux1eszqgJfetWknTKRQl1oZlJsNxTtJIN_WT1C070DibXvOVG2CpZ0VTWoYB43kqyqyC3o_ATpkzft6ig7G0OeXpnxwnNuDfyguoOtMwIS6dxDWswi4YZ14ToZNkEt5c_3Qix2AjFhNru6JgFc_keZmaH0Ehr8bjEKqzLL2-8phepgc3zbv13CXmHURf6SKT6LTI7zZyDmrJrL8GZS_zK2eq6mL62vmR3U2QsxAQbvtPdW2m2kFvJTc2J3lVlNu7TzBxl1DLGhm3bKVGU81X1Fyp_Ub7VXqvxg9ZLUG-Sc6sPynaB3_MuYtUlFLXMhV7lUFgnIOMtKMpA-DSFg"
+		},
+		"Viewport": {
+			"experiences": [
+				{
+					"arcMinuteWidth": 246,
+					"arcMinuteHeight": 144,
+					"canRotate": false,
+					"canResize": false
+				}
+			],
+			"shape": "RECTANGLE",
+			"pixelWidth": 1024,
+			"pixelHeight": 600,
+			"dpi": 160,
+			"currentPixelWidth": 1024,
+			"currentPixelHeight": 600,
+			"touch": [
+				"SINGLE"
+			]
 		}
 	},
 	"request": {
 		"type": "IntentRequest",
-		"requestId": "amzn1.echo-api.request.97a4d11b-9c3b-4f5e-868e-48504f9dc743",
-		"timestamp": "2018-08-09T18:00:24Z",
+		"requestId": "amzn1.echo-api.request.41b775ff-5c88-4e4b-bd85-e0241113e516",
+		"timestamp": "2018-12-05T22:44:44Z",
 		"locale": "en-US",
 		"intent": {
 			"name": "CharacterMoveIntent",
@@ -68,7 +83,8 @@
 							}
 						]
 					},
-					"confirmationStatus": "NONE"
+					"confirmationStatus": "NONE",
+					"source": "USER"
 				},
 				"move_type": {
 					"name": "move_type",
@@ -91,7 +107,8 @@
 							}
 						]
 					},
-					"confirmationStatus": "NONE"
+					"confirmationStatus": "NONE",
+					"source": "USER"
 				}
 			}
 		},

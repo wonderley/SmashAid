@@ -2,13 +2,13 @@
 	"version": "1.0",
 	"session": {
 		"new": false,
-		"sessionId": "amzn1.echo-api.session.42e01b04-24bc-4981-8ac0-9efe7fce4019",
+		"sessionId": "amzn1.echo-api.session.39d0d5cf-a12e-4cf7-8987-7be8f35d1962",
 		"application": {
 			"applicationId": "amzn1.ask.skill.2fb7d380-4b6c-4bf4-969b-2894cb77037c"
 		},
 		"attributes": {
-			"character": "king dedede",
-			"move": "down air"
+			"character": "pac man",
+			"move": "neutral air"
 		},
 		"user": {
 			"userId": "amzn1.ask.account.AHE2YIB5CB2FNVYWYYRQEFDBDE423OP3RUEKJLPGDHIGRGD4ZU7VOKQFDNYUMF3OWBQBFLDAMJ3RIGBBD4QE7I2EUEC6NNDFN244VMTGQKF5VWDDROWENJXCWBBMOUUP5FTUOVSB3WEOVNKT3VZRRAHSJKRISEE5QUYSWDJJLEIBP6RDF2L3IWLTT6Y5EK4V66XCM7GRIX3NINQ"
@@ -35,13 +35,32 @@
 				}
 			},
 			"apiEndpoint": "https://api.amazonalexa.com",
-			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjJmYjdkMzgwLTRiNmMtNGJmNC05NjliLTI4OTRjYjc3MDM3YyIsImV4cCI6MTUzMzQzMTU0NSwiaWF0IjoxNTMzNDI3OTQ1LCJuYmYiOjE1MzM0Mjc5NDUsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhOWExMTlk1WFNTVFZSVlhEWlA2N01QMlRUM09HSjJGTzVEVk5TUzVQV1BLNUNTVkRMQTdDVUY2SVJFNkpLRkZVRUQ0VE9XTDc0TVBDM0ZBS0tPQzRPWU9MSERINFJERFhPMkRMMzc3RklJR09LNFZYUUhBWTVWU0VYUkNHQVZURDNNU0hLRU8yVE4zTFBNSE9WUEhFSlNMSVVHTlZBN0IyUlpORjVKUUpUTE5SVFRPSlFCUSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIRTJZSUI1Q0IyRk5WWVdZWVJRRUZEQkRFNDIzT1AzUlVFS0pMUEdESElHUkdENFpVN1ZPS1FGRE5ZVU1GM09XQlFCRkxEQU1KM1JJR0JCRDRRRTdJMkVVRUM2Tk5ERk4yNDRWTVRHUUtGNVZXRERST1dFTkpYQ1dCQk1PVVVQNUZUVU9WU0IzV0VPVk5LVDNWWlJSQUhTSktSSVNFRTVRVVlTV0RKSkxFSUJQNlJERjJMM0lXTFRUNlk1RUs0VjY2WENNN0dSSVgzTklOUSJ9fQ.WM9MJOH2O3XC5kY9vEZtarN5qhAYScK2jGsLJC53rxdTNmuhXj7c6eVKf0LvrLm6FkJIwKNzBfFWI30o-Mm5G3dFxko9xaYNO6bOuDSmDvA3PnTssbBwIN3Usj1sJ6mtimQetR1srPnXcbFlDr7qlhzCCFhi8hn3bBhnwKtep2a2bbRaTyFuDE6xzqLxrZ7662WUy9kmzbsB7Bs4NJoJsYyUh77CHxub_R-hGGBivxOJd20LNS-2sKUVhW8dP0F7rsx43vwlg_qE3pv-W9hbTl2-CSy3_RNXCWXYapOz36Ild6dxi-stQorFeTxEvFvYROvHVQ7NlRx7sm6ed299Ww"
+			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjJmYjdkMzgwLTRiNmMtNGJmNC05NjliLTI4OTRjYjc3MDM3YyIsImV4cCI6MTU0NDA3MjcyMSwiaWF0IjoxNTQ0MDY5MTIxLCJuYmYiOjE1NDQwNjkxMjEsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhOWExMTlk1WFNTVFZSVlhEWlA2N01QMlRUM09HSjJGTzVEVk5TUzVQV1BLNUNTVkRMQTdDVUY2SVJFNkpLRkZVRUQ0VE9XTDc0TVBDM0ZBS0tPQzRPWU9MSERINFJERFhPMkRMMzc3RklJR09LNFZYUUhBWTVWU0VYUkNHQVZURDNNU0hLRU8yVE4zTFBNSE9WUEhFSlNMSVVHTlZBN0IyUlpORjVKUUpUTE5SVFRPSlFCUSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIRTJZSUI1Q0IyRk5WWVdZWVJRRUZEQkRFNDIzT1AzUlVFS0pMUEdESElHUkdENFpVN1ZPS1FGRE5ZVU1GM09XQlFCRkxEQU1KM1JJR0JCRDRRRTdJMkVVRUM2Tk5ERk4yNDRWTVRHUUtGNVZXRERST1dFTkpYQ1dCQk1PVVVQNUZUVU9WU0IzV0VPVk5LVDNWWlJSQUhTSktSSVNFRTVRVVlTV0RKSkxFSUJQNlJERjJMM0lXTFRUNlk1RUs0VjY2WENNN0dSSVgzTklOUSJ9fQ.KItU78QqUCTwr3BiXXGTYAC4xByH8qKw3ueBfeouX-Af96fpXzJSuJoL0A0z2XLNGA5aCEflsipal70-vW7JxKnsqgbVYArSBKkfc9ixT_f596gOAbZ8a_kQHg_CuT2p7nZ3MUxIg_P3gYCxFp5gy865swvBL8xxwzPqrnqu1vqYnh4YnWEZhdVs7LmY7uTUkug9eAc4TRivC_a6AEnNIIDXq_4IEdL18udQSwFPtyH7ILw1zb5epQsbusSRXmypDG3bk5glL7RKuLaI_JqLwRjEHgCXtetJlKXJ1rGBYcoxAZDiBo2oYEVjZOtFW3nelCbtPN8I1HL_6PgIu6VthQ"
+		},
+		"Viewport": {
+			"experiences": [
+				{
+					"arcMinuteWidth": 246,
+					"arcMinuteHeight": 144,
+					"canRotate": false,
+					"canResize": false
+				}
+			],
+			"shape": "RECTANGLE",
+			"pixelWidth": 1024,
+			"pixelHeight": 600,
+			"dpi": 160,
+			"currentPixelWidth": 1024,
+			"currentPixelHeight": 600,
+			"touch": [
+				"SINGLE"
+			]
 		}
 	},
 	"request": {
 		"type": "IntentRequest",
-		"requestId": "amzn1.echo-api.request.b0001c2b-e984-47f7-9194-a160a1934dc5",
-		"timestamp": "2018-08-05T00:12:25Z",
+		"requestId": "amzn1.echo-api.request.9f214084-c37a-4249-99f7-256718b8f12b",
+		"timestamp": "2018-12-06T04:05:21Z",
 		"locale": "en-US",
 		"intent": {
 			"name": "CharacterMoveIntent",
@@ -68,11 +87,32 @@
 							}
 						]
 					},
-					"confirmationStatus": "NONE"
+					"confirmationStatus": "NONE",
+					"source": "USER"
 				},
 				"move_type": {
 					"name": "move_type",
-					"confirmationStatus": "NONE"
+					"value": "down air",
+					"resolutions": {
+						"resolutionsPerAuthority": [
+							{
+								"authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.2fb7d380-4b6c-4bf4-969b-2894cb77037c.move_type",
+								"status": {
+									"code": "ER_SUCCESS_MATCH"
+								},
+								"values": [
+									{
+										"value": {
+											"name": "down air",
+											"id": "29283b93447cf44a4e643819c4cb6e23"
+										}
+									}
+								]
+							}
+						]
+					},
+					"confirmationStatus": "NONE",
+					"source": "USER"
 				}
 			}
 		},

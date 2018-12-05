@@ -3,8 +3,8 @@
 		"version": "1.0",
 		"response": {
 			"outputSpeech": {
-				"type": "PlainText",
-				"text": "Rosalina And Luma's up tilt has 4 parts.  rosalina is active frames 9 to 17 (Head Intangible: 4 to 11).  early luma is active frame 3 (Ground Only).  luma is active frames 4 to 5.  late luma is active frames 6 to 10. Rosalina And Luma can act on frame 41. You can ask about another one of Rosalina And Luma's moves, or name another character and move."
+				"type": "SSML",
+				"ssml": "<speak>Rosalina And Luma's up tilt has 4 parts.  rosalina is active frames 9 to 17 (Head Intangible: 4 to 11).  early luma is active frame 3 (Ground Only).  luma is active frames 4 to 5.  late luma is active frames 6 to 10. Rosalina And Luma can act on frame 41. You can ask about another one of Rosalina And Luma's moves, or name another character and move.</speak>"
 			},
 			"card": {
 				"type": "Simple",
@@ -13,8 +13,8 @@
 			},
 			"reprompt": {
 				"outputSpeech": {
-					"type": "PlainText",
-					"text": "Ask about another one of Rosalina And Luma's moves, or name another character and move."
+					"type": "SSML",
+					"ssml": "<speak>Rosalina And Luma's up tilt has 4 parts.  rosalina is active frames 9 to 17 (Head Intangible: 4 to 11).  early luma is active frame 3 (Ground Only).  luma is active frames 4 to 5.  late luma is active frames 6 to 10. Rosalina And Luma can act on frame 41. You can ask about another one of Rosalina And Luma's moves, or name another character and move.</speak>"
 				}
 			},
 			"shouldEndSession": false
@@ -22,6 +22,7 @@
 		"sessionAttributes": {
 			"character": "rosalina and luma",
 			"move": "up tilt"
-		}
+		},
+		"userAgent": "ask-node/2.3.0 Node/v8.10.0"
 	}
 }

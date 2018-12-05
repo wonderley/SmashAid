@@ -1,0 +1,489 @@
+{
+  "moveset": {
+    "jab": [
+      {
+        "hitbox_active": "3-6",
+        "faf": "22",
+        "base_dmg": "2",
+        "angle": "70/60/80",
+        "bkb_wbkb": "30",
+        "kbg": "30",
+        "modifier": "1 "
+      },
+      {
+        "hitbox_active": "3-4",
+        "faf": "22",
+        "base_dmg": "1.6",
+        "angle": "70/60/90",
+        "bkb_wbkb": "30",
+        "kbg": "50",
+        "modifier": "2 "
+      },
+      {
+        "hitbox_active": "5-9",
+        "faf": "36",
+        "base_dmg": "3.5",
+        "angle": "361",
+        "bkb_wbkb": "60",
+        "kbg": "100",
+        "modifier": "3 "
+      }
+    ],
+    "rapid jab finisher": [
+      {
+        "hitbox_active": "4-5",
+        "faf": "36",
+        "base_dmg": "2",
+        "angle": "45",
+        "bkb_wbkb": "60",
+        "kbg": "120",
+        "modifier": ""
+      }
+    ],
+    "dash attack": [
+      {
+        "hitbox_active": "7-10",
+        "faf": "31",
+        "base_dmg": "7",
+        "angle": "60",
+        "bkb_wbkb": "100",
+        "kbg": "40",
+        "modifier": ""
+      }
+    ],
+    "forward tilt": [
+      {
+        "hitbox_active": "10-12",
+        "faf": "33",
+        "base_dmg": "7.3",
+        "angle": "361",
+        "bkb_wbkb": "20/30/40",
+        "kbg": "110/90/70",
+        "modifier": " all angles"
+      }
+    ],
+    "up tilt": [
+      {
+        "hitbox_active": "9-12",
+        "faf": "33",
+        "base_dmg": "4.5",
+        "angle": "92/90/80",
+        "bkb_wbkb": "60",
+        "kbg": "100",
+        "modifier": ""
+      }
+    ],
+    "down tilt": [
+      {
+        "hitbox_active": "5-6",
+        "faf": "27",
+        "base_dmg": "7",
+        "angle": "70",
+        "bkb_wbkb": "60",
+        "kbg": "40",
+        "modifier": ""
+      }
+    ],
+    "forward smash": [
+      {
+        "hitbox_active": "13-15",
+        "faf": "50",
+        "base_dmg": "14",
+        "angle": "361",
+        "bkb_wbkb": "30",
+        "kbg": "101",
+        "modifier": ""
+      }
+    ],
+    "up smash": [
+      {
+        "hitbox_active": "12-17",
+        "faf": "52",
+        "base_dmg": "5",
+        "angle": "366",
+        "bkb_wbkb": "30",
+        "kbg": "120",
+        "modifier": " hit 1"
+      },
+      {
+        "hitbox_active": "18",
+        "faf": "",
+        "base_dmg": "14/11/11/11/11",
+        "angle": "90/44/44/44/44",
+        "bkb_wbkb": "30",
+        "kbg": "104/100/100/100/100",
+        "modifier": " hit 2 early"
+      },
+      {
+        "hitbox_active": "19-20",
+        "faf": "",
+        "base_dmg": "11",
+        "angle": "44",
+        "bkb_wbkb": "30",
+        "kbg": "100",
+        "modifier": " hit 2"
+      },
+      {
+        "hitbox_active": "21",
+        "faf": "",
+        "base_dmg": "10",
+        "angle": "40",
+        "bkb_wbkb": "30",
+        "kbg": "98",
+        "modifier": " hit 2 late"
+      }
+    ],
+    "down smash": [
+      {
+        "hitbox_active": "16-18",
+        "faf": "55",
+        "base_dmg": "13/13/11/11",
+        "angle": "30",
+        "bkb_wbkb": "32",
+        "kbg": "92",
+        "modifier": ""
+      }
+    ],
+    "down taunt": [
+      {
+        "hitbox_active": "30-73 (Rehit rate: 3)",
+        "faf": "80",
+        "base_dmg": "0.5",
+        "angle": "90",
+        "bkb_wbkb": "70",
+        "kbg": "100",
+        "modifier": ""
+      }
+    ],
+    "standing grab": {
+      "hitbox_active": "11-12",
+      "faf": "29"
+    },
+    "dash grab": {
+      "hitbox_active": "9-10",
+      "faf": "38"
+    },
+    "pivot grab": {
+      "hitbox_active": "15-16",
+      "faf": "37"
+    },
+    "forward throw": {
+      "weight_dependent": true,
+      "base_dmg": "5",
+      "angle": "50",
+      "bkb_wbkb": "70",
+      "kbg": "45"
+    },
+    "back throw": {
+      "weight_dependent": true,
+      "base_dmg": "8",
+      "angle": "140",
+      "bkb_wbkb": "55",
+      "kbg": "60"
+    },
+    "up throw": {
+      "weight_dependent": true,
+      "base_dmg": "5",
+      "angle": "93",
+      "bkb_wbkb": "60",
+      "kbg": "120"
+    },
+    "down throw": {
+      "weight_dependent": false,
+      "base_dmg": "5",
+      "angle": "65",
+      "bkb_wbkb": "53",
+      "kbg": "75"
+    },
+    "spot dodge": {
+      "intangibility": "2-16",
+      "faf": "26"
+    },
+    "forward roll": {
+      "intangibility": "4-14",
+      "faf": "30"
+    },
+    "back roll": {
+      "intangibility": "4-14",
+      "faf": "33"
+    },
+    "air dodge": {
+      "intangibility": "2-26",
+      "faf": "32"
+    },
+    "neutral air": [
+      {
+        "hitbox_active": "12-13",
+        "faf": "65",
+        "base_dmg": "11",
+        "angle": "60",
+        "bkb_wbkb": "30",
+        "kbg": "95",
+        "landing_lag": "12",
+        "autocancel": "1-9, 40>",
+        "modifier": ""
+      },
+      {
+        "hitbox_active": "14-16",
+        "faf": "",
+        "base_dmg": "6",
+        "angle": "60",
+        "bkb_wbkb": "30",
+        "kbg": "95",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " late"
+      }
+    ],
+    "forward air": [
+      {
+        "hitbox_active": "16-17",
+        "faf": "55",
+        "base_dmg": "14",
+        "angle": "45",
+        "bkb_wbkb": "30",
+        "kbg": "84",
+        "landing_lag": "15",
+        "autocancel": "1-12, 40>",
+        "modifier": ""
+      }
+    ],
+    "back air": [
+      {
+        "hitbox_active": "5",
+        "faf": "46",
+        "base_dmg": "3",
+        "angle": "365/30/30",
+        "bkb_wbkb": "W: 0/100/130",
+        "kbg": "100",
+        "landing_lag": "13",
+        "autocancel": "1-3, 35>",
+        "modifier": " hit 1"
+      },
+      {
+        "hitbox_active": "8",
+        "faf": "",
+        "base_dmg": "2.5",
+        "angle": "365/40/35",
+        "bkb_wbkb": "W: 0/105/140",
+        "kbg": "100",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " hit 2"
+      },
+      {
+        "hitbox_active": "13-16",
+        "faf": "",
+        "base_dmg": "4",
+        "angle": "361",
+        "bkb_wbkb": "60",
+        "kbg": "120",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " hit 3"
+      }
+    ],
+    "up air": [
+      {
+        "hitbox_active": "7-8, 9-10, 11-12, 13-14",
+        "faf": "42",
+        "base_dmg": "1.3",
+        "angle": "366",
+        "bkb_wbkb": "45",
+        "kbg": "100",
+        "landing_lag": "16",
+        "autocancel": "1-2, 35>",
+        "modifier": " hits 1-4"
+      },
+      {
+        "hitbox_active": "15-16",
+        "faf": "",
+        "base_dmg": "1.3",
+        "angle": "85",
+        "bkb_wbkb": "W: 10 B: 45",
+        "kbg": "100",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " hit 5"
+      },
+      {
+        "hitbox_active": "17",
+        "faf": "",
+        "base_dmg": "3",
+        "angle": "75",
+        "bkb_wbkb": "40",
+        "kbg": "168",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " hit 6"
+      }
+    ],
+    "down air": [
+      {
+        "hitbox_active": "17-19",
+        "faf": "57 (On Hit: 13)",
+        "base_dmg": "8",
+        "angle": "270",
+        "bkb_wbkb": "20",
+        "kbg": "95",
+        "landing_lag": "33",
+        "autocancel": "1-2, 53>",
+        "modifier": ""
+      },
+      {
+        "hitbox_active": "20-45",
+        "faf": "",
+        "base_dmg": "8",
+        "angle": "60",
+        "bkb_wbkb": "35",
+        "kbg": "95",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " late"
+      }
+    ],
+    "specials": [
+      {
+        "name": "neutral special",
+        "otherName": "water shuriken",
+        "value": [
+          {
+            "hitbox_active": "20",
+            "faf": "46",
+            "base_dmg": "3",
+            "angle": "361",
+            "bkb_wbkb": "60",
+            "kbg": "100",
+            "modifier": " uncharged"
+          },
+          {
+            "hitbox_active": "60-100 (Rehit rate: 6)",
+            "faf": "86",
+            "base_dmg": "0.7",
+            "angle": "21",
+            "bkb_wbkb": "W: 50",
+            "kbg": "100",
+            "modifier": " full charge"
+          },
+          {
+            "hitbox_active": "106",
+            "faf": "",
+            "base_dmg": "9",
+            "angle": "60",
+            "bkb_wbkb": "40",
+            "kbg": "122",
+            "modifier": " full charge final hit"
+          }
+        ]
+      },
+      {
+        "name": "side special",
+        "otherName": "shadow sneak",
+        "value": [
+          {
+            "hitbox_active": "Hold Charge Until:",
+            "faf": "",
+            "base_dmg": "",
+            "angle": "",
+            "bkb_wbkb": "",
+            "kbg": "",
+            "modifier": " charge"
+          },
+          {
+            "hitbox_active": "27-28",
+            "faf": "67",
+            "base_dmg": "10",
+            "angle": "48",
+            "bkb_wbkb": "60",
+            "kbg": "104",
+            "modifier": " front attack"
+          },
+          {
+            "hitbox_active": "27-28",
+            "faf": "",
+            "base_dmg": "12",
+            "angle": "48",
+            "bkb_wbkb": "60",
+            "kbg": "103",
+            "modifier": " back attack"
+          }
+        ]
+      },
+      {
+        "name": "up special",
+        "otherName": "hydro pump",
+        "value": [
+          {
+            "hitbox_active": "19-31, 24-36, 30-42, 35-47",
+            "faf": "",
+            "base_dmg": "2",
+            "angle": "58",
+            "bkb_wbkb": "65",
+            "kbg": "100",
+            "modifier": ""
+          }
+        ]
+      },
+      {
+        "name": "down special",
+        "otherName": "substitute",
+        "value": [
+          {
+            "hitbox_active": "Counters: 8-29 (Intangible: 8-19)",
+            "faf": "65",
+            "base_dmg": "",
+            "angle": "",
+            "bkb_wbkb": "",
+            "kbg": "",
+            "modifier": ""
+          },
+          {
+            "hitbox_active": "41-65 (Intangible: 1-37)",
+            "faf": "85",
+            "base_dmg": "11",
+            "angle": "361",
+            "bkb_wbkb": "62",
+            "kbg": "100",
+            "modifier": " attack neutral/side"
+          },
+          {
+            "hitbox_active": "41-65 (Intangible: 1-37)",
+            "faf": "",
+            "base_dmg": "14",
+            "angle": "90",
+            "bkb_wbkb": "50",
+            "kbg": "100",
+            "modifier": " attack up"
+          },
+          {
+            "hitbox_active": "41-65 (Intangible: 1-37)",
+            "faf": "",
+            "base_dmg": "13",
+            "angle": "60",
+            "bkb_wbkb": "62",
+            "kbg": "100",
+            "modifier": " attack up diagonal"
+          },
+          {
+            "hitbox_active": "41-65 (Intangible: 1-37)",
+            "faf": "",
+            "base_dmg": "14",
+            "angle": "45/270",
+            "bkb_wbkb": "50",
+            "kbg": "100",
+            "modifier": " attack down"
+          },
+          {
+            "hitbox_active": "41-65 (Intangible: 1-37)",
+            "faf": "",
+            "base_dmg": "13",
+            "angle": "25",
+            "bkb_wbkb": "62",
+            "kbg": "72",
+            "modifier": " attack down diagonal"
+          }
+        ]
+      }
+    ]
+  }
+}

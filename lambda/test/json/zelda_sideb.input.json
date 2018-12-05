@@ -2,13 +2,13 @@
 	"version": "1.0",
 	"session": {
 		"new": false,
-		"sessionId": "amzn1.echo-api.session.155816a0-2342-4ecf-b666-88ffd33db9bd",
+		"sessionId": "amzn1.echo-api.session.39d0d5cf-a12e-4cf7-8987-7be8f35d1962",
 		"application": {
 			"applicationId": "amzn1.ask.skill.2fb7d380-4b6c-4bf4-969b-2894cb77037c"
 		},
 		"attributes": {
-			"character": "zelda",
-			"move": "down special"
+			"character": "rosalina and luma",
+			"move": "up tilt"
 		},
 		"user": {
 			"userId": "amzn1.ask.account.AHE2YIB5CB2FNVYWYYRQEFDBDE423OP3RUEKJLPGDHIGRGD4ZU7VOKQFDNYUMF3OWBQBFLDAMJ3RIGBBD4QE7I2EUEC6NNDFN244VMTGQKF5VWDDROWENJXCWBBMOUUP5FTUOVSB3WEOVNKT3VZRRAHSJKRISEE5QUYSWDJJLEIBP6RDF2L3IWLTT6Y5EK4V66XCM7GRIX3NINQ"
@@ -35,13 +35,32 @@
 				}
 			},
 			"apiEndpoint": "https://api.amazonalexa.com",
-			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjJmYjdkMzgwLTRiNmMtNGJmNC05NjliLTI4OTRjYjc3MDM3YyIsImV4cCI6MTUzMzkzMTIwNSwiaWF0IjoxNTMzOTI3NjA1LCJuYmYiOjE1MzM5Mjc2MDUsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhOWExMTlk1WFNTVFZSVlhEWlA2N01QMlRUM09HSjJGTzVEVk5TUzVQV1BLNUNTVkRMQTdDVUY2SVJFNkpLRkZVRUQ0VE9XTDc0TVBDM0ZBS0tPQzRPWU9MSERINFJERFhPMkRMMzc3RklJR09LNFZYUUhBWTVWU0VYUkNHQVZURDNNU0hLRU8yVE4zTFBNSE9WUEhFSlNMSVVHTlZBN0IyUlpORjVKUUpUTE5SVFRPSlFCUSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIRTJZSUI1Q0IyRk5WWVdZWVJRRUZEQkRFNDIzT1AzUlVFS0pMUEdESElHUkdENFpVN1ZPS1FGRE5ZVU1GM09XQlFCRkxEQU1KM1JJR0JCRDRRRTdJMkVVRUM2Tk5ERk4yNDRWTVRHUUtGNVZXRERST1dFTkpYQ1dCQk1PVVVQNUZUVU9WU0IzV0VPVk5LVDNWWlJSQUhTSktSSVNFRTVRVVlTV0RKSkxFSUJQNlJERjJMM0lXTFRUNlk1RUs0VjY2WENNN0dSSVgzTklOUSJ9fQ.Mj98cwSh2NLZAyebddTUuz5yTsUw4iqJShtuJqWtOBDiKbeJMLk0KOWjaA-hBk4oI_mzZW10-l_YYqRclf-hEI9ZPY9bpDgrAaElwHGp7S5OlDz5JxQX73eu-ue5kfRmz5AUA9mb9uxbNOuFu_-iuaukIA4_IpLNx1yicMH-WD4U7RZvcUsSSsekjSOGNxiV9QJGAor-ezCJdIfM4SydMsJz1yQmW1is8GU5EnAcw_3PTVBmLv5uq_dmfbiBBHLSxvn_b9pjVYoApoAqNM4PUNY-zByqaeK1gmlkbfrqE0mkjNM6bdStF4D9ohcbW-cK35oVtTlgDBDqb3fr9wNKtQ"
+			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjJmYjdkMzgwLTRiNmMtNGJmNC05NjliLTI4OTRjYjc3MDM3YyIsImV4cCI6MTU0NDA3MjgxMywiaWF0IjoxNTQ0MDY5MjEzLCJuYmYiOjE1NDQwNjkyMTMsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhOWExMTlk1WFNTVFZSVlhEWlA2N01QMlRUM09HSjJGTzVEVk5TUzVQV1BLNUNTVkRMQTdDVUY2SVJFNkpLRkZVRUQ0VE9XTDc0TVBDM0ZBS0tPQzRPWU9MSERINFJERFhPMkRMMzc3RklJR09LNFZYUUhBWTVWU0VYUkNHQVZURDNNU0hLRU8yVE4zTFBNSE9WUEhFSlNMSVVHTlZBN0IyUlpORjVKUUpUTE5SVFRPSlFCUSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIRTJZSUI1Q0IyRk5WWVdZWVJRRUZEQkRFNDIzT1AzUlVFS0pMUEdESElHUkdENFpVN1ZPS1FGRE5ZVU1GM09XQlFCRkxEQU1KM1JJR0JCRDRRRTdJMkVVRUM2Tk5ERk4yNDRWTVRHUUtGNVZXRERST1dFTkpYQ1dCQk1PVVVQNUZUVU9WU0IzV0VPVk5LVDNWWlJSQUhTSktSSVNFRTVRVVlTV0RKSkxFSUJQNlJERjJMM0lXTFRUNlk1RUs0VjY2WENNN0dSSVgzTklOUSJ9fQ.e1mBh1mExgqfWAa09rS0e25mA26uGsbBAlJa99CawA5wZO6vAQ-J1yw7F6DZwudk-oX9Aw99_5zQ6xF8Rhj7sIxN8HrlF58HsE4hLMI4ZmaFOpk6jZS-RJwBJ-svZmc40pwtpU_krgVfnF_9_8P19tvyrwXUJr94hUVBnXZVKD6Tklxe7t-_kmK9LOw3imsAqMDRg9T1LDcbq103wXgZLO0QenyE_vilEW4j50tn_uOp2UgbXfCxZYV3DB7NBGrFXKPEIIHtRasZIPz1XyO0O2aPl_Va_pQTnYtegbCDCP6jDZ3NLX-m6_r35HApDm1_afTyvG-qK9LafGjCi7GEJQ"
+		},
+		"Viewport": {
+			"experiences": [
+				{
+					"arcMinuteWidth": 246,
+					"arcMinuteHeight": 144,
+					"canRotate": false,
+					"canResize": false
+				}
+			],
+			"shape": "RECTANGLE",
+			"pixelWidth": 1024,
+			"pixelHeight": 600,
+			"dpi": 160,
+			"currentPixelWidth": 1024,
+			"currentPixelHeight": 600,
+			"touch": [
+				"SINGLE"
+			]
 		}
 	},
 	"request": {
 		"type": "IntentRequest",
-		"requestId": "amzn1.echo-api.request.6040ce48-97b7-44a5-9830-9b89feccd0b4",
-		"timestamp": "2018-08-10T19:00:05Z",
+		"requestId": "amzn1.echo-api.request.cc11300d-6783-4901-8d6b-b2a841cc12af",
+		"timestamp": "2018-12-06T04:06:53Z",
 		"locale": "en-US",
 		"intent": {
 			"name": "CharacterMoveIntent",
@@ -68,7 +87,8 @@
 							}
 						]
 					},
-					"confirmationStatus": "NONE"
+					"confirmationStatus": "NONE",
+					"source": "USER"
 				},
 				"move_type": {
 					"name": "move_type",
@@ -91,7 +111,8 @@
 							}
 						]
 					},
-					"confirmationStatus": "NONE"
+					"confirmationStatus": "NONE",
+					"source": "USER"
 				}
 			}
 		},

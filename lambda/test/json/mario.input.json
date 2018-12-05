@@ -2,7 +2,7 @@
 	"version": "1.0",
 	"session": {
 		"new": false,
-		"sessionId": "amzn1.echo-api.session.0ef7552b-ff7d-4f10-a3ff-35a6354b9632",
+		"sessionId": "amzn1.echo-api.session.79e239f9-bd74-459c-8f3e-71babd8309ee",
 		"application": {
 			"applicationId": "amzn1.ask.skill.2fb7d380-4b6c-4bf4-969b-2894cb77037c"
 		},
@@ -31,13 +31,32 @@
 				}
 			},
 			"apiEndpoint": "https://api.amazonalexa.com",
-			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjJmYjdkMzgwLTRiNmMtNGJmNC05NjliLTI4OTRjYjc3MDM3YyIsImV4cCI6MTUzMzQwNjMwOCwiaWF0IjoxNTMzNDAyNzA4LCJuYmYiOjE1MzM0MDI3MDgsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhOWExMTlk1WFNTVFZSVlhEWlA2N01QMlRUM09HSjJGTzVEVk5TUzVQV1BLNUNTVkRMQTdDVUY2SVJFNkpLRkZVRUQ0VE9XTDc0TVBDM0ZBS0tPQzRPWU9MSERINFJERFhPMkRMMzc3RklJR09LNFZYUUhBWTVWU0VYUkNHQVZURDNNU0hLRU8yVE4zTFBNSE9WUEhFSlNMSVVHTlZBN0IyUlpORjVKUUpUTE5SVFRPSlFCUSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIRTJZSUI1Q0IyRk5WWVdZWVJRRUZEQkRFNDIzT1AzUlVFS0pMUEdESElHUkdENFpVN1ZPS1FGRE5ZVU1GM09XQlFCRkxEQU1KM1JJR0JCRDRRRTdJMkVVRUM2Tk5ERk4yNDRWTVRHUUtGNVZXRERST1dFTkpYQ1dCQk1PVVVQNUZUVU9WU0IzV0VPVk5LVDNWWlJSQUhTSktSSVNFRTVRVVlTV0RKSkxFSUJQNlJERjJMM0lXTFRUNlk1RUs0VjY2WENNN0dSSVgzTklOUSJ9fQ.I5D9PnoUlYRu7ai7-yxyQ-rI9tbIXGkgHWS3xvsfvOX41ymMnIpnYfincraSRICCmtuOxUbjo1_gsfHTvGAp2O2X2qH6a64JmFZB9heGUO1CNbP1288JtjB2Or6OAh0TAofEXzT1UHcqCtlU17m-YDQwWEOaG11FppIfR_pCpIuuSRWdhyew-Y14EQoD299JvH-FBVQF_qNDRykkUA4mg-KPwhBK5sPGO_oHUn0wy4V4EN-Uhq0VmE7mxVf6oSF-oNPRz5BG5qFZRanIdy-sAfSJauviqMOHj_qQ6yoZ437u7ksSnk_rPkk7VqD7T81f4yidjzpzcZuKvsTiLrcylA"
+			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjJmYjdkMzgwLTRiNmMtNGJmNC05NjliLTI4OTRjYjc3MDM3YyIsImV4cCI6MTU0NDA3NDYzNywiaWF0IjoxNTQ0MDcxMDM3LCJuYmYiOjE1NDQwNzEwMzcsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhOWExMTlk1WFNTVFZSVlhEWlA2N01QMlRUM09HSjJGTzVEVk5TUzVQV1BLNUNTVkRMQTdDVUY2SVJFNkpLRkZVRUQ0VE9XTDc0TVBDM0ZBS0tPQzRPWU9MSERINFJERFhPMkRMMzc3RklJR09LNFZYUUhBWTVWU0VYUkNHQVZURDNNU0hLRU8yVE4zTFBNSE9WUEhFSlNMSVVHTlZBN0IyUlpORjVKUUpUTE5SVFRPSlFCUSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIRTJZSUI1Q0IyRk5WWVdZWVJRRUZEQkRFNDIzT1AzUlVFS0pMUEdESElHUkdENFpVN1ZPS1FGRE5ZVU1GM09XQlFCRkxEQU1KM1JJR0JCRDRRRTdJMkVVRUM2Tk5ERk4yNDRWTVRHUUtGNVZXRERST1dFTkpYQ1dCQk1PVVVQNUZUVU9WU0IzV0VPVk5LVDNWWlJSQUhTSktSSVNFRTVRVVlTV0RKSkxFSUJQNlJERjJMM0lXTFRUNlk1RUs0VjY2WENNN0dSSVgzTklOUSJ9fQ.SGISdPdFUOE6s74Sl27Awuy7D3zIQOUfMvHATA_xVKFkKikhMVasKZPh2IDly05djtJ86XjgS2jyT18-rSWg2FBOU16jVb_3RZ-24eAMay6HnBxV0cFHRsgj6aSI0mPcrPPdIGANI744Zc_FLShN70d1KY3kt3bI54jVvZ3p16HYt-NK5WbCdO1UuuH_DhGh4l4rF3tcBuXkJeJyRdLXjBTyoxQA6AKn6TUazNEDRFk36RWMbvA4RmSJXRpjs7qFWs10bUBrzpSwjpy7G8ed7WwrdVDuTUQbModXfEqT271VaqxlT3rBUYNxMy1xHTC9KMdwE9PZ6b8U-srH0Z5Mzg"
+		},
+		"Viewport": {
+			"experiences": [
+				{
+					"arcMinuteWidth": 246,
+					"arcMinuteHeight": 144,
+					"canRotate": false,
+					"canResize": false
+				}
+			],
+			"shape": "RECTANGLE",
+			"pixelWidth": 1024,
+			"pixelHeight": 600,
+			"dpi": 160,
+			"currentPixelWidth": 1024,
+			"currentPixelHeight": 600,
+			"touch": [
+				"SINGLE"
+			]
 		}
 	},
 	"request": {
 		"type": "IntentRequest",
-		"requestId": "amzn1.echo-api.request.e2880776-9a24-42a6-b9ee-cdb95af50919",
-		"timestamp": "2018-08-04T17:11:48Z",
+		"requestId": "amzn1.echo-api.request.05eb0ef8-4161-4644-9480-d3123a02668f",
+		"timestamp": "2018-12-06T04:37:17Z",
 		"locale": "en-US",
 		"intent": {
 			"name": "CharacterMoveIntent",
@@ -59,12 +78,19 @@
 											"name": "mario",
 											"id": "de2f15d014d40b93578d255e6221fd60"
 										}
+									},
+									{
+										"value": {
+											"name": "doctor mario",
+											"id": "bec8fc4d1cb05e2f8f356fab7537e83a"
+										}
 									}
 								]
 							}
 						]
 					},
-					"confirmationStatus": "NONE"
+					"confirmationStatus": "NONE",
+					"source": "USER"
 				},
 				"move_type": {
 					"name": "move_type",

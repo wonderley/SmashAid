@@ -2,9 +2,13 @@
 	"version": "1.0",
 	"session": {
 		"new": false,
-		"sessionId": "amzn1.echo-api.session.4ac0aae5-fd51-44a3-9e73-fb3bd3fcc9ce",
+		"sessionId": "amzn1.echo-api.session.089e97ee-3730-49c6-9d93-a39ee235c037",
 		"application": {
 			"applicationId": "amzn1.ask.skill.2fb7d380-4b6c-4bf4-969b-2894cb77037c"
+		},
+		"attributes": {
+			"character": "mario",
+			"move": "side special"
 		},
 		"user": {
 			"userId": "amzn1.ask.account.AHE2YIB5CB2FNVYWYYRQEFDBDE423OP3RUEKJLPGDHIGRGD4ZU7VOKQFDNYUMF3OWBQBFLDAMJ3RIGBBD4QE7I2EUEC6NNDFN244VMTGQKF5VWDDROWENJXCWBBMOUUP5FTUOVSB3WEOVNKT3VZRRAHSJKRISEE5QUYSWDJJLEIBP6RDF2L3IWLTT6Y5EK4V66XCM7GRIX3NINQ"
@@ -31,13 +35,32 @@
 				}
 			},
 			"apiEndpoint": "https://api.amazonalexa.com",
-			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjJmYjdkMzgwLTRiNmMtNGJmNC05NjliLTI4OTRjYjc3MDM3YyIsImV4cCI6MTUzMzM0MDMzMywiaWF0IjoxNTMzMzM2NzMzLCJuYmYiOjE1MzMzMzY3MzMsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhOWExMTlk1WFNTVFZSVlhEWlA2N01QMlRUM09HSjJGTzVEVk5TUzVQV1BLNUNTVkRMQTdDVUY2SVJFNkpLRkZVRUQ0VE9XTDc0TVBDM0ZBS0tPQzRPWU9MSERINFJERFhPMkRMMzc3RklJR09LNFZYUUhBWTVWU0VYUkNHQVZURDNNU0hLRU8yVE4zTFBNSE9WUEhFSlNMSVVHTlZBN0IyUlpORjVKUUpUTE5SVFRPSlFCUSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIRTJZSUI1Q0IyRk5WWVdZWVJRRUZEQkRFNDIzT1AzUlVFS0pMUEdESElHUkdENFpVN1ZPS1FGRE5ZVU1GM09XQlFCRkxEQU1KM1JJR0JCRDRRRTdJMkVVRUM2Tk5ERk4yNDRWTVRHUUtGNVZXRERST1dFTkpYQ1dCQk1PVVVQNUZUVU9WU0IzV0VPVk5LVDNWWlJSQUhTSktSSVNFRTVRVVlTV0RKSkxFSUJQNlJERjJMM0lXTFRUNlk1RUs0VjY2WENNN0dSSVgzTklOUSJ9fQ.LZoqaaEYsymQWOOtEs8KXBKU3Fm9W92wUNoiVLd3kxJwPEqsVsq3qmQ29IqqQKG_h4v9eRhbRobYgVVvwOR96fMTGkX79WsF48lP8bAcFScrzclcvS7DJR7oyxyLf-hpgNvdsesZZLGHperaHLBvQbkMNKVJ9z48ZTJd3ffHTegVPuhy_TQkj0CR60ioEIJsYTvxMRrxDOD9OwikhvJaHCjmZSWibWi2LvjhbPSqiddobjhtCUQRGd6mqnjDrfrNKzYEHi-KV78EZiCCzhLYEvMBCTC3-gVy4dIsRhqE7QKv_F5Lj8ELyRKy7skMDI51Zz1sgoQdzOYI2DYRMAruog"
+			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjJmYjdkMzgwLTRiNmMtNGJmNC05NjliLTI4OTRjYjc3MDM3YyIsImV4cCI6MTU0NDA3MjQxNSwiaWF0IjoxNTQ0MDY4ODE1LCJuYmYiOjE1NDQwNjg4MTUsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhOWExMTlk1WFNTVFZSVlhEWlA2N01QMlRUM09HSjJGTzVEVk5TUzVQV1BLNUNTVkRMQTdDVUY2SVJFNkpLRkZVRUQ0VE9XTDc0TVBDM0ZBS0tPQzRPWU9MSERINFJERFhPMkRMMzc3RklJR09LNFZYUUhBWTVWU0VYUkNHQVZURDNNU0hLRU8yVE4zTFBNSE9WUEhFSlNMSVVHTlZBN0IyUlpORjVKUUpUTE5SVFRPSlFCUSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIRTJZSUI1Q0IyRk5WWVdZWVJRRUZEQkRFNDIzT1AzUlVFS0pMUEdESElHUkdENFpVN1ZPS1FGRE5ZVU1GM09XQlFCRkxEQU1KM1JJR0JCRDRRRTdJMkVVRUM2Tk5ERk4yNDRWTVRHUUtGNVZXRERST1dFTkpYQ1dCQk1PVVVQNUZUVU9WU0IzV0VPVk5LVDNWWlJSQUhTSktSSVNFRTVRVVlTV0RKSkxFSUJQNlJERjJMM0lXTFRUNlk1RUs0VjY2WENNN0dSSVgzTklOUSJ9fQ.jVPEOL20DXh41wmgS7oXx1wMrq14D7zXnOU7rq7hncYHKdDlM2b_27-jpcAcrvsOIvwc4SfAQ6w12WALuFttLpnOHZO-M5OPdrSsF6PERCBzC-2RISjWFnnmQTvZeazESCfuXa6_FOz106TTdTgGZN4cXwtTOc02N3qX_h8NKTzX4kvXFV4OXQWzxVf6_r4zBsQIdm7_t-nEA9wHRi1X59X-CPPKd2iXEbsM_Q9gEroD3fauDxUBWQ_oW6o5zjZFmaAJqAQ1Bvk1qPSsqBZaKXpNXEWdkfVlRKlE9_dCj9ETWMGXp2fFqBodDZVDUgh4j1czJCVIYBEMnWGOmTmjiQ"
+		},
+		"Viewport": {
+			"experiences": [
+				{
+					"arcMinuteWidth": 246,
+					"arcMinuteHeight": 144,
+					"canRotate": false,
+					"canResize": false
+				}
+			],
+			"shape": "RECTANGLE",
+			"pixelWidth": 1024,
+			"pixelHeight": 600,
+			"dpi": 160,
+			"currentPixelWidth": 1024,
+			"currentPixelHeight": 600,
+			"touch": [
+				"SINGLE"
+			]
 		}
 	},
 	"request": {
 		"type": "IntentRequest",
-		"requestId": "amzn1.echo-api.request.9ae3eb71-aabd-4113-9e2a-5134c8e42fd9",
-		"timestamp": "2018-08-03T22:52:13Z",
+		"requestId": "amzn1.echo-api.request.86edb22f-680a-48c1-af3f-bfaacf1364fb",
+		"timestamp": "2018-12-06T04:00:15Z",
 		"locale": "en-US",
 		"intent": {
 			"name": "CharacterMoveIntent",
@@ -45,7 +68,7 @@
 			"slots": {
 				"character": {
 					"name": "character",
-					"value": "Mario",
+					"value": "Mario's",
 					"resolutions": {
 						"resolutionsPerAuthority": [
 							{
@@ -59,12 +82,19 @@
 											"name": "mario",
 											"id": "de2f15d014d40b93578d255e6221fd60"
 										}
+									},
+									{
+										"value": {
+											"name": "doctor mario",
+											"id": "bec8fc4d1cb05e2f8f356fab7537e83a"
+										}
 									}
 								]
 							}
 						]
 					},
-					"confirmationStatus": "NONE"
+					"confirmationStatus": "NONE",
+					"source": "USER"
 				},
 				"move_type": {
 					"name": "move_type",
@@ -87,7 +117,8 @@
 							}
 						]
 					},
-					"confirmationStatus": "NONE"
+					"confirmationStatus": "NONE",
+					"source": "USER"
 				}
 			}
 		},

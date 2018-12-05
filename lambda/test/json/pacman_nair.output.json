@@ -3,8 +3,8 @@
 		"version": "1.0",
 		"response": {
 			"outputSpeech": {
-				"type": "PlainText",
-				"text": "Pac Man's neutral air has 3 parts.  early is active frames 3 to 5. the next one is active frames 6 to 9.  late is active frames 10 to 19. Pac Man can act on frame 52. You can ask about another one of Pac Man's moves, or name another character and move."
+				"type": "SSML",
+				"ssml": "<speak>Pac Man's neutral air has 3 parts.  early is active frames 3 to 5. the next one is active frames 6 to 9.  late is active frames 10 to 19. Pac Man can act on frame 52. You can ask about another one of Pac Man's moves, or name another character and move.</speak>"
 			},
 			"card": {
 				"type": "Simple",
@@ -13,8 +13,8 @@
 			},
 			"reprompt": {
 				"outputSpeech": {
-					"type": "PlainText",
-					"text": "Ask about another one of Pac Man's moves, or name another character and move."
+					"type": "SSML",
+					"ssml": "<speak>Pac Man's neutral air has 3 parts.  early is active frames 3 to 5. the next one is active frames 6 to 9.  late is active frames 10 to 19. Pac Man can act on frame 52. You can ask about another one of Pac Man's moves, or name another character and move.</speak>"
 				}
 			},
 			"shouldEndSession": false
@@ -22,6 +22,7 @@
 		"sessionAttributes": {
 			"character": "pac man",
 			"move": "neutral air"
-		}
+		},
+		"userAgent": "ask-node/2.3.0 Node/v8.10.0"
 	}
 }

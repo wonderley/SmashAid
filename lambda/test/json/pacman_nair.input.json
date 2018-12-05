@@ -2,12 +2,11 @@
 	"version": "1.0",
 	"session": {
 		"new": false,
-		"sessionId": "amzn1.echo-api.session.47c654e8-916d-4ce6-9788-d3e6fcde06fb",
+		"sessionId": "amzn1.echo-api.session.39d0d5cf-a12e-4cf7-8987-7be8f35d1962",
 		"application": {
 			"applicationId": "amzn1.ask.skill.2fb7d380-4b6c-4bf4-969b-2894cb77037c"
 		},
 		"attributes": {
-			"move": "forward roll",
 			"character": "mario"
 		},
 		"user": {
@@ -35,13 +34,32 @@
 				}
 			},
 			"apiEndpoint": "https://api.amazonalexa.com",
-			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjJmYjdkMzgwLTRiNmMtNGJmNC05NjliLTI4OTRjYjc3MDM3YyIsImV4cCI6MTUzMzUwODM0NSwiaWF0IjoxNTMzNTA0NzQ1LCJuYmYiOjE1MzM1MDQ3NDUsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhOWExMTlk1WFNTVFZSVlhEWlA2N01QMlRUM09HSjJGTzVEVk5TUzVQV1BLNUNTVkRMQTdDVUY2SVJFNkpLRkZVRUQ0VE9XTDc0TVBDM0ZBS0tPQzRPWU9MSERINFJERFhPMkRMMzc3RklJR09LNFZYUUhBWTVWU0VYUkNHQVZURDNNU0hLRU8yVE4zTFBNSE9WUEhFSlNMSVVHTlZBN0IyUlpORjVKUUpUTE5SVFRPSlFCUSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIRTJZSUI1Q0IyRk5WWVdZWVJRRUZEQkRFNDIzT1AzUlVFS0pMUEdESElHUkdENFpVN1ZPS1FGRE5ZVU1GM09XQlFCRkxEQU1KM1JJR0JCRDRRRTdJMkVVRUM2Tk5ERk4yNDRWTVRHUUtGNVZXRERST1dFTkpYQ1dCQk1PVVVQNUZUVU9WU0IzV0VPVk5LVDNWWlJSQUhTSktSSVNFRTVRVVlTV0RKSkxFSUJQNlJERjJMM0lXTFRUNlk1RUs0VjY2WENNN0dSSVgzTklOUSJ9fQ.QtQ4hDE5CL_-ypg0ZfZC2ln0clnDTaDT4wbwcxABII6GYVE5rrO_1llpOxtCNP4x7mt4Ie0uJ8aRiZsb1XQ3i7gppNjHXR8vV70N1Wp54DbF59qE8DA-Ivpl_4W7tBZ7f_hWs3vr_gtpro3UqgmRW_WdlC_MsPwNdYbsey6xZGbWwkXWp3jcGlRDZf_wMQtpN57xPfBev9RumFPHOFPM5v3cdNBlobKzvEdsfAgUGKGhRAVd_cZTNjWX17w5c4iux82DFOkcSakhzLVWg9Ic06nQk9ICBz_PEnd8BqaVpaCtxTFJWVgq90c7ryJhe5KVzjtlZTrZp4HchVLc0phsAA"
+			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjJmYjdkMzgwLTRiNmMtNGJmNC05NjliLTI4OTRjYjc3MDM3YyIsImV4cCI6MTU0NDA3MjY5NSwiaWF0IjoxNTQ0MDY5MDk1LCJuYmYiOjE1NDQwNjkwOTUsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhOWExMTlk1WFNTVFZSVlhEWlA2N01QMlRUM09HSjJGTzVEVk5TUzVQV1BLNUNTVkRMQTdDVUY2SVJFNkpLRkZVRUQ0VE9XTDc0TVBDM0ZBS0tPQzRPWU9MSERINFJERFhPMkRMMzc3RklJR09LNFZYUUhBWTVWU0VYUkNHQVZURDNNU0hLRU8yVE4zTFBNSE9WUEhFSlNMSVVHTlZBN0IyUlpORjVKUUpUTE5SVFRPSlFCUSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIRTJZSUI1Q0IyRk5WWVdZWVJRRUZEQkRFNDIzT1AzUlVFS0pMUEdESElHUkdENFpVN1ZPS1FGRE5ZVU1GM09XQlFCRkxEQU1KM1JJR0JCRDRRRTdJMkVVRUM2Tk5ERk4yNDRWTVRHUUtGNVZXRERST1dFTkpYQ1dCQk1PVVVQNUZUVU9WU0IzV0VPVk5LVDNWWlJSQUhTSktSSVNFRTVRVVlTV0RKSkxFSUJQNlJERjJMM0lXTFRUNlk1RUs0VjY2WENNN0dSSVgzTklOUSJ9fQ.h_1VX6-APeNycS9kgI9a-iEHN7f4pBVMNbONlWFfaFQQ4H1v8AhiD99E5p-n2I5avuG5IsKLGIW44qwed_Ph3Ix5mCU6ziJz_vZpe6F_-EuKeP8SshodkPjLCz-R-BrIXNmsbkfU0hlrDxPk0gbDOq74UnPmfOMZLyh46UZLtgkwlYegGOVhUNqPsOiYhDoqGCuBcH1ueyHrjZ7c8p9qTEnmzXjAgmPUZLpLaPUgVjS4kicf5n5X86upcPzEFdhuEEOTxgWEwI1WTJSZWlzt65OSn6TA9LmVjdUCTNZ830wE2eMp67pAxElP23SaNdouwd0SsHk_eV0EHwwlnKu8Vw"
+		},
+		"Viewport": {
+			"experiences": [
+				{
+					"arcMinuteWidth": 246,
+					"arcMinuteHeight": 144,
+					"canRotate": false,
+					"canResize": false
+				}
+			],
+			"shape": "RECTANGLE",
+			"pixelWidth": 1024,
+			"pixelHeight": 600,
+			"dpi": 160,
+			"currentPixelWidth": 1024,
+			"currentPixelHeight": 600,
+			"touch": [
+				"SINGLE"
+			]
 		}
 	},
 	"request": {
 		"type": "IntentRequest",
-		"requestId": "amzn1.echo-api.request.5bb54c8c-ee44-4525-9781-fdbb4c39e47c",
-		"timestamp": "2018-08-05T21:32:25Z",
+		"requestId": "amzn1.echo-api.request.d636701d-1a9b-43ab-8a5d-7247a33954eb",
+		"timestamp": "2018-12-06T04:04:55Z",
 		"locale": "en-US",
 		"intent": {
 			"name": "CharacterMoveIntent",
@@ -49,7 +67,7 @@
 			"slots": {
 				"character": {
 					"name": "character",
-					"value": "Pac Man",
+					"value": "Pac Man's",
 					"resolutions": {
 						"resolutionsPerAuthority": [
 							{
@@ -68,7 +86,8 @@
 							}
 						]
 					},
-					"confirmationStatus": "NONE"
+					"confirmationStatus": "NONE",
+					"source": "USER"
 				},
 				"move_type": {
 					"name": "move_type",
@@ -91,7 +110,8 @@
 							}
 						]
 					},
-					"confirmationStatus": "NONE"
+					"confirmationStatus": "NONE",
+					"source": "USER"
 				}
 			}
 		},

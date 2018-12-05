@@ -1,0 +1,643 @@
+{
+  "moveset": {
+    "jab": [
+      {
+        "hitbox_active": "4-7",
+        "faf": "32",
+        "base_dmg": "3",
+        "angle": "70/88/90",
+        "bkb_wbkb": "40",
+        "kbg": "20/25/25",
+        "modifier": "1 "
+      },
+      {
+        "hitbox_active": "4-8",
+        "faf": "35",
+        "base_dmg": "3",
+        "angle": "80/88/98",
+        "bkb_wbkb": "45",
+        "kbg": "24/20/20",
+        "modifier": "2 "
+      },
+      {
+        "hitbox_active": "10-11",
+        "faf": "36",
+        "base_dmg": "5",
+        "angle": "361",
+        "bkb_wbkb": "70",
+        "kbg": "124",
+        "modifier": "3  fire"
+      }
+    ],
+    "rapid jab": [
+      {
+        "hitbox_active": "9, 11? (1 use every 7 hits)",
+        "faf": "",
+        "base_dmg": "1",
+        "angle": "",
+        "bkb_wbkb": "",
+        "kbg": "",
+        "modifier": " wind"
+      }
+    ],
+    "rapid jab finisher": [
+      {
+        "hitbox_active": "8",
+        "faf": "41",
+        "base_dmg": "2",
+        "angle": "74",
+        "bkb_wbkb": "80",
+        "kbg": "160",
+        "modifier": " wind"
+      }
+    ],
+    "dash attack": [
+      {
+        "hitbox_active": "8-10",
+        "faf": "50",
+        "base_dmg": "10",
+        "angle": "45",
+        "bkb_wbkb": "80",
+        "kbg": "66",
+        "modifier": ""
+      },
+      {
+        "hitbox_active": "11-18",
+        "faf": "",
+        "base_dmg": "6",
+        "angle": "65",
+        "bkb_wbkb": "80",
+        "kbg": "60",
+        "modifier": " late"
+      }
+    ],
+    "forward tilt": [
+      {
+        "hitbox_active": "9-10",
+        "faf": "33",
+        "base_dmg": "7.5",
+        "angle": "361",
+        "bkb_wbkb": "50",
+        "kbg": "70",
+        "modifier": ""
+      }
+    ],
+    "up tilt": [
+      {
+        "hitbox_active": "6-13",
+        "faf": "36",
+        "base_dmg": "6",
+        "angle": "96",
+        "bkb_wbkb": "50/60/70",
+        "kbg": "80",
+        "modifier": ""
+      }
+    ],
+    "down tilt": [
+      {
+        "hitbox_active": "7-8",
+        "faf": "22",
+        "base_dmg": "6",
+        "angle": "30",
+        "bkb_wbkb": "40",
+        "kbg": "40",
+        "modifier": ""
+      }
+    ],
+    "forward smash": [
+      {
+        "hitbox_active": "16-18",
+        "faf": "58",
+        "base_dmg": "16",
+        "angle": "361",
+        "bkb_wbkb": "50",
+        "kbg": "87",
+        "modifier": " levin sword"
+      },
+      {
+        "hitbox_active": "19-27",
+        "faf": "",
+        "base_dmg": "5",
+        "angle": "361",
+        "bkb_wbkb": "60",
+        "kbg": "70",
+        "modifier": " levin sword late"
+      },
+      {
+        "hitbox_active": "16-18",
+        "faf": "",
+        "base_dmg": "9",
+        "angle": "361",
+        "bkb_wbkb": "50",
+        "kbg": "87",
+        "modifier": " bronze sword"
+      }
+    ],
+    "up smash": [
+      {
+        "hitbox_active": "12",
+        "faf": "53",
+        "base_dmg": "15/10",
+        "angle": "92/70",
+        "bkb_wbkb": "45/70",
+        "kbg": "84/79",
+        "modifier": " levin sword early"
+      },
+      {
+        "hitbox_active": "13-16",
+        "faf": "",
+        "base_dmg": "15",
+        "angle": "92",
+        "bkb_wbkb": "45",
+        "kbg": "84",
+        "modifier": " levin sword"
+      },
+      {
+        "hitbox_active": "17-25",
+        "faf": "",
+        "base_dmg": "5",
+        "angle": "70",
+        "bkb_wbkb": "60",
+        "kbg": "70",
+        "modifier": " levin sword late"
+      },
+      {
+        "hitbox_active": "12-16",
+        "faf": "",
+        "base_dmg": "9",
+        "angle": "55",
+        "bkb_wbkb": "45",
+        "kbg": "84",
+        "modifier": " bronze sword"
+      }
+    ],
+    "down smash": [
+      {
+        "hitbox_active": "16-17",
+        "faf": "57",
+        "base_dmg": "15",
+        "angle": "55",
+        "bkb_wbkb": "50",
+        "kbg": "95",
+        "modifier": " levin sword"
+      },
+      {
+        "hitbox_active": "20-23 (Ground only)",
+        "faf": "",
+        "base_dmg": "12",
+        "angle": "45",
+        "bkb_wbkb": "50",
+        "kbg": "100",
+        "modifier": " levin sword late"
+      },
+      {
+        "hitbox_active": "24-28",
+        "faf": "",
+        "base_dmg": "8",
+        "angle": "45",
+        "bkb_wbkb": "50",
+        "kbg": "80",
+        "modifier": " levin sword electricity"
+      },
+      {
+        "hitbox_active": "16-17",
+        "faf": "",
+        "base_dmg": "8",
+        "angle": "28",
+        "bkb_wbkb": "50",
+        "kbg": "95",
+        "modifier": " bronze sword"
+      }
+    ],
+    "standing grab": {
+      "hitbox_active": "7-8",
+      "faf": "40"
+    },
+    "dash grab": {
+      "hitbox_active": "8-9",
+      "faf": "50"
+    },
+    "pivot grab": {
+      "hitbox_active": "9-10",
+      "faf": "47"
+    },
+    "forward throw": {
+      "weight_dependent": true,
+      "base_dmg": "8",
+      "angle": "45",
+      "bkb_wbkb": "82",
+      "kbg": "25"
+    },
+    "back throw": {
+      "weight_dependent": true,
+      "base_dmg": "11",
+      "angle": "52",
+      "bkb_wbkb": "85",
+      "kbg": "60"
+    },
+    "up throw": {
+      "weight_dependent": true,
+      "base_dmg": "9",
+      "angle": "93",
+      "bkb_wbkb": "100",
+      "kbg": "30"
+    },
+    "down throw": {
+      "weight_dependent": true,
+      "base_dmg": "6",
+      "angle": "85",
+      "bkb_wbkb": "30",
+      "kbg": "88"
+    },
+    "spot dodge": {
+      "intangibility": "3-18",
+      "faf": "28"
+    },
+    "forward roll": {
+      "intangibility": "4-18",
+      "faf": "33"
+    },
+    "back roll": {
+      "intangibility": "4-18",
+      "faf": "33"
+    },
+    "air dodge": {
+      "intangibility": "3-28",
+      "faf": "34"
+    },
+    "neutral air": [
+      {
+        "hitbox_active": "9-12",
+        "faf": "50",
+        "base_dmg": "7",
+        "angle": "30",
+        "bkb_wbkb": "60",
+        "kbg": "55",
+        "landing_lag": "18",
+        "autocancel": "1-3, 34>",
+        "modifier": " hit 1"
+      },
+      {
+        "hitbox_active": "22-25",
+        "faf": "",
+        "base_dmg": "7",
+        "angle": "30",
+        "bkb_wbkb": "60",
+        "kbg": "55",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " hit 2"
+      }
+    ],
+    "forward air": [
+      {
+        "hitbox_active": "12-15",
+        "faf": "34",
+        "base_dmg": "12.5",
+        "angle": "55",
+        "bkb_wbkb": "50",
+        "kbg": "100",
+        "landing_lag": "18",
+        "autocancel": "1-3, 27>",
+        "modifier": " levin sword"
+      },
+      {
+        "hitbox_active": "16-19",
+        "faf": "",
+        "base_dmg": "5",
+        "angle": "65",
+        "bkb_wbkb": "45",
+        "kbg": "80",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " levin sword late"
+      },
+      {
+        "hitbox_active": "12-15",
+        "faf": "",
+        "base_dmg": "7.5",
+        "angle": "361",
+        "bkb_wbkb": "50",
+        "kbg": "100",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " bronze sword"
+      }
+    ],
+    "back air": [
+      {
+        "hitbox_active": "9-10",
+        "faf": "40",
+        "base_dmg": "15",
+        "angle": "361",
+        "bkb_wbkb": "40",
+        "kbg": "93",
+        "landing_lag": "19",
+        "autocancel": "32>",
+        "modifier": " levin sword"
+      },
+      {
+        "hitbox_active": "11-16",
+        "faf": "",
+        "base_dmg": "5",
+        "angle": "65",
+        "bkb_wbkb": "45",
+        "kbg": "80",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " levin sword late"
+      },
+      {
+        "hitbox_active": "9-10",
+        "faf": "",
+        "base_dmg": "9",
+        "angle": "361",
+        "bkb_wbkb": "40",
+        "kbg": "93",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " bronze sword"
+      }
+    ],
+    "up air": [
+      {
+        "hitbox_active": "10-13",
+        "faf": "46",
+        "base_dmg": "13",
+        "angle": "95",
+        "bkb_wbkb": "48",
+        "kbg": "90",
+        "landing_lag": "18",
+        "autocancel": "1-4, 27>",
+        "modifier": " levin sword"
+      },
+      {
+        "hitbox_active": "14-23",
+        "faf": "",
+        "base_dmg": "5",
+        "angle": "65",
+        "bkb_wbkb": "45",
+        "kbg": "80",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " levin sword late"
+      },
+      {
+        "hitbox_active": "10-13",
+        "faf": "",
+        "base_dmg": "7.8",
+        "angle": "95",
+        "bkb_wbkb": "48",
+        "kbg": "90",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " bronze sword"
+      }
+    ],
+    "down air": [
+      {
+        "hitbox_active": "13-14",
+        "faf": "60",
+        "base_dmg": "11",
+        "angle": "270/70",
+        "bkb_wbkb": "20",
+        "kbg": "100",
+        "landing_lag": "26",
+        "autocancel": "1, 48>",
+        "modifier": " levin sword early"
+      },
+      {
+        "hitbox_active": "15-17",
+        "faf": "",
+        "base_dmg": "12/11",
+        "angle": "40/70",
+        "bkb_wbkb": "55/20",
+        "kbg": "80/100",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " levin sword"
+      },
+      {
+        "hitbox_active": "18-24",
+        "faf": "",
+        "base_dmg": "8",
+        "angle": "65",
+        "bkb_wbkb": "45",
+        "kbg": "80",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " levin sword late"
+      },
+      {
+        "hitbox_active": "13-15",
+        "faf": "",
+        "base_dmg": "7.2",
+        "angle": "361",
+        "bkb_wbkb": "55",
+        "kbg": "80",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " bronze sword"
+      },
+      {
+        "hitbox_active": "16-24",
+        "faf": "",
+        "base_dmg": "6",
+        "angle": "361",
+        "bkb_wbkb": "45",
+        "kbg": "80",
+        "landing_lag": "",
+        "autocancel": "",
+        "modifier": " bronze sword late"
+      }
+    ],
+    "specials": [
+      {
+        "name": "neutral special",
+        "otherName": "",
+        "value": [
+          {
+            "hitbox_active": "Startup: 7 frames",
+            "faf": "",
+            "base_dmg": "",
+            "angle": "",
+            "bkb_wbkb": "",
+            "kbg": "",
+            "modifier": "thunder  non-thoron"
+          },
+          {
+            "hitbox_active": "11-23 (Uses 1 Durability)",
+            "faf": "39",
+            "base_dmg": "4.5",
+            "angle": "50",
+            "bkb_wbkb": "50",
+            "kbg": "20",
+            "modifier": "thunder "
+          },
+          {
+            "hitbox_active": "11-54 (Uses 3 Durability)",
+            "faf": "48",
+            "base_dmg": "10.5",
+            "angle": "50",
+            "bkb_wbkb": "30",
+            "kbg": "100",
+            "modifier": "elthunder "
+          },
+          {
+            "hitbox_active": "11-67 (Uses 5 Durability)",
+            "faf": "48",
+            "base_dmg": "",
+            "angle": "",
+            "bkb_wbkb": "",
+            "kbg": "",
+            "modifier": "arcthunder  projectile"
+          },
+          {
+            "hitbox_active": "1-2",
+            "faf": "",
+            "base_dmg": "3",
+            "angle": "70",
+            "bkb_wbkb": "50",
+            "kbg": "75",
+            "modifier": "arcthunder  hit 1"
+          },
+          {
+            "hitbox_active": "3-33 (Rehit rate: 6)",
+            "faf": "",
+            "base_dmg": "1",
+            "angle": "110/366/366",
+            "bkb_wbkb": "W: 20/16/16",
+            "kbg": "100",
+            "modifier": "arcthunder "
+          },
+          {
+            "hitbox_active": "34",
+            "faf": "",
+            "base_dmg": "1",
+            "angle": "50",
+            "bkb_wbkb": "60",
+            "kbg": "280",
+            "modifier": "arcthunder  final hit"
+          },
+          {
+            "hitbox_active": "20-?? (Rehit rate: 4, Uses 8 Durability)",
+            "faf": "62",
+            "base_dmg": "2.6",
+            "angle": "60",
+            "bkb_wbkb": "50",
+            "kbg": "230",
+            "modifier": "thoron "
+          },
+          {
+            "hitbox_active": "20-?? (Rehit rate: 4)",
+            "faf": "71",
+            "base_dmg": "2.6",
+            "angle": "60",
+            "bkb_wbkb": "50",
+            "kbg": "230",
+            "modifier": "super thoron "
+          }
+        ]
+      },
+      {
+        "name": "side special",
+        "otherName": "arcfire",
+        "value": [
+          {
+            "hitbox_active": "17-50",
+            "faf": "64",
+            "base_dmg": "",
+            "angle": "",
+            "bkb_wbkb": "",
+            "kbg": "",
+            "modifier": " projectile"
+          },
+          {
+            "hitbox_active": "1-2",
+            "faf": "",
+            "base_dmg": "1",
+            "angle": "85",
+            "bkb_wbkb": "W: 22",
+            "kbg": "100",
+            "modifier": " hit 1"
+          },
+          {
+            "hitbox_active": "1-48 (Rehit rate: 8)",
+            "faf": "",
+            "base_dmg": "1",
+            "angle": "78",
+            "bkb_wbkb": "W: 16",
+            "kbg": "100",
+            "modifier": ""
+          },
+          {
+            "hitbox_active": "49-50",
+            "faf": "",
+            "base_dmg": "4",
+            "angle": "70",
+            "bkb_wbkb": "80",
+            "kbg": "115",
+            "modifier": " final hit"
+          }
+        ]
+      },
+      {
+        "name": "up special",
+        "otherName": "elwind",
+        "value": [
+          {
+            "hitbox_active": "8-12 (Uses 1 Durability)",
+            "faf": "",
+            "base_dmg": "7",
+            "angle": "255",
+            "bkb_wbkb": "10",
+            "kbg": "100",
+            "modifier": " hit 1"
+          },
+          {
+            "hitbox_active": "13-29",
+            "faf": "",
+            "base_dmg": "5",
+            "angle": "80",
+            "bkb_wbkb": "100",
+            "kbg": "30",
+            "modifier": " hit 1 late"
+          },
+          {
+            "hitbox_active": "28-53 (Uses 1 Durability)",
+            "faf": "",
+            "base_dmg": "5",
+            "angle": "125",
+            "bkb_wbkb": "60",
+            "kbg": "70",
+            "modifier": " hit 2"
+          }
+        ]
+      },
+      {
+        "name": "down special",
+        "otherName": "nosferatu",
+        "value": [
+          {
+            "hitbox_active": "15 (Intangible: 15-18)",
+            "faf": "56",
+            "base_dmg": "",
+            "angle": "",
+            "bkb_wbkb": "",
+            "kbg": "",
+            "modifier": " grab"
+          },
+          {
+            "hitbox_active": "23, 31, 39, 47, 55...",
+            "faf": "39 after grab break",
+            "base_dmg": "0.8",
+            "angle": "",
+            "bkb_wbkb": "",
+            "kbg": "",
+            "modifier": " attack"
+          }
+        ]
+      }
+    ]
+  }
+}

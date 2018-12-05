@@ -13,7 +13,7 @@ function S3() {
             let data;
             let err;
             try {
-              data = fs.readFileSync(`${__dirname}/../../gen/${params.Key}`);
+              data = fs.readFileSync(`${__dirname}/input/${params.Key}`);
             } catch (e) {
               err = e;
             }
@@ -37,9 +37,6 @@ const CharacterMoveIntentHandler = proxyquire('../CharacterMoveIntentHandler', {
   'BuildSpeechletResponse': BuildSpeechletResponse,
 });
 const index = proxyquire('../index', {
-  'aws-sdk': {
-    S3,
-  },
   'AlexaCharacterMoveIntentHandler': proxyquire('../AlexaCharacterMoveIntentHandler', {
     'aws-sdk': {
       S3,
@@ -55,13 +52,21 @@ function test(testName) {
   const outputPath = `${__dirname}/json/${testName}.output.json`;
   const input = JSON.parse(fs.readFileSync(inputPath));
   const output = JSON.parse(fs.readFileSync(outputPath));
+  // For some reason the callback is called more than once
+  let testDone = false;
   index.handler(input, input.context,
-    (_, response) => {
+    (_, response, third, fourth) => {
+      debugger;
+      if (testDone) return;
+      testDone = true;
       try {
+        if (output.body && output.body.userAgent)
+          response.userAgent = output.body.userAgent;
         expect(response).to.deep.equal(output.body);
       } catch (e) {
         console.error(`${testName} failed`);
-        throw e;
+        console.error(e);
+        process.exit(1);
       }
     });
 }

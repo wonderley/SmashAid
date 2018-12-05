@@ -1,155 +1,128 @@
-'use strict';
-const AWS = require('aws-sdk');
-const s3 = new AWS.S3();
+/* eslint-disable  func-names */
+/* eslint-disable  no-console */
+
+const Alexa = require('ask-sdk-core');
 const AlexaCharacterMoveIntentHandler = require('AlexaCharacterMoveIntentHandler');
-const buildSpeechletResponse = require('BuildSpeechletResponse');
 
-/**
- * This sample demonstrates a simple skill built with the Amazon Alexa Skills Kit.
- * The Intent Schema, Custom Slots, and Sample Utterances for this skill, as well as
- * testing instructions are located at http://amzn.to/1LzFrj6
- *
- * For additional samples, visit the Alexa Skills Kit Getting Started guide at
- * http://amzn.to/1LGWsLG
- */
-
-
-// --------------- Helpers that build all of the responses -----------------------
-
-String.prototype.replaceAll = function(target, replacement) {
-  return this.split(target).join(replacement);
+const LaunchRequestHandler = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
+  },
+  handle(handlerInput) {
+    const sessionAttributes = {};
+    const cardTitle = 'Smash Aid';
+    const speechOutput = 'Welcome to Smash Aid. ' +
+      'Ask about a move for any character.';
+    // If the user either does not reply to the welcome message or says something that is not
+    // understood, they will be prompted again with this text.
+    const repromptText = 'Please ask about a move for any character. For example, say, ' +
+      'tell me about Mario\'s up smash.';
+    const shouldEndSession = false;
+    debugger;
+    return handlerInput.responseBuilder
+      .speak(speechOutput)
+      .reprompt(repromptText)
+      .withSimpleCard(cardTitle, '')
+      .getResponse();
+  },
 };
 
-function buildResponse(sessionAttributes, speechletResponse) {
-  return {
-    version: '1.0',
-    sessionAttributes,
-    response: speechletResponse,
-  };
-}
-
-
-// --------------- Functions that control the skill's behavior -----------------------
-
-function getWelcomeResponse(callback) {
-  // If we wanted to initialize the session to have some attributes we could add those here.
-  const sessionAttributes = {};
-  const cardTitle = 'Smash Aid';
-  const speechOutput = 'Welcome to Smash Aid. ' +
-    'Ask about a move for any character.';
-  // If the user either does not reply to the welcome message or says something that is not
-  // understood, they will be prompted again with this text.
-  const repromptText = 'Please ask about a move for any character. For example, say, ' +
-    'tell me about Mario\'s up smash.';
-  const shouldEndSession = false;
-
-  callback(sessionAttributes,
-    buildSpeechletResponse(cardTitle, speechOutput, repromptText, shouldEndSession, speechOutput));
-}
-
-function handleSessionEndRequest(callback) {
-  const cardTitle = 'Exiting Smash Aid';
-  const speechOutput = 'Thanks for using Smash Aid!';
-  // Setting this to true ends the session and exits the skill.
-  const shouldEndSession = true;
-
-  callback({}, buildSpeechletResponse(cardTitle, speechOutput, null, shouldEndSession, speechOutput));
-}
-
-// --------------- Events -----------------------
-
-/**
- * Called when the session starts.
- */
-function onSessionStarted(sessionStartedRequest, session) {
-  // console.log(`onSessionStarted requestId=${sessionStartedRequest.requestId}, sessionId=${session.sessionId}`);
-}
-
-/**
- * Called when the user launches the skill without specifying what they want.
- */
-function onLaunch(launchRequest, session, callback) {
-  //console.log(`onLaunch requestId=${launchRequest.requestId}, sessionId=${session.sessionId}`);
-
-  // Dispatch to your skill's launch.
-  getWelcomeResponse(callback);
-}
-
-/**
- * Called when the user specifies an intent for this skill.
- */
-function onIntent(intentRequest, session, callback) {
-  console.log(`intentRequest ${intentRequest}`);
-  console.log(`onIntent requestId=${intentRequest.requestId}, sessionId=${session.sessionId}`);
-
-  const intent = intentRequest.intent;
-  const intentName = intentRequest.intent.name;
-
-  // Dispatch to your skill's intent handlers
-  if (intentName === 'CharacterMoveIntent') {
-    console.log('Going in onCharacterMoveIntent');
-    const intentHandler = new AlexaCharacterMoveIntentHandler();
-    intentHandler.onIntent(intent, session, callback);
-  } else if (intentName === 'AMAZON.HelpIntent') {
-    getWelcomeResponse(callback);
-  } else if (intentName === 'AMAZON.StopIntent' || intentName === 'AMAZON.CancelIntent') {
-    handleSessionEndRequest(callback);
-  } else {
-    let speechOutput = 'My B. I didn\'t understand what you said. Please name a character and move.';
-    let repromptText = 'Please name a character and move. For example, say, tell me about Mario\'s up smash.';
-    let shouldEndSession = false;
-    callback(session.attributes || {},
-      buildSpeechletResponse('Please try again', speechOutput, repromptText, shouldEndSession, speechOutput));
-  }
-}
-
-/**
- * Called when the user ends the session.
- * Is not called when the skill returns shouldEndSession=true.
- */
-function onSessionEnded(sessionEndedRequest, session) {
-  console.log(`onSessionEnded requestId=${sessionEndedRequest.requestId}, sessionId=${session.sessionId}`);
-  // Add cleanup logic here
-}
-
-
-// --------------- Main handler -----------------------
-
-// Route the incoming request based on type (LaunchRequest, IntentRequest,
-// etc.) The JSON body of the request is provided in the event parameter.
-exports.handler = (event, context, callback) => {
-  try {
-    /**
-     * Uncomment this if statement and populate with your skill's application ID to
-     * prevent someone else from configuring a skill that sends requests to this function.
-     */
-    /*
-    if (event.session.application.applicationId !== 'amzn1.echo-sdk-ams.app.[unique-value-here]') {
-       callback('Invalid Application ID');
-    }
-    */
-
-    if (event.session.new) {
-      onSessionStarted({ requestId: event.request.requestId }, event.session);
-    }
-
-    if (event.request.type === 'LaunchRequest') {
-      onLaunch(event.request,
-        event.session,
-        (sessionAttributes, speechletResponse) => {
-          callback(null, buildResponse(sessionAttributes, speechletResponse));
-        });
-    } else if (event.request.type === 'IntentRequest') {
-      onIntent(event.request,
-        event.session,
-        (sessionAttributes, speechletResponse) => {
-          callback(null, buildResponse(sessionAttributes, speechletResponse));
-        });
-    } else if (event.request.type === 'SessionEndedRequest') {
-      onSessionEnded(event.request, event.session);
-      callback();
-    }
-  } catch (err) {
-    callback(err);
-  }
+const CharacterMoveIntentHandler = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+      && handlerInput.requestEnvelope.request.intent.name === 'CharacterMoveIntent';
+  },
+  handle(handlerInput) {
+    const intent = handlerInput.requestEnvelope.request.intent;
+    const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
+    return this.handler.onIntent(intent, sessionAttributes)
+    .then(responseObj => {
+      debugger;
+      // const response = buildSpeechletResponse(responseObj.cardTitle, responseObj.speechOutput, responseObj.repromptText, false /*shouldEndSession*/);
+      return handlerInput.responseBuilder
+        .speak(responseObj.speechOutput)
+        .reprompt(responseObj.repromptText)
+        .withSimpleCard(responseObj.cardTitle, '')
+        .getResponse();
+    });
+  },
+  handler: new AlexaCharacterMoveIntentHandler(),
 };
+
+const HelpIntentHandler = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+      && handlerInput.requestEnvelope.request.intent.name === 'AMAZON.HelpIntent';
+  },
+  handle(handlerInput) {
+    const speechText = 'You can say hello to me!';
+
+    return handlerInput.responseBuilder
+      .speak(speechText)
+      .reprompt(speechText)
+      .withSimpleCard('Hello World', speechText)
+      .getResponse();
+  },
+};
+
+const CancelAndStopIntentHandler = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
+      && (handlerInput.requestEnvelope.request.intent.name === 'AMAZON.CancelIntent'
+        || handlerInput.requestEnvelope.request.intent.name === 'AMAZON.StopIntent');
+  },
+  handle(handlerInput) {
+    const cardTitle = 'Exiting Smash Aid';
+    const speechOutput = 'Thanks for using Smash Aid!';
+    // Setting this to true ends the session and exits the skill.
+    const shouldEndSession = true;
+    return handlerInput.responseBuilder
+      .speak(speechOutput)
+      .withSimpleCard(cardTitle, speechOutput)
+      .getResponse();
+  },
+};
+
+const SessionEndedRequestHandler = {
+  canHandle(handlerInput) {
+    return handlerInput.requestEnvelope.request.type === 'SessionEndedRequest';
+  },
+  handle(handlerInput) {
+    console.log(`Session ended with reason: ${handlerInput.requestEnvelope.request.reason}`);
+    const cardTitle = 'Exiting Smash Aid';
+    const speechOutput = 'Thanks for using Smash Aid!';
+    // Setting this to true ends the session and exits the skill.
+    const shouldEndSession = true;
+    return handlerInput.responseBuilder
+      .speak(speechOutput)
+      .withSimpleCard(cardTitle, speechOutput)
+      .getResponse();
+  },
+};
+
+const ErrorHandler = {
+  canHandle() {
+    return true;
+  },
+  handle(handlerInput, error) {
+    console.log(`Error handled: ${error.message}`);
+
+    return handlerInput.responseBuilder
+      .speak('Sorry, I can\'t understand the command. Please say again.')
+      .reprompt('Sorry, I can\'t understand the command. Please say again.')
+      .getResponse();
+  },
+};
+
+const skillBuilder = Alexa.SkillBuilders.custom();
+
+exports.handler = skillBuilder
+  .addRequestHandlers(
+    LaunchRequestHandler,
+    CharacterMoveIntentHandler,
+    HelpIntentHandler,
+    CancelAndStopIntentHandler,
+    SessionEndedRequestHandler
+  )
+  .addErrorHandlers(ErrorHandler)
+  .lambda();

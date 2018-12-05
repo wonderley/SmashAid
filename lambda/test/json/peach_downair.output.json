@@ -3,8 +3,8 @@
 		"version": "1.0",
 		"response": {
 			"outputSpeech": {
-				"type": "PlainText",
-				"text": "Peach's down air has 2 parts.  hits 1 to 3 are active frames 12 to 13, 18 to 19 and  24 to 25.  hit 4 is active frames 30 to 31. Peach can act on frame 39. You can ask about another one of Peach's moves, or name another character and move."
+				"type": "SSML",
+				"ssml": "<speak>Peach's down air has 2 parts.  hits 1 to 3 are active frames 12 to 13, 18 to 19 and  24 to 25.  hit 4 is active frames 30 to 31. Peach can act on frame 39. You can ask about another one of Peach's moves, or name another character and move.</speak>"
 			},
 			"card": {
 				"type": "Simple",
@@ -13,8 +13,8 @@
 			},
 			"reprompt": {
 				"outputSpeech": {
-					"type": "PlainText",
-					"text": "Ask about another one of Peach's moves, or name another character and move."
+					"type": "SSML",
+					"ssml": "<speak>Peach's down air has 2 parts.  hits 1 to 3 are active frames 12 to 13, 18 to 19 and  24 to 25.  hit 4 is active frames 30 to 31. Peach can act on frame 39. You can ask about another one of Peach's moves, or name another character and move.</speak>"
 				}
 			},
 			"shouldEndSession": false
@@ -22,6 +22,7 @@
 		"sessionAttributes": {
 			"character": "peach",
 			"move": "down air"
-		}
+		},
+		"userAgent": "ask-node/2.3.0 Node/v8.10.0"
 	}
 }

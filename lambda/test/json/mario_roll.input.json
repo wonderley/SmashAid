@@ -2,12 +2,13 @@
 	"version": "1.0",
 	"session": {
 		"new": false,
-		"sessionId": "amzn1.echo-api.session.47c654e8-916d-4ce6-9788-d3e6fcde06fb",
+		"sessionId": "amzn1.echo-api.session.089e97ee-3730-49c6-9d93-a39ee235c037",
 		"application": {
 			"applicationId": "amzn1.ask.skill.2fb7d380-4b6c-4bf4-969b-2894cb77037c"
 		},
 		"attributes": {
-			"move": "forward roll"
+			"character": "luigi",
+			"move": "up air"
 		},
 		"user": {
 			"userId": "amzn1.ask.account.AHE2YIB5CB2FNVYWYYRQEFDBDE423OP3RUEKJLPGDHIGRGD4ZU7VOKQFDNYUMF3OWBQBFLDAMJ3RIGBBD4QE7I2EUEC6NNDFN244VMTGQKF5VWDDROWENJXCWBBMOUUP5FTUOVSB3WEOVNKT3VZRRAHSJKRISEE5QUYSWDJJLEIBP6RDF2L3IWLTT6Y5EK4V66XCM7GRIX3NINQ"
@@ -34,13 +35,32 @@
 				}
 			},
 			"apiEndpoint": "https://api.amazonalexa.com",
-			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjJmYjdkMzgwLTRiNmMtNGJmNC05NjliLTI4OTRjYjc3MDM3YyIsImV4cCI6MTUzMzUwNzU5OSwiaWF0IjoxNTMzNTAzOTk5LCJuYmYiOjE1MzM1MDM5OTksInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhOWExMTlk1WFNTVFZSVlhEWlA2N01QMlRUM09HSjJGTzVEVk5TUzVQV1BLNUNTVkRMQTdDVUY2SVJFNkpLRkZVRUQ0VE9XTDc0TVBDM0ZBS0tPQzRPWU9MSERINFJERFhPMkRMMzc3RklJR09LNFZYUUhBWTVWU0VYUkNHQVZURDNNU0hLRU8yVE4zTFBNSE9WUEhFSlNMSVVHTlZBN0IyUlpORjVKUUpUTE5SVFRPSlFCUSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIRTJZSUI1Q0IyRk5WWVdZWVJRRUZEQkRFNDIzT1AzUlVFS0pMUEdESElHUkdENFpVN1ZPS1FGRE5ZVU1GM09XQlFCRkxEQU1KM1JJR0JCRDRRRTdJMkVVRUM2Tk5ERk4yNDRWTVRHUUtGNVZXRERST1dFTkpYQ1dCQk1PVVVQNUZUVU9WU0IzV0VPVk5LVDNWWlJSQUhTSktSSVNFRTVRVVlTV0RKSkxFSUJQNlJERjJMM0lXTFRUNlk1RUs0VjY2WENNN0dSSVgzTklOUSJ9fQ.W4RA09N0YYYlAvoyGbE0uNd5r_ZwoqgD_0FJVAM-dO5SvxJA4VoSRW8Tydled_KYO_-iFQXAAhEOyvWMyCvysoS_k520yVmoKllYbFXiwD0BrKPLzQKUloczmTZsI_JL9eZVJ3BnE9zlYj-ejfDbr0p_891ceWh3bCNOXudDNSOC0Iisxy-rnnJiawVVjFq-uCDEKPAhQ8n2RxgzpglnMRi18IajbOW69mzzYCSkhIpCk4MBlV5MN3meUm-ABcLSW3OTVlxIpRvuL3sujd_56bwyqJDkE5YJCXaEtIpF8sFkAagqCqvWx6l5834HW7-1AHvkGh8UuthnsMlEekmkWg"
+			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjJmYjdkMzgwLTRiNmMtNGJmNC05NjliLTI4OTRjYjc3MDM3YyIsImV4cCI6MTU0NDA3MjA1NSwiaWF0IjoxNTQ0MDY4NDU1LCJuYmYiOjE1NDQwNjg0NTUsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhOWExMTlk1WFNTVFZSVlhEWlA2N01QMlRUM09HSjJGTzVEVk5TUzVQV1BLNUNTVkRMQTdDVUY2SVJFNkpLRkZVRUQ0VE9XTDc0TVBDM0ZBS0tPQzRPWU9MSERINFJERFhPMkRMMzc3RklJR09LNFZYUUhBWTVWU0VYUkNHQVZURDNNU0hLRU8yVE4zTFBNSE9WUEhFSlNMSVVHTlZBN0IyUlpORjVKUUpUTE5SVFRPSlFCUSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIRTJZSUI1Q0IyRk5WWVdZWVJRRUZEQkRFNDIzT1AzUlVFS0pMUEdESElHUkdENFpVN1ZPS1FGRE5ZVU1GM09XQlFCRkxEQU1KM1JJR0JCRDRRRTdJMkVVRUM2Tk5ERk4yNDRWTVRHUUtGNVZXRERST1dFTkpYQ1dCQk1PVVVQNUZUVU9WU0IzV0VPVk5LVDNWWlJSQUhTSktSSVNFRTVRVVlTV0RKSkxFSUJQNlJERjJMM0lXTFRUNlk1RUs0VjY2WENNN0dSSVgzTklOUSJ9fQ.GjZCzxPyqAl3WX4W0pWLq-NJzbsp7CRG3X9CVEsfvFnJ_oZb8N60T8aV3n3jsBCRUgzhG6eO5D7LbAV_R9jmu5dhDlb4_GZWZvKSc3nSA8T6LGn1wq-M1xBJPbxnE_yXctHQuluhfzuLQkZvabmL1nh56es3gozemCaRt2WylwjTzVBTNhOByinv6mT22IwaT_1LqGEBjwXPz4T9KFq1P1iqm7lKxQI4UsPcq_7KUeU-ml5Op2mbKjwGmPP-Bjh7aVkapQErLmrMqxyBbP2EWCRojagKlWyHCzzgqWYmXIB1rXkFeXFsPkdl4ta5ddNd0ZnIBKjMdz-PyJN97lfOpA"
+		},
+		"Viewport": {
+			"experiences": [
+				{
+					"arcMinuteWidth": 246,
+					"arcMinuteHeight": 144,
+					"canRotate": false,
+					"canResize": false
+				}
+			],
+			"shape": "RECTANGLE",
+			"pixelWidth": 1024,
+			"pixelHeight": 600,
+			"dpi": 160,
+			"currentPixelWidth": 1024,
+			"currentPixelHeight": 600,
+			"touch": [
+				"SINGLE"
+			]
 		}
 	},
 	"request": {
 		"type": "IntentRequest",
-		"requestId": "amzn1.echo-api.request.eba88b4a-0a30-4a06-8f76-2df40b668503",
-		"timestamp": "2018-08-05T21:19:59Z",
+		"requestId": "amzn1.echo-api.request.a775f94d-f015-4527-9fb6-573808427f8a",
+		"timestamp": "2018-12-06T03:54:15Z",
 		"locale": "en-US",
 		"intent": {
 			"name": "CharacterMoveIntent",
@@ -48,7 +68,7 @@
 			"slots": {
 				"character": {
 					"name": "character",
-					"value": "Mario",
+					"value": "Mario's",
 					"resolutions": {
 						"resolutionsPerAuthority": [
 							{
@@ -73,11 +93,38 @@
 							}
 						]
 					},
-					"confirmationStatus": "NONE"
+					"confirmationStatus": "NONE",
+					"source": "USER"
 				},
 				"move_type": {
 					"name": "move_type",
-					"confirmationStatus": "NONE"
+					"value": "roll",
+					"resolutions": {
+						"resolutionsPerAuthority": [
+							{
+								"authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.2fb7d380-4b6c-4bf4-969b-2894cb77037c.move_type",
+								"status": {
+									"code": "ER_SUCCESS_MATCH"
+								},
+								"values": [
+									{
+										"value": {
+											"name": "forward roll",
+											"id": "f39ea5b741d3dd3d5d1532eab56070ca"
+										}
+									},
+									{
+										"value": {
+											"name": "back roll",
+											"id": "4bdc556db47a401e876086be9fc3535e"
+										}
+									}
+								]
+							}
+						]
+					},
+					"confirmationStatus": "NONE",
+					"source": "USER"
 				}
 			}
 		},

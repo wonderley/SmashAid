@@ -3,8 +3,8 @@
 		"version": "1.0",
 		"response": {
 			"outputSpeech": {
-				"type": "PlainText",
-				"text": "Welcome to Smash Aid. Ask about a move for any character."
+				"type": "SSML",
+				"ssml": "<speak>Welcome to Smash Aid. Ask about a move for any character.</speak>"
 			},
 			"card": {
 				"type": "Simple",
@@ -13,12 +13,13 @@
 			},
 			"reprompt": {
 				"outputSpeech": {
-					"type": "PlainText",
-					"text": "Please ask about a move for any character. For example, say, tell me about Mario's up smash."
+					"type": "SSML",
+					"ssml": "<speak>Please ask about a move for any character. For example, say, tell me about Mario's up smash.</speak>"
 				}
 			},
 			"shouldEndSession": false
 		},
-		"sessionAttributes": {}
+		"sessionAttributes": {},
+		"userAgent": "ask-node/2.3.0 Node/v8.10.0"
 	}
 }

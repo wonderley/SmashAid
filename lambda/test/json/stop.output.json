@@ -1,0 +1,18 @@
+{
+	"body": {
+		"version": "1.0",
+		"response": {
+			"outputSpeech": {
+				"type": "SSML",
+				"ssml": "<speak>Thanks for using Smash Aid!</speak>"
+			},
+			"card": {
+				"type": "Simple",
+				"title": "Exiting Smash Aid",
+				"content": "Thanks for using Smash Aid!"
+			}
+		},
+		"sessionAttributes": {},
+		"userAgent": "ask-node/2.3.0 Node/v8.10.0"
+	}
+}

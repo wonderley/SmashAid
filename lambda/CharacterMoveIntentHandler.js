@@ -1,22 +1,17 @@
 'use strict';
 const AWS = require('aws-sdk');
 const s3 = new AWS.S3();
-const buildSpeechletResponse = require('BuildSpeechletResponse');
 
 class CharacterMoveIntentHandler {
-  onIntent(intent, session, callback) {
+  // Returns Promise that resolves to response object.
+  onIntent(intent, sessionAttributes) {
     debugger;
-    let sessionAttributes = session.attributes || {};
     let cardTitle = 'Failed to find move';
     let move = sessionAttributes.move;
     let character = sessionAttributes.character;
     let speechOutput = 'What character and move are you interested in?';
     let repromptText = 'Please name a character and move. For example, say, tell me about Mario\'s up smash.';
     try {
-      console.log(JSON.stringify(intent));
-      console.log(session);
-      console.log(intent.slots.character);
-      console.log(intent.slots.move_type);
       move = getSlot(intent, 'move_type') || move;
       character = getSlot(intent, 'character') || character;
       if (character) {
@@ -27,39 +22,57 @@ class CharacterMoveIntentHandler {
       }
       if (!character && !move) {
         cardTitle = 'Choose a character and move';
-        callback(sessionAttributes,
-        buildSpeechletResponse(cardTitle, speechOutput, repromptText, false /*shouldEndSession*/));
-        return;
+        return Promise.resolve({
+          sessionAttributes,
+          cardTitle,
+          speechOutput,
+          repromptText: speechOutput,
+        });
       } else if (character && !move) {
         cardTitle = `${capitalize(character)}`;
         speechOutput = `Which of ${capitalize(character)}'s moves?`;
         repromptText = `I didn't get that. ${speechOutput}`;
-        callback(sessionAttributes,
-        buildSpeechletResponse(cardTitle, speechOutput, repromptText, false /*shouldEndSession*/));
-        return;
+        return Promise.resolve({
+          sessionAttributes,
+          cardTitle,
+          speechOutput,
+          repromptText,
+        });
       } else if (move && !character) {
         cardTitle = `${capitalize(move)}`;
         speechOutput = `Which character's ${move} do you want to know about?`;
         repromptText = `I didn't get that. ${speechOutput}`;
-        callback(sessionAttributes,
-        buildSpeechletResponse(cardTitle, speechOutput, repromptText, false /*shouldEndSession*/));
-        return;
+        return Promise.resolve({
+          sessionAttributes,
+          cardTitle,
+          speechOutput,
+          repromptText,
+        });
       }
       speechOutput = '';
       repromptText = '';
     } catch (e) {
+      debugger;
       console.log(e);
-      callback(sessionAttributes,
-        buildSpeechletResponse(cardTitle, speechOutput, repromptText, false /*shouldEndSession*/));
+      return Promise.resolve({
+        sessionAttributes,
+        cardTitle,
+        speechOutput,
+        repromptText: speechOutput,
+      });
     }
 
     // read from file
-    const characterFileName = character
-      .replaceAll(' ', '_').replaceAll('junior', 'jr')
-      .replaceAll('doctor', 'dr');
+    debugger;
+    let characterFileName =
+      replaceAll(character, ' ', '_');
+    characterFileName =
+      replaceAll(characterFileName, 'junior', 'jr');
+    characterFileName =
+      replaceAll(characterFileName, 'doctor', 'dr');
     return this.readFile(`${characterFileName}.json`)
     .then(jsonResult => {
-      onFileContent(jsonResult, character, move, speechOutput, cardTitle, sessionAttributes, repromptText, callback);
+      return onFileContent(jsonResult, character, move, speechOutput, cardTitle, sessionAttributes, repromptText);
     })
     .catch(onFileError, character);
   }
@@ -70,7 +83,8 @@ class CharacterMoveIntentHandler {
   }
 }
 
-function onFileContent(jsonResult, character, move, speechOutput, cardTitle, sessionAttributes, repromptText, callback) {
+function onFileContent(jsonResult, character, move, speechOutput, cardTitle, sessionAttributes, repromptText) {
+  debugger;
   const Character = capitalize(character);
   try {
     const result = JSON.parse(jsonResult.toString());
@@ -91,13 +105,22 @@ function onFileContent(jsonResult, character, move, speechOutput, cardTitle, ses
       Character, move, moveObj);
     speechOutput += ` You can ask about another one of ${Character}'s moves, or name another character and move.`;
     repromptText = `Ask about another one of ${Character}'s moves, or name another character and move.`;
-    callback(sessionAttributes,
-    buildSpeechletResponse(cardTitle, speechOutput, repromptText, false /*shouldEndSession*/));
+    debugger;
+    return Promise.resolve({
+      sessionAttributes,
+      cardTitle,
+      speechOutput,
+      repromptText: speechOutput,
+    });
   } catch (e) {
     speechOutput = `Sorry, I don't have any information about the ${move} for ${Character}. Please name another character and move.`;
     cardTitle = 'Please try again';
-    callback(sessionAttributes,
-    buildSpeechletResponse(cardTitle, speechOutput, repromptText, false /*shouldEndSession*/, speechOutput));
+    return Promise.resolve({
+      sessionAttributes,
+      cardTitle,
+      speechOutput,
+      repromptText: speechOutput,
+    });
   }
 }
 
@@ -105,8 +128,12 @@ function onFileError(err, character) {
   console.error(err);
   const speechOutput = `My B. I can't find any information about ${character}.`;
   const cardTitle = 'Please try again';
-  callback(sessionAttributes,
-  buildSpeechletResponse(cardTitle, speechOutput, speechOutput /*repromptText*/, false /*shouldEndSession*/, speechOutput));
+  return Promise.resolve({
+    sessionAttributes,
+    cardTitle,
+    speechOutput,
+    repromptText: speechOutput,
+  });
 }
 
 function speechOutputForMoveGroup(character, group, data) {
@@ -176,16 +203,16 @@ function speechOutputForAttackData(character, move, data, verbose) {
     let framesStr = 'frame';
     if (data.hitbox_active.includes('-')) {
       framesStr = 'frames';
-      data.hitbox_active = data.hitbox_active.replaceAll('-', ' to ');
+      data.hitbox_active = replaceAll(data.hitbox_active, '-', ' to ');
     }
     let activeFramesStr = `${framesStr} ${data.hitbox_active}`;
     activeStr = `${move} is active ${activeFramesStr}.`;
   }
-  activeStr = activeStr.replaceAll('-', ' to ');
+  activeStr = replaceAll(activeStr, '-', ' to ');
   if (move.includes('hit') && move.includes('-')) {
     // Handle plural move modifier, e.g. hits 1-3 are...
-    activeStr = activeStr.replaceAll(' is ', ' are ')
-                        .replaceAll(' hit ', ' hits ');
+    activeStr = replaceAll(activeStr, ' is ', ' are ')
+    activeStr = replaceAll(activeStr, ' hit ', ' hits ');
   }
   if (verbose) activeStr = `${character}'s ${activeStr}`;
   return activeStr;
@@ -202,7 +229,7 @@ function speechOutputForThrowData(character, move, data) {
 
 function getSlot(intent, slotName) {
   try {
-  return intent.slots[slotName].resolutions.resolutionsPerAuthority[0].values[0].value.name;
+    return intent.slots[slotName].resolutions.resolutionsPerAuthority[0].values[0].value.name;
   } catch (e) {
     return undefined;
   }
@@ -214,6 +241,10 @@ function capitalize(input) {
     if (word.length === 1) return word.toUpperCase();
     else return word[0].toUpperCase() + word.substring(1);
   }).join(' ');
+}
+
+function replaceAll(str, target, replacement) {
+  return str.split(target).join(replacement);
 }
 
 module.exports = CharacterMoveIntentHandler;

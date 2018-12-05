@@ -2,9 +2,13 @@
 	"version": "1.0",
 	"session": {
 		"new": false,
-		"sessionId": "amzn1.echo-api.session.094c9444-7187-4ab5-a6b0-22885a42a162",
+		"sessionId": "amzn1.echo-api.session.089e97ee-3730-49c6-9d93-a39ee235c037",
 		"application": {
 			"applicationId": "amzn1.ask.skill.2fb7d380-4b6c-4bf4-969b-2894cb77037c"
+		},
+		"attributes": {
+			"character": "mario",
+			"move": "up throw"
 		},
 		"user": {
 			"userId": "amzn1.ask.account.AHE2YIB5CB2FNVYWYYRQEFDBDE423OP3RUEKJLPGDHIGRGD4ZU7VOKQFDNYUMF3OWBQBFLDAMJ3RIGBBD4QE7I2EUEC6NNDFN244VMTGQKF5VWDDROWENJXCWBBMOUUP5FTUOVSB3WEOVNKT3VZRRAHSJKRISEE5QUYSWDJJLEIBP6RDF2L3IWLTT6Y5EK4V66XCM7GRIX3NINQ"
@@ -31,13 +35,32 @@
 				}
 			},
 			"apiEndpoint": "https://api.amazonalexa.com",
-			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjJmYjdkMzgwLTRiNmMtNGJmNC05NjliLTI4OTRjYjc3MDM3YyIsImV4cCI6MTUzMzM5MjAzMSwiaWF0IjoxNTMzMzg4NDMxLCJuYmYiOjE1MzMzODg0MzEsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhOWExMTlk1WFNTVFZSVlhEWlA2N01QMlRUM09HSjJGTzVEVk5TUzVQV1BLNUNTVkRMQTdDVUY2SVJFNkpLRkZVRUQ0VE9XTDc0TVBDM0ZBS0tPQzRPWU9MSERINFJERFhPMkRMMzc3RklJR09LNFZYUUhBWTVWU0VYUkNHQVZURDNNU0hLRU8yVE4zTFBNSE9WUEhFSlNMSVVHTlZBN0IyUlpORjVKUUpUTE5SVFRPSlFCUSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIRTJZSUI1Q0IyRk5WWVdZWVJRRUZEQkRFNDIzT1AzUlVFS0pMUEdESElHUkdENFpVN1ZPS1FGRE5ZVU1GM09XQlFCRkxEQU1KM1JJR0JCRDRRRTdJMkVVRUM2Tk5ERk4yNDRWTVRHUUtGNVZXRERST1dFTkpYQ1dCQk1PVVVQNUZUVU9WU0IzV0VPVk5LVDNWWlJSQUhTSktSSVNFRTVRVVlTV0RKSkxFSUJQNlJERjJMM0lXTFRUNlk1RUs0VjY2WENNN0dSSVgzTklOUSJ9fQ.FAoeXbGncno8K3fSxqCuhrpeE7aEXi6raC0JKAdgvpydWXz_6dzawdignHIEawd8VGjsqsDO_6jR0CgehRHFIkXfRr_Cg2TgY3YpO7H0SvyElhQ42HTQglCH-jRX0a1W-vwMjJk9TqdF_Agm_TQj6TuNupGn_jZLtSofY_TCkV_mtSdKZ5gSRALalJHIDBbZB6Rn1JI76iFR0tPeCUHkJ5945NZSOpr1oOb_586WSpRET8D3rbeCO7hOdG5OI1WYAwSktFBaVFWol_zrpF9GcdGThdCcg28Sii9SsBz_O-lTm2kXQQe0qjNsUQ79tAaqfL1OMYAP_5_lVp8RIRdrVQ"
+			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLjJmYjdkMzgwLTRiNmMtNGJmNC05NjliLTI4OTRjYjc3MDM3YyIsImV4cCI6MTU0NDA3MjYyNCwiaWF0IjoxNTQ0MDY5MDI0LCJuYmYiOjE1NDQwNjkwMjQsInByaXZhdGVDbGFpbXMiOnsiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUhOWExMTlk1WFNTVFZSVlhEWlA2N01QMlRUM09HSjJGTzVEVk5TUzVQV1BLNUNTVkRMQTdDVUY2SVJFNkpLRkZVRUQ0VE9XTDc0TVBDM0ZBS0tPQzRPWU9MSERINFJERFhPMkRMMzc3RklJR09LNFZYUUhBWTVWU0VYUkNHQVZURDNNU0hLRU8yVE4zTFBNSE9WUEhFSlNMSVVHTlZBN0IyUlpORjVKUUpUTE5SVFRPSlFCUSIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFIRTJZSUI1Q0IyRk5WWVdZWVJRRUZEQkRFNDIzT1AzUlVFS0pMUEdESElHUkdENFpVN1ZPS1FGRE5ZVU1GM09XQlFCRkxEQU1KM1JJR0JCRDRRRTdJMkVVRUM2Tk5ERk4yNDRWTVRHUUtGNVZXRERST1dFTkpYQ1dCQk1PVVVQNUZUVU9WU0IzV0VPVk5LVDNWWlJSQUhTSktSSVNFRTVRVVlTV0RKSkxFSUJQNlJERjJMM0lXTFRUNlk1RUs0VjY2WENNN0dSSVgzTklOUSJ9fQ.LM3Ynm316hbIFbwecjB_TjeomWZIf4YdTplc033h9C7QJoU3wtMQZvFPIHHslRtzJcvuWmRS7I77umUmJgPii05zdfD4OZZ35s3dydBlnz_bt00CY_tC9na2s0iCk12-nrbKuKnVIAd9Mw75sFdFLU6_ac-veokLWIUORvyWA8sEjqAWzYrM0uFodYmLvrqpy8j5X4XT5HZX4pNOy8AJHOjmOyeJAEWfJeQE37nkUHz8LhPRg9d9nTeGuvP-QDZfXVk4p-TJ3DdOe86CHWvZI0JX5oI335xHVdKKmJ-ze5S6snmjIEOvfJoczDarXTdcyFwO4hS7ph9vJxrW74pBfQ"
+		},
+		"Viewport": {
+			"experiences": [
+				{
+					"arcMinuteWidth": 246,
+					"arcMinuteHeight": 144,
+					"canRotate": false,
+					"canResize": false
+				}
+			],
+			"shape": "RECTANGLE",
+			"pixelWidth": 1024,
+			"pixelHeight": 600,
+			"dpi": 160,
+			"currentPixelWidth": 1024,
+			"currentPixelHeight": 600,
+			"touch": [
+				"SINGLE"
+			]
 		}
 	},
 	"request": {
 		"type": "IntentRequest",
-		"requestId": "amzn1.echo-api.request.21f84150-4973-4fd0-9fe2-e499df4d4975",
-		"timestamp": "2018-08-04T13:13:51Z",
+		"requestId": "amzn1.echo-api.request.c5774f12-51e7-4aa0-b6bb-482cb11c9f43",
+		"timestamp": "2018-12-06T04:03:44Z",
 		"locale": "en-US",
 		"intent": {
 			"name": "CharacterMoveIntent",
@@ -59,12 +82,19 @@
 											"name": "mario",
 											"id": "de2f15d014d40b93578d255e6221fd60"
 										}
+									},
+									{
+										"value": {
+											"name": "doctor mario",
+											"id": "bec8fc4d1cb05e2f8f356fab7537e83a"
+										}
 									}
 								]
 							}
 						]
 					},
-					"confirmationStatus": "NONE"
+					"confirmationStatus": "NONE",
+					"source": "USER"
 				},
 				"move_type": {
 					"name": "move_type",
@@ -87,7 +117,8 @@
 							}
 						]
 					},
-					"confirmationStatus": "NONE"
+					"confirmationStatus": "NONE",
+					"source": "USER"
 				}
 			}
 		},

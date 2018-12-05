@@ -3,8 +3,8 @@
 		"version": "1.0",
 		"response": {
 			"outputSpeech": {
-				"type": "PlainText",
-				"text": "Luigi's up air has 2 parts. the first one is active frames 5 to 7.  late is active frames 8 to 11. Luigi can act on frame 30. You can ask about another one of Luigi's moves, or name another character and move."
+				"type": "SSML",
+				"ssml": "<speak>Luigi's up air has 2 parts. the first one is active frames 5 to 7.  late is active frames 8 to 11. Luigi can act on frame 30. You can ask about another one of Luigi's moves, or name another character and move.</speak>"
 			},
 			"card": {
 				"type": "Simple",
@@ -13,15 +13,16 @@
 			},
 			"reprompt": {
 				"outputSpeech": {
-					"type": "PlainText",
-					"text": "Ask about another one of Luigi's moves, or name another character and move."
+					"type": "SSML",
+					"ssml": "<speak>Luigi's up air has 2 parts. the first one is active frames 5 to 7.  late is active frames 8 to 11. Luigi can act on frame 30. You can ask about another one of Luigi's moves, or name another character and move.</speak>"
 				}
 			},
 			"shouldEndSession": false
 		},
 		"sessionAttributes": {
-			"move": "up air",
-			"character": "luigi"
-		}
+			"character": "luigi",
+			"move": "up air"
+		},
+		"userAgent": "ask-node/2.3.0 Node/v8.10.0"
 	}
 }

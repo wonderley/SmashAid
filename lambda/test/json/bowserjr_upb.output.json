@@ -3,8 +3,8 @@
 		"version": "1.0",
 		"response": {
 			"outputSpeech": {
-				"type": "PlainText",
-				"text": "Bowser Junior's up special, Abandon Ship!, has 3 parts.  initial is active frames 21 to 22.  explosion is active frames 60 to 61.  hammer is active frames 8 and  13. Bowser Junior can act on frame 40. You can ask about another one of Bowser Junior's moves, or name another character and move."
+				"type": "SSML",
+				"ssml": "<speak>Bowser Junior's up special, Abandon Ship!, has 3 parts.  initial is active frames 21 to 22.  explosion is active frames 60 to 61.  hammer is active frames 8 and  13. Bowser Junior can act on frame 40. You can ask about another one of Bowser Junior's moves, or name another character and move.</speak>"
 			},
 			"card": {
 				"type": "Simple",
@@ -13,8 +13,8 @@
 			},
 			"reprompt": {
 				"outputSpeech": {
-					"type": "PlainText",
-					"text": "Ask about another one of Bowser Junior's moves, or name another character and move."
+					"type": "SSML",
+					"ssml": "<speak>Bowser Junior's up special, Abandon Ship!, has 3 parts.  initial is active frames 21 to 22.  explosion is active frames 60 to 61.  hammer is active frames 8 and  13. Bowser Junior can act on frame 40. You can ask about another one of Bowser Junior's moves, or name another character and move.</speak>"
 				}
 			},
 			"shouldEndSession": false
@@ -22,6 +22,7 @@
 		"sessionAttributes": {
 			"character": "bowser junior",
 			"move": "up special"
-		}
+		},
+		"userAgent": "ask-node/2.3.0 Node/v8.10.0"
 	}
 }

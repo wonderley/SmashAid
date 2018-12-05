@@ -3,8 +3,8 @@
 		"version": "1.0",
 		"response": {
 			"outputSpeech": {
-				"type": "PlainText",
-				"text": "Mario's up throw is  weight dependent.  You can ask about another one of Mario's moves, or name another character and move."
+				"type": "SSML",
+				"ssml": "<speak>Mario's up throw is  weight dependent.  You can ask about another one of Mario's moves, or name another character and move.</speak>"
 			},
 			"card": {
 				"type": "Simple",
@@ -13,8 +13,8 @@
 			},
 			"reprompt": {
 				"outputSpeech": {
-					"type": "PlainText",
-					"text": "Ask about another one of Mario's moves, or name another character and move."
+					"type": "SSML",
+					"ssml": "<speak>Mario's up throw is  weight dependent.  You can ask about another one of Mario's moves, or name another character and move.</speak>"
 				}
 			},
 			"shouldEndSession": false
@@ -22,6 +22,7 @@
 		"sessionAttributes": {
 			"character": "mario",
 			"move": "up throw"
-		}
+		},
+		"userAgent": "ask-node/2.3.0 Node/v8.10.0"
 	}
 }
