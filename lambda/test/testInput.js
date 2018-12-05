@@ -37,9 +37,6 @@ const CharacterMoveIntentHandler = proxyquire('../CharacterMoveIntentHandler', {
   'BuildSpeechletResponse': BuildSpeechletResponse,
 });
 const index = proxyquire('../index', {
-  'aws-sdk': {
-    S3,
-  },
   'AlexaCharacterMoveIntentHandler': proxyquire('../AlexaCharacterMoveIntentHandler', {
     'aws-sdk': {
       S3,
@@ -55,6 +52,7 @@ function test(testName) {
   const outputPath = `${__dirname}/json/${testName}.output.json`;
   const input = JSON.parse(fs.readFileSync(inputPath));
   const output = JSON.parse(fs.readFileSync(outputPath));
+  debugger;
   index.handler(input, input.context,
     (_, response) => {
       try {

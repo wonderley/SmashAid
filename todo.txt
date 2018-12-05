@@ -7,3 +7,10 @@ Comparisons
 Damage/knockback/angles
 Confirms, esp kill confirms, esp out of grab
 Ledge options
+
+Change lambda index.js to use this structure: https://github.com/alexa/skill-sample-nodejs-hello-world/blob/master/lambda/custom/index.js
+
+Intent handler should return or provide the response text and other information
+Then pass it on to the response builder
+
+*Fix production function to use old index.js. Currently session is broken.

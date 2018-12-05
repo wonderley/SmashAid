@@ -4,7 +4,9 @@ const s3 = new AWS.S3();
 const buildSpeechletResponse = require('BuildSpeechletResponse');
 
 class CharacterMoveIntentHandler {
-  onIntent(intent, session, callback) {
+  // No return value.
+  // Postcondition: this._responseObj is set
+  onIntent(intent, session) {
     debugger;
     let sessionAttributes = session.attributes || {};
     let cardTitle = 'Failed to find move';
@@ -27,21 +29,21 @@ class CharacterMoveIntentHandler {
       }
       if (!character && !move) {
         cardTitle = 'Choose a character and move';
-        callback(sessionAttributes,
+        this.storeResponseObj(sessionAttributes,
         buildSpeechletResponse(cardTitle, speechOutput, repromptText, false /*shouldEndSession*/));
         return;
       } else if (character && !move) {
         cardTitle = `${capitalize(character)}`;
         speechOutput = `Which of ${capitalize(character)}'s moves?`;
         repromptText = `I didn't get that. ${speechOutput}`;
-        callback(sessionAttributes,
+        this.storeResponseObj(sessionAttributes,
         buildSpeechletResponse(cardTitle, speechOutput, repromptText, false /*shouldEndSession*/));
         return;
       } else if (move && !character) {
         cardTitle = `${capitalize(move)}`;
         speechOutput = `Which character's ${move} do you want to know about?`;
         repromptText = `I didn't get that. ${speechOutput}`;
-        callback(sessionAttributes,
+        this.storeResponseObj(sessionAttributes,
         buildSpeechletResponse(cardTitle, speechOutput, repromptText, false /*shouldEndSession*/));
         return;
       }
@@ -49,7 +51,7 @@ class CharacterMoveIntentHandler {
       repromptText = '';
     } catch (e) {
       console.log(e);
-      callback(sessionAttributes,
+      this.storeResponseObj(sessionAttributes,
         buildSpeechletResponse(cardTitle, speechOutput, repromptText, false /*shouldEndSession*/));
     }
 
@@ -59,7 +61,7 @@ class CharacterMoveIntentHandler {
       .replaceAll('doctor', 'dr');
     return this.readFile(`${characterFileName}.json`)
     .then(jsonResult => {
-      onFileContent(jsonResult, character, move, speechOutput, cardTitle, sessionAttributes, repromptText, callback);
+      onFileContent(jsonResult, character, move, speechOutput, cardTitle, sessionAttributes, repromptText);
     })
     .catch(onFileError, character);
   }
@@ -70,7 +72,7 @@ class CharacterMoveIntentHandler {
   }
 }
 
-function onFileContent(jsonResult, character, move, speechOutput, cardTitle, sessionAttributes, repromptText, callback) {
+function onFileContent(jsonResult, character, move, speechOutput, cardTitle, sessionAttributes, repromptText) {
   const Character = capitalize(character);
   try {
     const result = JSON.parse(jsonResult.toString());
@@ -91,12 +93,12 @@ function onFileContent(jsonResult, character, move, speechOutput, cardTitle, ses
       Character, move, moveObj);
     speechOutput += ` You can ask about another one of ${Character}'s moves, or name another character and move.`;
     repromptText = `Ask about another one of ${Character}'s moves, or name another character and move.`;
-    callback(sessionAttributes,
+    this.storeResponseObj(sessionAttributes,
     buildSpeechletResponse(cardTitle, speechOutput, repromptText, false /*shouldEndSession*/));
   } catch (e) {
     speechOutput = `Sorry, I don't have any information about the ${move} for ${Character}. Please name another character and move.`;
     cardTitle = 'Please try again';
-    callback(sessionAttributes,
+    this.storeResponseObj(sessionAttributes,
     buildSpeechletResponse(cardTitle, speechOutput, repromptText, false /*shouldEndSession*/, speechOutput));
   }
 }
@@ -105,7 +107,7 @@ function onFileError(err, character) {
   console.error(err);
   const speechOutput = `My B. I can't find any information about ${character}.`;
   const cardTitle = 'Please try again';
-  callback(sessionAttributes,
+  this.storeResponseObj(sessionAttributes,
   buildSpeechletResponse(cardTitle, speechOutput, speechOutput /*repromptText*/, false /*shouldEndSession*/, speechOutput));
 }
 
