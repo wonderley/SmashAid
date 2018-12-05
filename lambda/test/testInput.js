@@ -6,22 +6,48 @@ const expect = require('chai').expect;
 const proxyquire = require('proxyquire').noCallThru();
 function S3() {
   return {
-    getObject: (params, callback) => {
-      let data;
-      let err;
-      try {
-        data = fs.readFileSync(`${__dirname}/../../gen/${params.Key}`);
-      } catch (e) {
-        err = e;
-      }
-      callback(err, { Body: data });
+    getObject: (params) => {
+      return {
+        promise: () => {
+          return new Promise((resolve, reject) => {
+            let data;
+            let err;
+            try {
+              data = fs.readFileSync(`${__dirname}/../../gen/${params.Key}`);
+            } catch (e) {
+              err = e;
+            }
+            err ? reject(err) : resolve({ Body: data });
+          });
+        },
+      };
     },
   };
 }
+
+const BuildSpeechletResponse = proxyquire('../BuildSpeechletResponse', {
+  'aws-sdk': {
+    S3,
+  },
+});
+const CharacterMoveIntentHandler = proxyquire('../CharacterMoveIntentHandler', {
+  'aws-sdk': {
+    S3,
+  },
+  'BuildSpeechletResponse': BuildSpeechletResponse,
+});
 const index = proxyquire('../index', {
   'aws-sdk': {
     S3,
   },
+  'AlexaCharacterMoveIntentHandler': proxyquire('../AlexaCharacterMoveIntentHandler', {
+    'aws-sdk': {
+      S3,
+    },
+    BuildSpeechletResponse,
+    CharacterMoveIntentHandler,
+  }),
+  BuildSpeechletResponse,
 });
 
 function test(testName) {
