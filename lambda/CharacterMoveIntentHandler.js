@@ -5,7 +5,6 @@ const s3 = new AWS.S3();
 class CharacterMoveIntentHandler {
   // Returns Promise that resolves to response object.
   onIntent(intent, sessionAttributes) {
-    debugger;
     let cardTitle = 'Failed to find move';
     let move = sessionAttributes.move;
     let character = sessionAttributes.character;
@@ -52,7 +51,6 @@ class CharacterMoveIntentHandler {
       speechOutput = '';
       repromptText = '';
     } catch (e) {
-      debugger;
       console.log(e);
       return Promise.resolve({
         sessionAttributes,
@@ -63,7 +61,6 @@ class CharacterMoveIntentHandler {
     }
 
     // read from file
-    debugger;
     let characterFileName =
       replaceAll(character, ' ', '_');
     characterFileName =
@@ -84,7 +81,6 @@ class CharacterMoveIntentHandler {
 }
 
 function onFileContent(jsonResult, character, move, speechOutput, cardTitle, sessionAttributes, repromptText) {
-  debugger;
   const Character = capitalize(character);
   try {
     const result = JSON.parse(jsonResult.toString());
@@ -105,7 +101,6 @@ function onFileContent(jsonResult, character, move, speechOutput, cardTitle, ses
       Character, move, moveObj);
     speechOutput += ` You can ask about another one of ${Character}'s moves, or name another character and move.`;
     repromptText = `Ask about another one of ${Character}'s moves, or name another character and move.`;
-    debugger;
     return Promise.resolve({
       sessionAttributes,
       cardTitle,

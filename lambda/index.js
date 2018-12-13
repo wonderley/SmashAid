@@ -18,7 +18,6 @@ const LaunchRequestHandler = {
     const repromptText = 'Please ask about a move for any character. For example, say, ' +
       'tell me about Mario\'s up smash.';
     const shouldEndSession = false;
-    debugger;
     return handlerInput.responseBuilder
       .speak(speechOutput)
       .reprompt(repromptText)
@@ -37,8 +36,6 @@ const CharacterMoveIntentHandler = {
     const sessionAttributes = handlerInput.attributesManager.getSessionAttributes();
     return this.handler.onIntent(intent, sessionAttributes)
     .then(responseObj => {
-      debugger;
-      // const response = buildSpeechletResponse(responseObj.cardTitle, responseObj.speechOutput, responseObj.repromptText, false /*shouldEndSession*/);
       return handlerInput.responseBuilder
         .speak(responseObj.speechOutput)
         .reprompt(responseObj.repromptText)
